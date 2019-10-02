@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E512C19A23445A29005BF52E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19923445A29005BF52E /* User.swift */; };
 		E512C19D23445BD6005BF52E /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19C23445BD6005BF52E /* Meeting.swift */; };
+		E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4A62344DFF6005C5091 /* TabBarController.swift */; };
+		E51FA4AB2344E2D4005C5091 /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */; };
+		E51FA4AD2344E2E3005C5091 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
 		E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36E234431E60070241F /* SceneDelegate.swift */; };
 		E54DA371234431E60070241F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA370234431E60070241F /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		E512C19923445A29005BF52E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E512C19C23445BD6005BF52E /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		E51FA4A62344DFF6005C5091 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
+		E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* publicmeetings-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "publicmeetings-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DA36E234431E60070241F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +93,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E51FA4A52344DF88005C5091 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E51FA4A62344DFF6005C5091 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E51FA4A82344E297005C5091 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E51FA4A92344E2A7005C5091 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */,
+				E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E54DA360234431E60070241F = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +140,10 @@
 		E54DA36B234431E60070241F /* publicmeetings-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E51FA4A52344DF88005C5091 /* TabBar */,
 				E512C19B23445A31005BF52E /* Models */,
+				E51FA4A82344E297005C5091 /* Views */,
+				E51FA4A92344E2A7005C5091 /* Controllers */,
 				E54DA36C234431E60070241F /* AppDelegate.swift */,
 				E54DA36E234431E60070241F /* SceneDelegate.swift */,
 				E54DA370234431E60070241F /* ViewController.swift */,
@@ -272,7 +305,10 @@
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
 				E54DA371234431E60070241F /* ViewController.swift in Sources */,
+				E51FA4AB2344E2D4005C5091 /* MeetingsViewController.swift in Sources */,
 				E54DA36D234431E60070241F /* AppDelegate.swift in Sources */,
+				E51FA4AD2344E2E3005C5091 /* MoreViewController.swift in Sources */,
+				E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

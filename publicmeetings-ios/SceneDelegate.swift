@@ -21,9 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         
-        let viewController = ViewController()
-        navigationController = UINavigationController(rootViewController: viewController)
-                
+        let rootViewController = TabBarController()
+        navigationController = UINavigationController()
+        navigationController?.viewControllers = [rootViewController]
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
