@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemOrange
+        self.title = "Public Meetings"
     }
 }
 
