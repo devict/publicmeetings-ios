@@ -12,6 +12,7 @@
 		E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4A62344DFF6005C5091 /* TabBarController.swift */; };
 		E51FA4AB2344E2D4005C5091 /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */; };
 		E51FA4AD2344E2E3005C5091 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */; };
+		E51FA4AF234580E4005C5091 /* MeetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AE234580E4005C5091 /* MeetingsView.swift */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
 		E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36E234431E60070241F /* SceneDelegate.swift */; };
 		E54DA371234431E60070241F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA370234431E60070241F /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		E51FA4A62344DFF6005C5091 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
 		E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		E51FA4AE234580E4005C5091 /* MeetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsView.swift; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* publicmeetings-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "publicmeetings-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DA36E234431E60070241F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		E51FA4A82344E297005C5091 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E51FA4AE234580E4005C5091 /* MeetingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				E51FA4AB2344E2D4005C5091 /* MeetingsViewController.swift in Sources */,
 				E54DA36D234431E60070241F /* AppDelegate.swift in Sources */,
 				E51FA4AD2344E2E3005C5091 /* MoreViewController.swift in Sources */,
+				E51FA4AF234580E4005C5091 /* MeetingsView.swift in Sources */,
 				E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
 			);

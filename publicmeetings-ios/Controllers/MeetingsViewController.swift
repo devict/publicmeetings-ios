@@ -10,11 +10,21 @@ import UIKit
 
 class MeetingsViewController: UIViewController {
 
+    var meetingsView: MeetingsView = {
+        let view = MeetingsView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemOrange
+        return view
+    }()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemIndigo
+        view.backgroundColor = .systemGray3
         setScreenTitle()
+        
+        setupView()
+        setupLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,5 +35,19 @@ class MeetingsViewController: UIViewController {
         DispatchQueue.main.async {
             self.tabBarController?.navigationItem.title = "Meetings"
         }
+    }
+    
+    //MARK: - Setup and Layout
+    private func setupView() {
+        view.addSubview(meetingsView)
+    }
+    
+    private func setupLayout() {
+        NSLayoutConstraint.activate([
+            meetingsView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
+            meetingsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            meetingsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            meetingsView.heightAnchor.constraint(equalToConstant: 30.0)
+        ])
     }
 }
