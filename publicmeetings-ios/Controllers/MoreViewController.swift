@@ -14,18 +14,18 @@ class MoreViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemTeal
-        self.tabBarController?.navigationItem.title = "More"
+        setScreenTitle()
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        setScreenTitle()
     }
-    */
-
+    
+    func setScreenTitle() {
+        DispatchQueue.main.async {
+            self.tabBarController?.navigationItem.title = "More"
+        }
+    }
+    
 }
