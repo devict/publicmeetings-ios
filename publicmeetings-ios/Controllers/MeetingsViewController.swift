@@ -10,17 +10,19 @@ import UIKit
 
 class MeetingsViewController: UIViewController {
 
+    //MARK: - Properties
     var meetingsView: MeetingsView = {
         let view = MeetingsView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemOrange
+        view.backgroundColor = UIColor(named: "devictOrange")
         return view
     }()
         
+    //MARK: - Delegates
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemGray3
+        view.backgroundColor = UIColor(named: "devictTan")
         setScreenTitle()
         
         setupView()
@@ -31,6 +33,7 @@ class MeetingsViewController: UIViewController {
         setScreenTitle()
     }
     
+    //MARK: - Methods
     func setScreenTitle() {
         DispatchQueue.main.async {
             self.tabBarController?.navigationItem.title = "Meetings"
