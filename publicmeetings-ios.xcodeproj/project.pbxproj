@@ -20,6 +20,7 @@
 		E54DA379234431E70070241F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54DA377234431E70070241F /* LaunchScreen.storyboard */; };
 		E54DA384234431E70070241F /* publicmeetings_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA383234431E70070241F /* publicmeetings_iosTests.swift */; };
 		E54DA38F234431E70070241F /* publicmeetings_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */; };
+		E55F53B723462E2700200F10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55F53B623462E2700200F10 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E54DA38A234431E70070241F /* publicmeetings-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "publicmeetings-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicmeetings_iosUITests.swift; sourceTree = "<group>"; };
 		E54DA390234431E70070241F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E55F53B623462E2700200F10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				E54DA36E234431E60070241F /* SceneDelegate.swift */,
 				E54DA370234431E60070241F /* ViewController.swift */,
 				E54DA375234431E70070241F /* Assets.xcassets */,
+				E55F53B623462E2700200F10 /* Colors.xcassets */,
 				E54DA377234431E70070241F /* LaunchScreen.storyboard */,
 				E54DA37A234431E70070241F /* Info.plist */,
 			);
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55F53B723462E2700200F10 /* Colors.xcassets in Resources */,
 				E54DA379234431E70070241F /* LaunchScreen.storyboard in Resources */,
 				E54DA376234431E70070241F /* Assets.xcassets in Resources */,
 			);

@@ -15,7 +15,6 @@ class MeetingsView: UIView {
            let segmented = UISegmentedControl(items: ["Wichita","County", "State"])
            segmented.translatesAutoresizingMaskIntoConstraints = false
            segmented.backgroundColor = .clear
-           segmented.tintColor = .systemOrange
            segmented.selectedSegmentIndex = 0
            return segmented
     }()
