@@ -21,7 +21,6 @@ class TabBarController: UITabBarController {
         
          meetingsViewController.navigationController?.navigationBar.topItem?.title = "Meetings"
          moreViewController.navigationController?.navigationBar.topItem?.title = "More"
-
          
          let viewControllerList = [meetingsViewController, moreViewController]
          viewControllers = viewControllerList
