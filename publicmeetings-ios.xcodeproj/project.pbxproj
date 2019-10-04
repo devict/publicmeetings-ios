@@ -47,7 +47,7 @@
 		E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
 		E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		E51FA4AE234580E4005C5091 /* MeetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsView.swift; sourceTree = "<group>"; };
-		E54DA369234431E60070241F /* publicmeetings-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "publicmeetings-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DA36E234431E60070241F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E54DA370234431E60070241F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		E54DA36A234431E60070241F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E54DA369234431E60070241F /* publicmeetings-ios.app */,
+				E54DA369234431E60070241F /* Public Meetings.app */,
 				E54DA37F234431E70070241F /* publicmeetings-iosTests.xctest */,
 				E54DA38A234431E70070241F /* publicmeetings-iosUITests.xctest */,
 			);
@@ -195,7 +195,7 @@
 			);
 			name = "publicmeetings-ios";
 			productName = "publicmeetings-ios";
-			productReference = E54DA369234431E60070241F /* publicmeetings-ios.app */;
+			productReference = E54DA369234431E60070241F /* Public Meetings.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E54DA37E234431E70070241F /* publicmeetings-iosTests */ = {
@@ -490,7 +490,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mpc.publicmeetings-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Public Meetings";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,7 +508,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mpc.publicmeetings-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Public Meetings";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

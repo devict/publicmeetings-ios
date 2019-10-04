@@ -8,18 +8,17 @@
 
 import UIKit
 
-class MeetingsView: UIView {
+class MeetingsView: UIView, UISearchBarDelegate {
 
     //MARK: - Properties
-    var meetingLocation: UISegmentedControl = {
-           let segmented = UISegmentedControl(items: ["Wichita","County", "State"])
-           segmented.translatesAutoresizingMaskIntoConstraints = false
-           segmented.backgroundColor = .clear
-           segmented.selectedSegmentIndex = 0
-           return segmented
+    var meetingLocality: UISegmentedControl = {
+        let segmented = UISegmentedControl(items: ["Wichita","County", "State"])
+        segmented.translatesAutoresizingMaskIntoConstraints = false
+        segmented.backgroundColor = .clear
+        segmented.selectedSegmentIndex = 0
+        return segmented
     }()
 
-    
     //MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,15 +33,15 @@ class MeetingsView: UIView {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        addSubview(meetingLocation)
+        addSubview(meetingLocality)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            meetingLocation.topAnchor.constraint(equalTo: topAnchor),
-            meetingLocation.leadingAnchor.constraint(equalTo: leadingAnchor),
-            meetingLocation.trailingAnchor.constraint(equalTo: trailingAnchor),
-            meetingLocation.heightAnchor.constraint(equalToConstant: 30.0)
+            meetingLocality.topAnchor.constraint(equalTo: topAnchor),
+            meetingLocality.leadingAnchor.constraint(equalTo: leadingAnchor),
+            meetingLocality.trailingAnchor.constraint(equalTo: trailingAnchor),
+            meetingLocality.heightAnchor.constraint(equalToConstant: 30.0)
         ])
     }
 }
