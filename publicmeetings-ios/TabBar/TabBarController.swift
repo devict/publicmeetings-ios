@@ -16,8 +16,9 @@ class TabBarController: UITabBarController {
         let meetingsViewController = MeetingsViewController()
         let moreViewController = MoreViewController()
          
-        let meetingImage = UIImage(systemName: "calendar")
-        let moreImage = UIImage(systemName: "ellipsis.circle")
+        let config = UIImage.SymbolConfiguration(weight: .heavy)
+        let meetingImage = UIImage(systemName: "calendar", withConfiguration: config)
+        let moreImage = UIImage(systemName: "ellipsis.circle", withConfiguration: config)
         
         meetingsViewController.tabBarItem = UITabBarItem(title: "Meetings", image: meetingImage, selectedImage: meetingImage)
         moreViewController.tabBarItem = UITabBarItem(title: "More", image: moreImage, selectedImage: moreImage)
