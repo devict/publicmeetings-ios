@@ -17,14 +17,14 @@ class MeetingsViewController: UIViewController {
         view.backgroundColor = UIColor(named: "devictOrange")
         return view
     }()
-        
+    
     //MARK: - Delegates
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(named: "devictTan")
+
         setScreenTitle()
-        
         setupView()
         setupLayout()
     }
