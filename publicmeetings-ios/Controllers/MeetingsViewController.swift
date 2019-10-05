@@ -14,14 +14,14 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     var meetingLocality: UISegmentedControl = {
         let segmented = UISegmentedControl(items: ["Wichita", "County", "State"])
         segmented.translatesAutoresizingMaskIntoConstraints = false
-        segmented.backgroundColor = UIColor(named: "devictOrange")
+        segmented.backgroundColor = UIColor(named: "devictSpringGreen")
         segmented.selectedSegmentIndex = 0
         return segmented
     }()
     
     var tableView = UITableView()
     
-    var names: [String] = ["First","Second","Third","Fourth","Fifth"]
+    var names: [String] = ["First","Second","Third","Fourth","Fifth","Sixth","Seventh"]
     
     //MARK: - ViewController Delegates
     override func viewDidLoad() {
@@ -44,8 +44,10 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MeetingCell
         let row = indexPath.row
+        let backColor = indexPath.row % 2 == 0 ? .white : UIColor(named: "papayaWhip")
         
-        cell.backgroundColor = UIColor(named: "devictTan")
+        cell.accessoryType = .disclosureIndicator
+        cell.backgroundColor = backColor
         cell.name.text = names[row]
         return cell
     }
@@ -70,6 +72,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MeetingCell.self, forCellReuseIdentifier: "cell")
+        tableView.tableFooterView = UIView()
     }
     
     private func setupLayout() {
