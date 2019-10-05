@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		E512C19A23445A29005BF52E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19923445A29005BF52E /* User.swift */; };
 		E512C19D23445BD6005BF52E /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19C23445BD6005BF52E /* Meeting.swift */; };
+		E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514FAAB2347330D00075816 /* MeetingCell.swift */; };
 		E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4A62344DFF6005C5091 /* TabBarController.swift */; };
-		E51FA4AB2344E2D4005C5091 /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */; };
-		E51FA4AD2344E2E3005C5091 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */; };
-		E51FA4AF234580E4005C5091 /* MeetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4AE234580E4005C5091 /* MeetingsView.swift */; };
+		E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D5234854CA00DF9D5B /* MoreViewController.swift */; };
+		E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
 		E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36E234431E60070241F /* SceneDelegate.swift */; };
-		E54DA371234431E60070241F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA370234431E60070241F /* ViewController.swift */; };
 		E54DA376234431E70070241F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54DA375234431E70070241F /* Assets.xcassets */; };
 		E54DA379234431E70070241F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54DA377234431E70070241F /* LaunchScreen.storyboard */; };
 		E54DA384234431E70070241F /* publicmeetings_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA383234431E70070241F /* publicmeetings_iosTests.swift */; };
@@ -43,14 +42,13 @@
 /* Begin PBXFileReference section */
 		E512C19923445A29005BF52E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E512C19C23445BD6005BF52E /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		E514FAAB2347330D00075816 /* MeetingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
 		E51FA4A62344DFF6005C5091 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
-		E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		E51FA4AE234580E4005C5091 /* MeetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsView.swift; sourceTree = "<group>"; };
+		E52E43D5234854CA00DF9D5B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DA36E234431E60070241F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E54DA370234431E60070241F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E54DA375234431E70070241F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54DA378234431E70070241F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E54DA37A234431E70070241F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +95,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E514FAAA234732E500075816 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E514FAAB2347330D00075816 /* MeetingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		E51FA4A52344DF88005C5091 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +114,6 @@
 		E51FA4A82344E297005C5091 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E51FA4AE234580E4005C5091 /* MeetingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,8 +121,8 @@
 		E51FA4A92344E2A7005C5091 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E51FA4AA2344E2D4005C5091 /* MeetingsViewController.swift */,
-				E51FA4AC2344E2E3005C5091 /* MoreViewController.swift */,
+				E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */,
+				E52E43D5234854CA00DF9D5B /* MoreViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,9 +154,9 @@
 				E512C19B23445A31005BF52E /* Models */,
 				E51FA4A82344E297005C5091 /* Views */,
 				E51FA4A92344E2A7005C5091 /* Controllers */,
+				E514FAAA234732E500075816 /* Cells */,
 				E54DA36C234431E60070241F /* AppDelegate.swift */,
 				E54DA36E234431E60070241F /* SceneDelegate.swift */,
-				E54DA370234431E60070241F /* ViewController.swift */,
 				E54DA375234431E70070241F /* Assets.xcassets */,
 				E55F53B623462E2700200F10 /* Colors.xcassets */,
 				E54DA377234431E70070241F /* LaunchScreen.storyboard */,
@@ -311,13 +316,12 @@
 			files = (
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
-				E54DA371234431E60070241F /* ViewController.swift in Sources */,
-				E51FA4AB2344E2D4005C5091 /* MeetingsViewController.swift in Sources */,
+				E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */,
 				E54DA36D234431E60070241F /* AppDelegate.swift in Sources */,
-				E51FA4AD2344E2E3005C5091 /* MoreViewController.swift in Sources */,
-				E51FA4AF234580E4005C5091 /* MeetingsView.swift in Sources */,
 				E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */,
+				E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
+				E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
