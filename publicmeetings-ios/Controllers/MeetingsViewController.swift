@@ -29,6 +29,11 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         setupView()
         setupLayout()
+        setScreenTitle()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setScreenTitle()
     }
     
     //MARK: - TableView Delegates
@@ -51,6 +56,12 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     //MARK: - Setup and Layout
+    func setScreenTitle() {
+        DispatchQueue.main.async {
+            self.tabBarController?.navigationItem.title = "Meetings"
+        }
+    }
+    
     private func setupView() {
         view.addSubview(meetingLocality)
         view.addSubview(tableView)
