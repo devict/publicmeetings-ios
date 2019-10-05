@@ -2,55 +2,76 @@
 //  MeetingsViewController.swift
 //  publicmeetings-ios
 //
-//  Created by mpc on 10/2/19.
+//  Created by mpc on 10/5/19.
 //  Copyright © 2019 mpc. All rights reserved.
 //
 
 import UIKit
 
-class MeetingsViewController: UIViewController {
+class MeetingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
-    var meetingsView: MeetingsView = {
-        let view = MeetingsView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(named: "devictOrange")
-        return view
+    var meetingLocality: UISegmentedControl = {
+        let segmented = UISegmentedControl(items: ["Wichita", "County", "State"])
+        segmented.translatesAutoresizingMaskIntoConstraints = false
+        segmented.backgroundColor = UIColor(named: "devictOrange")
+        segmented.selectedSegmentIndex = 0
+        return segmented
     }()
     
-    //MARK: - Delegates
+    var tableView = UITableView()
+    
+    var names: [String] = ["First","Second","Third","Fourth","Fifth"]
+    
+    //MARK: - ViewController Delegates
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor(named: "devictTan")
-
-        setScreenTitle()
+        
         setupView()
         setupLayout()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        setScreenTitle()
+    //MARK: - TableView Delegates
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return names.count
     }
     
-    //MARK: - Methods
-    func setScreenTitle() {
-        DispatchQueue.main.async {
-            self.tabBarController?.navigationItem.title = "Meetings"
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MeetingCell
+        let row = indexPath.row
+        
+        cell.backgroundColor = UIColor(named: "devictTan")
+        cell.name.text = names[row]
+        return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 45.0
+    }
+    
     
     //MARK: - Setup and Layout
     private func setupView() {
-        view.addSubview(meetingsView)
+        view.addSubview(meetingLocality)
+        view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(MeetingCell.self, forCellReuseIdentifier: "cell")
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            meetingsView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
-            meetingsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            meetingsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            meetingsView.heightAnchor.constraint(equalToConstant: 30.0)
+            meetingLocality.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
+            meetingLocality.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            meetingLocality.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            meetingLocality.heightAnchor.constraint(equalToConstant: 30.0),
+            
+            tableView.topAnchor.constraint(equalToSystemSpacingBelow: meetingLocality.bottomAnchor, multiplier: 0.0),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }
