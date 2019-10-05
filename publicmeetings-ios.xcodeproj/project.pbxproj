@@ -11,6 +11,7 @@
 		E512C19D23445BD6005BF52E /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19C23445BD6005BF52E /* Meeting.swift */; };
 		E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514FAAB2347330D00075816 /* MeetingCell.swift */; };
 		E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4A62344DFF6005C5091 /* TabBarController.swift */; };
+		E525261923490A150003B575 /* devict-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E525261823490A150003B575 /* devict-logo.png */; };
 		E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D5234854CA00DF9D5B /* MoreViewController.swift */; };
 		E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		E512C19C23445BD6005BF52E /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		E514FAAB2347330D00075816 /* MeetingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
 		E51FA4A62344DFF6005C5091 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E525261823490A150003B575 /* devict-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-logo.png"; sourceTree = "<group>"; };
 		E52E43D5234854CA00DF9D5B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		E525261723490A150003B575 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E525261823490A150003B575 /* devict-logo.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E54DA360234431E60070241F = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 				E51FA4A82344E297005C5091 /* Views */,
 				E51FA4A92344E2A7005C5091 /* Controllers */,
 				E514FAAA234732E500075816 /* Cells */,
+				E525261723490A150003B575 /* Assets */,
 				E54DA36C234431E60070241F /* AppDelegate.swift */,
 				E54DA36E234431E60070241F /* SceneDelegate.swift */,
 				E54DA375234431E70070241F /* Assets.xcassets */,
@@ -290,6 +301,7 @@
 				E55F53B723462E2700200F10 /* Colors.xcassets in Resources */,
 				E54DA379234431E70070241F /* LaunchScreen.storyboard in Resources */,
 				E54DA376234431E70070241F /* Assets.xcassets in Resources */,
+				E525261923490A150003B575 /* devict-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
