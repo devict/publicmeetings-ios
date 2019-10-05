@@ -58,7 +58,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     //MARK: - Setup and Layout
-    func setScreenTitle() {
+    private func setScreenTitle() {
         DispatchQueue.main.async {
             self.tabBarController?.navigationItem.title = "Meetings"
         }

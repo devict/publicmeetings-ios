@@ -12,6 +12,7 @@
 		E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514FAAB2347330D00075816 /* MeetingCell.swift */; };
 		E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4A62344DFF6005C5091 /* TabBarController.swift */; };
 		E525261923490A150003B575 /* devict-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E525261823490A150003B575 /* devict-logo.png */; };
+		E525261B234911070003B575 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525261A234911070003B575 /* MoreCell.swift */; };
 		E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D5234854CA00DF9D5B /* MoreViewController.swift */; };
 		E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		E514FAAB2347330D00075816 /* MeetingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
 		E51FA4A62344DFF6005C5091 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E525261823490A150003B575 /* devict-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-logo.png"; sourceTree = "<group>"; };
+		E525261A234911070003B575 /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		E52E43D5234854CA00DF9D5B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E514FAAB2347330D00075816 /* MeetingCell.swift */,
+				E525261A234911070003B575 /* MoreCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
 				E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */,
+				E525261B234911070003B575 /* MoreCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
