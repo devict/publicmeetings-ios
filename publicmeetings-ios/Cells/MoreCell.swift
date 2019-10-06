@@ -10,6 +10,7 @@ import UIKit
 
 class MoreCell: UITableViewCell {
 
+    //MARK: - Properties
     var item: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -20,6 +21,7 @@ class MoreCell: UITableViewCell {
         return label
     }()
     
+    //MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -37,6 +39,7 @@ class MoreCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
+    //MARK: - Cell delegates
     override func awakeFromNib() {
         super.awakeFromNib()
     }
