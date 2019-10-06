@@ -35,6 +35,9 @@ class MeetingCell: UITableViewCell {
         
         setupView()
         setupLayout()
+        
+        reminder.addTarget(self, action: #selector(reminderTapped(sender:)), for: .touchUpInside)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -68,5 +71,10 @@ class MeetingCell: UITableViewCell {
             reminder.widthAnchor.constraint(equalToConstant: 40.0),
             reminder.heightAnchor.constraint(equalToConstant: 40.0)
         ])
+    }
+    
+    @objc func reminderTapped(sender: UIButton) {
+        guard let name = name.text else { return }
+        print("\(name) button tapped")
     }
 }
