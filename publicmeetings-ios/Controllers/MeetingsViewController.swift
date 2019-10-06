@@ -44,7 +44,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MeetingCell
         let row = indexPath.row
-        let backColor = indexPath.row % 2 == 0 ? .white : UIColor(named: "softBlue")
+        let backColor = indexPath.row % 2 == 0 ? UIColor.white : UIColor.systemGray6
         
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
