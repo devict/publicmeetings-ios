@@ -21,7 +21,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     var tableView = UITableView()
     
-    var names: [String] = ["First","Second","Third","Fourth","Fifth","Sixth","Seventh"]
+    var names: [String] = ["First","Second","Third","Fourth","Fifth","Sixth","Seventh","Eighth","Ninth","Tenth","Eleventh","Twelvth","Thirteenth","Fourteenth","Fifteenth","Sixteenth","Seventeenth","Eighteenth","Nineteenth",]
     
     //MARK: - ViewController Delegates
     override func viewDidLoad() {
@@ -52,11 +52,14 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        _ = names[indexPath.row]
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45.0
     }
-    
-    
+        
     //MARK: - Setup and Layout
     private func setScreenTitle() {
         DispatchQueue.main.async {
