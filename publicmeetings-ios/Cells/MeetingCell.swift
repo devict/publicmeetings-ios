@@ -30,14 +30,13 @@ class MeetingCell: UITableViewCell {
     }()
     
     //MARK: - Initialization
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupView()
         setupLayout()
-        
-        reminder.addTarget(self, action: #selector(reminderTapped(sender:)), for: .touchUpInside)
-        
+        setupActions()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -73,6 +72,11 @@ class MeetingCell: UITableViewCell {
         ])
     }
     
+    private func setupActions() {
+        reminder.addTarget(self, action: #selector(reminderTapped(sender:)), for: .touchUpInside)
+    }
+        
+    //MARK: - Actions
     @objc func reminderTapped(sender: UIButton) {
         guard let name = name.text else { return }
         print("\(name) button tapped")
