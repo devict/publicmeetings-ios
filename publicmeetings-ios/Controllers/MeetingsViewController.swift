@@ -27,6 +27,10 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Temporary - Proof of concept only
+        tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "devictBlue")
+        tabBarController?.tabBar.items?[0].badgeValue = "3"
+
         setupView()
         setupLayout()
         setScreenTitle()
@@ -44,7 +48,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MeetingCell
         let row = indexPath.row
-        let backColor = indexPath.row % 2 == 0 ? UIColor.white : UIColor.systemGray6
+        let backColor: UIColor = row % 2 == 0 ? .white : .systemGray6
         
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
@@ -55,6 +59,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _ = names[indexPath.row]
+        let viewController = MeetingsDetailViewController()
+        present(viewController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

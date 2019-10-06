@@ -49,6 +49,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The app would like access to maps so it can display meeting locations. </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>The app would like access to maps so it can display meeting locations. </string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

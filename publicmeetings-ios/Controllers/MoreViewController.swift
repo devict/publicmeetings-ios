@@ -15,7 +15,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var tableView = UITableView()
     
-    
     //MARK: - ViewController Delegates
     override func viewDidLoad() {
         super.viewDidLoad()

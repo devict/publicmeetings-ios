@@ -16,8 +16,6 @@ class MoreCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .left
-        label.numberOfLines = 2
-        label.lineBreakMode = .byWordWrapping
         return label
     }()
     
