@@ -25,7 +25,7 @@ class MeetingCell: UITableViewCell {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "calendar.badge.plus"), for: .normal)
-        button.tintColor = UIColor(named: "devictBlue")
+        button.tintColor = .black
         return button
     }()
     
@@ -65,8 +65,8 @@ class MeetingCell: UITableViewCell {
             
             reminder.centerYAnchor.constraint(equalTo: centerYAnchor),
             reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40.0),
-            reminder.widthAnchor.constraint(equalToConstant: 20.0),
-            reminder.heightAnchor.constraint(equalToConstant: 20.0)
+            reminder.widthAnchor.constraint(equalToConstant: 40.0),
+            reminder.heightAnchor.constraint(equalToConstant: 40.0)
         ])
     }
 }
