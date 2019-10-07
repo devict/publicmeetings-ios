@@ -16,8 +16,6 @@ class MeetingCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .left
-        label.numberOfLines = 2
-        label.lineBreakMode = .byWordWrapping
         return label
     }()
     
@@ -30,7 +28,6 @@ class MeetingCell: UITableViewCell {
     }()
     
     //MARK: - Initialization
-
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         

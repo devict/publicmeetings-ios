@@ -11,6 +11,8 @@
 		E511CFEE234A8EE700807CAF /* Accuracy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFEC234A8EE700807CAF /* Accuracy.swift */; };
 		E511CFEF234A8EE700807CAF /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFED234A8EE700807CAF /* Screen.swift */; };
 		E511CFF1234A8FC300807CAF /* MeetingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFF0234A8FC300807CAF /* MeetingsDetailViewController.swift */; };
+		E511CFF3234ACD8D00807CAF /* MinutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */; };
+		E511CFF5234ACE5800807CAF /* MinutesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFF4234ACE5800807CAF /* MinutesCell.swift */; };
 		E512C19A23445A29005BF52E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19923445A29005BF52E /* User.swift */; };
 		E512C19D23445BD6005BF52E /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19C23445BD6005BF52E /* Meeting.swift */; };
 		E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514FAAB2347330D00075816 /* MeetingCell.swift */; };
@@ -50,6 +52,8 @@
 		E511CFEC234A8EE700807CAF /* Accuracy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accuracy.swift; sourceTree = "<group>"; };
 		E511CFED234A8EE700807CAF /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		E511CFF0234A8FC300807CAF /* MeetingsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsDetailViewController.swift; sourceTree = "<group>"; };
+		E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesViewController.swift; sourceTree = "<group>"; };
+		E511CFF4234ACE5800807CAF /* MinutesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesCell.swift; sourceTree = "<group>"; };
 		E512C19923445A29005BF52E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E512C19C23445BD6005BF52E /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		E514FAAB2347330D00075816 /* MeetingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				E514FAAB2347330D00075816 /* MeetingCell.swift */,
+				E511CFF4234ACE5800807CAF /* MinutesCell.swift */,
 				E525261A234911070003B575 /* MoreCell.swift */,
 			);
 			path = Cells;
@@ -146,6 +151,7 @@
 			children = (
 				E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */,
 				E511CFF0234A8FC300807CAF /* MeetingsDetailViewController.swift */,
+				E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */,
 				E52E43D5234854CA00DF9D5B /* MoreViewController.swift */,
 			);
 			path = Controllers;
@@ -360,7 +366,9 @@
 				E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
 				E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */,
+				E511CFF5234ACE5800807CAF /* MinutesCell.swift in Sources */,
 				E525261B234911070003B575 /* MoreCell.swift in Sources */,
+				E511CFF3234ACD8D00807CAF /* MinutesViewController.swift in Sources */,
 				E511CFEF234A8EE700807CAF /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
