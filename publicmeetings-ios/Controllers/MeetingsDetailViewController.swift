@@ -26,11 +26,11 @@ class MeetingsDetailViewController: UIViewController {
     }
     
     //MARK: - Setup and Layout
-    func setupView() {
+    private func setupView() {
         view.addSubview(meetingsDetail)
     }
     
-    func setupLayout() {
+    private func setupLayout() {
         NSLayoutConstraint.activate([
             meetingsDetail.topAnchor.constraint(equalTo: view.topAnchor),
             meetingsDetail.leadingAnchor.constraint(equalTo: view.leadingAnchor),
