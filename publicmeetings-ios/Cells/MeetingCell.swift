@@ -22,10 +22,12 @@ class MeetingCell: UITableViewCell {
     var reminder: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "calendar.badge.plus"), for: .normal)
+        button.setImage(UIImage(systemName: "calendar"), for: .normal)
         button.tintColor = .black
         return button
     }()
+    
+    var meetingAdded: Bool = false
     
     //MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -71,7 +73,12 @@ class MeetingCell: UITableViewCell {
         
     //MARK: - Actions
     @objc func reminderTapped(sender: UIButton) {
-        guard let name = name.text else { return }
-        print("\(name) button tapped")
+        meetingAdded = !meetingAdded
+        
+        if meetingAdded {
+             sender.setImage(UIImage(systemName: "calendar.badge.plus"), for: .normal)
+        } else {
+             sender.setImage(UIImage(systemName: "calendar"), for: .normal)
+        }
     }
 }
