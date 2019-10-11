@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeetingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MeetingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BadgeDelegate {
 
     //MARK: - Properties
     var meetingLocality: UISegmentedControl = {
@@ -29,7 +29,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         //Temporary - Proof of concept only
         tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "devictBlue")
-        tabBarController?.tabBar.items?[0].badgeValue = "3"
+        tabBarController?.tabBar.items?[0].badgeValue = "0"
 
         setupView()
         setupLayout()
@@ -50,6 +50,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let row = indexPath.row
         let backColor: UIColor = row % 2 == 0 ? .white : .systemGray6
         
+
+        cell.badgeDelegate = self
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
         cell.backgroundColor = backColor
@@ -66,7 +68,21 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45.0
     }
-        
+    
+    //MARK: - BadgeDelegate 
+    func incrementBadgeValue(item: Int) {
+        guard let currentBadgeValue = tabBarController?.tabBar.items![item].badgeValue else { return }
+        let currentValue: Int = Int(currentBadgeValue) ?? 0
+        tabBarController?.tabBar.items![item].badgeValue = String(currentValue + 1)
+    }
+    
+    func decrementBadgeValue(item: Int) {
+        guard let currentBadgeValue = tabBarController?.tabBar.items![item].badgeValue else { return }
+        let currentValue: Int = Int(currentBadgeValue) ?? 0
+        if currentValue == 0 { return }
+        tabBarController?.tabBar.items![item].badgeValue = String(currentValue - 1)
+    }
+            
     //MARK: - Setup and Layout
     private func setScreenTitle() {
         DispatchQueue.main.async {

@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol BadgeDelegate: class {
+    func incrementBadgeValue(item: Int)
+    func decrementBadgeValue(item: Int)
+}
+
 class MeetingCell: UITableViewCell {
 
     //MARK: - Properties
@@ -27,7 +32,12 @@ class MeetingCell: UITableViewCell {
         return button
     }()
     
+    weak var badgeDelegate: BadgeDelegate?
+    
     var meetingAdded: Bool = false
+    var badgeCount: Int = 0
+    
+    var tabBarController = TabBarController()
     
     //MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -76,9 +86,13 @@ class MeetingCell: UITableViewCell {
         meetingAdded = !meetingAdded
         
         if meetingAdded {
-             sender.setImage(UIImage(systemName: "calendar.badge.plus"), for: .normal)
+            sender.setImage(UIImage(systemName: "calendar.badge.plus"), for: .normal)
+            badgeDelegate?.incrementBadgeValue(item: 0)
         } else {
-             sender.setImage(UIImage(systemName: "calendar"), for: .normal)
+            sender.setImage(UIImage(systemName: "calendar"), for: .normal)
+            badgeDelegate?.decrementBadgeValue(item: 0)
         }
     }
 }
+
+
