@@ -29,7 +29,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         //Temporary - Proof of concept only
         tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "devictBlue")
-        tabBarController?.tabBar.items?[0].badgeValue = "0"
+        tabBarController?.tabBar.items?[0].badgeValue = nil
 
         setupView()
         setupLayout()
@@ -71,16 +71,35 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - BadgeDelegate 
     func incrementBadgeValue(item: Int) {
-        guard let currentBadgeValue = tabBarController?.tabBar.items![item].badgeValue else { return }
-        let currentValue: Int = Int(currentBadgeValue) ?? 0
+        var currentValue: Int = 0
+        
+        if tabBarController?.tabBar.items![item].badgeValue == "" {
+            currentValue = 0
+        } else {
+            if let cv = Int(tabBarController?.tabBar.items![item].badgeValue ?? "0") {
+                currentValue = cv
+            }
+        }
+        
+        if tabBarController?.tabBar.items![item].badgeValue == nil { currentValue = 0 }
         tabBarController?.tabBar.items![item].badgeValue = String(currentValue + 1)
     }
     
     func decrementBadgeValue(item: Int) {
         guard let currentBadgeValue = tabBarController?.tabBar.items![item].badgeValue else { return }
         let currentValue: Int = Int(currentBadgeValue) ?? 0
-        if currentValue == 0 { return }
+        
+        //Catch unusual badge value
+        if currentValue == 0 {
+             tabBarController?.tabBar.items![item].badgeValue = nil
+             return
+         }
+        
         tabBarController?.tabBar.items![item].badgeValue = String(currentValue - 1)
+        
+        if tabBarController?.tabBar.items![item].badgeValue == "0" {
+            tabBarController?.tabBar.items![item].badgeValue = nil
+        }
     }
             
     //MARK: - Setup and Layout
