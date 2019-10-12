@@ -23,6 +23,7 @@
 		E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */; };
 		E53056CB23516D870030D715 /* government3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53056C923516D870030D715 /* government3x.png */; };
 		E53056CC23516D870030D715 /* government2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53056CA23516D870030D715 /* government2x.png */; };
+		E5445E1923527DDE009A9FF4 /* devict00.png in Resources */ = {isa = PBXBuildFile; fileRef = E5445E1823527DDE009A9FF4 /* devict00.png */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
 		E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36E234431E60070241F /* SceneDelegate.swift */; };
 		E54DA376234431E70070241F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54DA375234431E70070241F /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
 		E53056C923516D870030D715 /* government3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = government3x.png; sourceTree = "<group>"; };
 		E53056CA23516D870030D715 /* government2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = government2x.png; sourceTree = "<group>"; };
+		E5445E1823527DDE009A9FF4 /* devict00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devict00.png; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DA36E234431E60070241F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				E53056CA23516D870030D715 /* government2x.png */,
 				E53056C923516D870030D715 /* government3x.png */,
+				E5445E1823527DDE009A9FF4 /* devict00.png */,
 				E525261823490A150003B575 /* devict-logo.png */,
 			);
 			path = Assets;
@@ -338,6 +341,7 @@
 				E54DA379234431E70070241F /* LaunchScreen.storyboard in Resources */,
 				E54DA376234431E70070241F /* Assets.xcassets in Resources */,
 				E53056CC23516D870030D715 /* government2x.png in Resources */,
+				E5445E1923527DDE009A9FF4 /* devict00.png in Resources */,
 				E525261923490A150003B575 /* devict-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
