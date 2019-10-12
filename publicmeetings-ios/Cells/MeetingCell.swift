@@ -32,6 +32,14 @@ class MeetingCell: UITableViewCell {
         return button
     }()
     
+    var share: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
+        button.tintColor = .black
+        return button
+    }()
+    
     weak var badgeDelegate: BadgeDelegate?
     
     var meetingAdded: Bool = false
@@ -61,6 +69,7 @@ class MeetingCell: UITableViewCell {
     private func setupView() {
         contentView.addSubview(name)
         contentView.addSubview(reminder)
+        contentView.addSubview(share)
     }
     
     private func setupLayout() {
@@ -73,12 +82,18 @@ class MeetingCell: UITableViewCell {
             reminder.centerYAnchor.constraint(equalTo: centerYAnchor),
             reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40.0),
             reminder.widthAnchor.constraint(equalToConstant: 40.0),
-            reminder.heightAnchor.constraint(equalToConstant: 40.0)
+            reminder.heightAnchor.constraint(equalToConstant: 40.0),
+            
+            share.centerYAnchor.constraint(equalTo: centerYAnchor),
+            share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -30.0),
+            share.widthAnchor.constraint(equalToConstant: 40.0),
+            share.heightAnchor.constraint(equalToConstant: 40.0)
         ])
     }
     
     private func setupActions() {
         reminder.addTarget(self, action: #selector(reminderTapped(sender:)), for: .touchUpInside)
+        share.addTarget(self, action: #selector(shareTapped(sender:)), for: .touchUpInside)
     }
         
     //MARK: - Actions
@@ -92,6 +107,10 @@ class MeetingCell: UITableViewCell {
             sender.setImage(UIImage(systemName: "calendar"), for: .normal)
             badgeDelegate?.decrementBadgeValue(item: 0)
         }
+    }
+    
+    @objc func shareTapped(sender: UIButton) {
+        print("shareTapped")
     }
 }
 
