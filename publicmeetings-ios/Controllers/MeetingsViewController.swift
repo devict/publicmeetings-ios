@@ -103,7 +103,11 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
 }
 
 extension MeetingsViewController: BadgeDelegate {
-    //MARK: - BadgeDelegate
+    /** Increment the badgeValue for the tabBar items
+     
+    - Parameter item: The index of the tabBar of the item with the badge.
+    */
+    
     func incrementBadgeValue(item: Int) {
         var currentValue: Int = 0
         
@@ -118,6 +122,11 @@ extension MeetingsViewController: BadgeDelegate {
         if tabBarController?.tabBar.items![item].badgeValue == nil { currentValue = 0 }
         tabBarController?.tabBar.items![item].badgeValue = String(currentValue + 1)
     }
+    
+    /** Decrement the badgeValue for the tabBar items.   If the badgeValue  gets to zero, the badge will be set to nil and not displayed
+     
+    - Parameter item: The index of the tabBar of the item with the badge.
+    */
     
     func decrementBadgeValue(item: Int) {
         guard let currentBadgeValue = tabBarController?.tabBar.items![item].badgeValue else { return }
