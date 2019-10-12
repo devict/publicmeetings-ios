@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeetingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BadgeDelegate {
+class MeetingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
     var meetingLocality: UISegmentedControl = {
@@ -68,39 +68,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45.0
     }
-    
-    //MARK: - BadgeDelegate 
-    func incrementBadgeValue(item: Int) {
-        var currentValue: Int = 0
-        
-        if tabBarController?.tabBar.items![item].badgeValue == "" {
-            currentValue = 0
-        } else {
-            if let cv = Int(tabBarController?.tabBar.items![item].badgeValue ?? "0") {
-                currentValue = cv
-            }
-        }
-        
-        if tabBarController?.tabBar.items![item].badgeValue == nil { currentValue = 0 }
-        tabBarController?.tabBar.items![item].badgeValue = String(currentValue + 1)
-    }
-    
-    func decrementBadgeValue(item: Int) {
-        guard let currentBadgeValue = tabBarController?.tabBar.items![item].badgeValue else { return }
-        let currentValue: Int = Int(currentBadgeValue) ?? 0
-        
-        //Catch unusual badge value
-        if currentValue == 0 {
-             tabBarController?.tabBar.items![item].badgeValue = nil
-             return
-         }
-        
-        tabBarController?.tabBar.items![item].badgeValue = String(currentValue - 1)
-        
-        if tabBarController?.tabBar.items![item].badgeValue == "0" {
-            tabBarController?.tabBar.items![item].badgeValue = nil
-        }
-    }
             
     //MARK: - Setup and Layout
     private func setScreenTitle() {
@@ -132,5 +99,40 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+}
+
+extension MeetingsViewController: BadgeDelegate {
+    //MARK: - BadgeDelegate
+    func incrementBadgeValue(item: Int) {
+        var currentValue: Int = 0
+        
+        if tabBarController?.tabBar.items![item].badgeValue == "" {
+            currentValue = 0
+        } else {
+            if let cv = Int(tabBarController?.tabBar.items![item].badgeValue ?? "0") {
+                currentValue = cv
+            }
+        }
+        
+        if tabBarController?.tabBar.items![item].badgeValue == nil { currentValue = 0 }
+        tabBarController?.tabBar.items![item].badgeValue = String(currentValue + 1)
+    }
+    
+    func decrementBadgeValue(item: Int) {
+        guard let currentBadgeValue = tabBarController?.tabBar.items![item].badgeValue else { return }
+        let currentValue: Int = Int(currentBadgeValue) ?? 0
+        
+        //Catch unusual badge value
+        if currentValue == 0 {
+             tabBarController?.tabBar.items![item].badgeValue = nil
+             return
+         }
+        
+        tabBarController?.tabBar.items![item].badgeValue = String(currentValue - 1)
+        
+        if tabBarController?.tabBar.items![item].badgeValue == "0" {
+            tabBarController?.tabBar.items![item].badgeValue = nil
+        }
     }
 }
