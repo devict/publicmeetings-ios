@@ -67,9 +67,7 @@ class MeetingCell: UITableViewCell {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        contentView.addSubview(name)
-        contentView.addSubview(reminder)
-        contentView.addSubview(share)
+        [name, reminder, share].forEach { contentView.addSubview($0) }
     }
     
     private func setupLayout() {

@@ -50,7 +50,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let row = indexPath.row
         let backColor: UIColor = row % 2 == 0 ? .white : .systemGray6
         
-
         cell.badgeDelegate = self
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
@@ -77,8 +76,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func setupView() {
-        view.addSubview(meetingLocality)
-        view.addSubview(tableView)
+        [meetingLocality, tableView].forEach { view.addSubview($0) }
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
