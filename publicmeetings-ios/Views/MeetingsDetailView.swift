@@ -72,12 +72,10 @@ class MeetingsDetailView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         
         setupView()
         setupLayout()
-        setupActions()
     }
     
     private func setupView() {
         addSubview(mapView)
-
     }
     
     private func setupLayout() {
@@ -86,9 +84,5 @@ class MeetingsDetailView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             mapView.widthAnchor.constraint(equalToConstant: Screen.width),
             mapView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1 * Screen.height * 0.40)
         ])
-    }
-    
-    private func setupActions() {
-
     }
 }

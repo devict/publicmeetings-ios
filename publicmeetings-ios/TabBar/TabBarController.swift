@@ -26,6 +26,7 @@ class TabBarController: UITabBarController {
         let searchImage = UIImage(systemName: "magnifyingglass", withConfiguration: config)
         let moreImage = UIImage(systemName: "ellipsis.circle", withConfiguration: config)
         
+        //MARK: - TabBar item setup
         meetingsViewController.tabBarItem = UITabBarItem(title: "Meetings", image: meetingImage, selectedImage: meetingImage)
         minutesViewController.tabBarItem = UITabBarItem(title: "Minutes", image: minutesImage, selectedImage: minutesImage)
         searchViewController.tabBarItem = UITabBarItem(title: "Search", image: searchImage, selectedImage: searchImage)
