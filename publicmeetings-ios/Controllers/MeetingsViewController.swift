@@ -12,7 +12,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
 
     //MARK: - Properties
     var meetingLocality: UISegmentedControl = {
-        let segmented = UISegmentedControl(items: ["Wichita", "County", "State"])
+        let segmented = UISegmentedControl(items: ["All", "Wichita", "County", "State"])
         segmented.translatesAutoresizingMaskIntoConstraints = false
         segmented.backgroundColor = UIColor(named: "papayaWhip")
         segmented.selectedSegmentIndex = 0
