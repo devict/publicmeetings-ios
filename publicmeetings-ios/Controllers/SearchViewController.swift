@@ -10,9 +10,18 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    var searchView: SearchView = {
+        let view = SearchView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemTeal
+        
+        setupView()
+        setupLayout()
+        setupActions()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,14 +36,23 @@ class SearchViewController: UIViewController {
     }
     
     private func setupView() {
-        
+        view.addSubview(searchView)
     }
     
     private func setupLayout() {
-        
+        NSLayoutConstraint.activate([
+            searchView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
+            searchView.widthAnchor.constraint(equalToConstant: Screen.width),
+            searchView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     private func setupActions() {
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
