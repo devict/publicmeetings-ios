@@ -83,10 +83,8 @@ class MeetingsDetailView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
     private func setupLayout() {
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 0.0),
-            mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mapView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1 * Screen.height * 0.40),
-            mapView.heightAnchor.constraint(equalToConstant: Screen.height * 0.40)
+            mapView.widthAnchor.constraint(equalToConstant: Screen.width),
+            mapView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1 * Screen.height * 0.40)
         ])
     }
     

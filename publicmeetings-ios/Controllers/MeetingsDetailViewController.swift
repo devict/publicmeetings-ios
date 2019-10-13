@@ -33,11 +33,8 @@ class MeetingsDetailViewController: UIViewController {
     private func setupLayout() {
         NSLayoutConstraint.activate([
             meetingsDetail.topAnchor.constraint(equalTo: view.topAnchor),
-            meetingsDetail.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            meetingsDetail.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             meetingsDetail.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            meetingsDetail.heightAnchor.constraint(equalToConstant: view.frame.height),
-            meetingsDetail.widthAnchor.constraint(equalToConstant: view.frame.width)
+            meetingsDetail.widthAnchor.constraint(equalToConstant: Screen.width)
         ])
     }
 }

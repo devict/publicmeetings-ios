@@ -67,8 +67,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     private func setupLayout() {
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 0.0),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.widthAnchor.constraint(equalToConstant: Screen.width),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
