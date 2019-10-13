@@ -88,13 +88,11 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupLayout() {
         NSLayoutConstraint.activate([
             meetingLocality.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
-            meetingLocality.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            meetingLocality.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            meetingLocality.widthAnchor.constraint(equalToConstant: Screen.width),
             meetingLocality.heightAnchor.constraint(equalToConstant: 30.0),
             
             tableView.topAnchor.constraint(equalToSystemSpacingBelow: meetingLocality.bottomAnchor, multiplier: 0.0),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.widthAnchor.constraint(equalToConstant: Screen.width),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
