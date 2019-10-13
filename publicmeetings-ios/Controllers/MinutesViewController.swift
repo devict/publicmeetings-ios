@@ -25,6 +25,10 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         setupLayout()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setScreenTitle()
+    }
+    
     //MARK: - TableView delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         minutes.count
