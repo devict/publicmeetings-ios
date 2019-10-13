@@ -12,8 +12,13 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     //MARK: - Properties
     let moreItems: [String] = ["About","Libraries","Version"]
-
+    
     var tableView = UITableView()
+    
+    var version: String = {
+        let ver: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        return ver
+    }()
     
     //MARK: - ViewController Delegates
     override func viewDidLoad() {
@@ -40,6 +45,11 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         let row = indexPath.row
         
         cell.item.text = moreItems[row]
+        cell.version.text = version
+        
+        guard let itemText = cell.item.text else { return cell }
+        cell.version.isHidden = itemText != "Version"
+        
         return cell
     }
     
@@ -68,7 +78,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 0.0),
             tableView.widthAnchor.constraint(equalToConstant: Screen.width),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
 }
