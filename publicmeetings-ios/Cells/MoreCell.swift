@@ -19,17 +19,30 @@ class MoreCell: UITableViewCell {
         return label
     }()
     
+    var version: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .right
+        label.textColor = .black
+        label.isHidden = true
+        return label
+    }()
+    
     //MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.addSubview(item)
+        [item, version].forEach { contentView.addSubview($0)}
         
         NSLayoutConstraint.activate([
             item.centerYAnchor.constraint(equalTo: centerYAnchor),
             item.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
             item.widthAnchor.constraint(equalToConstant: 200.0),
-            item.heightAnchor.constraint(equalToConstant: 35.0)
+            item.heightAnchor.constraint(equalToConstant: 35.0),
+            
+            version.centerYAnchor.constraint(equalTo: centerYAnchor),
+            version.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40.0),
+            version.widthAnchor.constraint(equalToConstant: 40.0)
         ])
     }
     
