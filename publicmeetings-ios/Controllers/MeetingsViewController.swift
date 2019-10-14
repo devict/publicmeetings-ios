@@ -21,6 +21,9 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     var tableView = UITableView()
     
+    var allMeetings = [Meeting]()
+    var meetings = [Meeting]()
+    
     var names: [String] = ["Zeroth","First","Second","Third","Fourth","Fifth","Sixth","Seventh","Eighth","Ninth","Tenth","Eleventh","Twelvth","Thirteenth","Fourteenth","Fifteenth","Sixteenth","Seventeenth","Eighteenth","Nineteenth"]
     
     //MARK: - ViewController Delegates
@@ -31,8 +34,13 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "devictBlue")
         tabBarController?.tabBar.items?[0].badgeValue = nil
 
+        allMeetings = meetingData()
+        meetings = allMeetings
+        print("vdl: meetings -> \(meetings)")
+        
         setupView()
         setupLayout()
+        setupActions()
         setScreenTitle()
     }
     
@@ -42,7 +50,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - TableView Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return self.meetings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,11 +58,13 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let row = indexPath.row
         let backColor: UIColor = row % 2 == 0 ? .white : .systemGray6
         
+        print("meeting: \(meetings[row].title)")
+        
         cell.badgeDelegate = self
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
         cell.backgroundColor = backColor
-        cell.name.text = names[row]
+        cell.name.text = meetings[row].title
         return cell
     }
     
@@ -67,7 +77,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45.0
     }
-            
+    
     //MARK: - Setup and Layout
     private func setScreenTitle() {
         DispatchQueue.main.async {
@@ -95,6 +105,30 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
             tableView.widthAnchor.constraint(equalToConstant: Screen.width),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    private func setupActions() {
+        meetingLocality.addTarget(self, action: #selector(segmentedValueChanged(sender:)), for: .valueChanged)
+    }
+    
+    //MARK: - Actions
+    @objc func segmentedValueChanged(sender: UISegmentedControl) {
+        guard let location = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
+        print("location --> \(location)")
+        
+        meetings = []
+        
+        if location == "All" {
+            meetings = allMeetings
+        } else {
+            for meeting in allMeetings {
+                if meeting.location == location {
+                    meetings.append(meeting)
+                }
+            }
+        }
+
+        tableView.reloadData()
     }
 }
 
