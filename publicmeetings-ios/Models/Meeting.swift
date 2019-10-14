@@ -14,10 +14,15 @@ enum MeetingType {
 }
 
 struct Meeting {
-    let type: MeetingType
-    let title: String?
-    let description: String?
-    let date: Date?
-    let agenda: String?
-    let location: String?
+    //let type: MeetingType?
+    let title: String
+    //let description: String?
+    //let date: Date?
+    //let agenda: String?
+    let location: String
+    
+    init(title: String, location: String) {
+        self.title = title
+        self.location = location
+    }
 }
