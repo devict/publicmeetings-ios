@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchView: UIView {
+class SearchView: UIView, UISearchBarDelegate {
 
     //MARK: - Properties
     var searchBar: UISearchBar = {
@@ -39,7 +39,9 @@ class SearchView: UIView {
     
     //MARK: - Setup and Layout
     private func setupView() {
-       [searchBar, detailView].forEach { addSubview($0) }
+        [searchBar, detailView].forEach { addSubview($0) }
+        
+        searchBar.delegate = self
     }
      
     private func setupLayout() {
@@ -50,5 +52,9 @@ class SearchView: UIView {
            detailView.widthAnchor.constraint(equalToConstant: Screen.width),
            detailView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+           searchBar.resignFirstResponder()
     }
 }
