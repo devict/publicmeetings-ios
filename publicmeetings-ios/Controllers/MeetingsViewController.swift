@@ -30,13 +30,11 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Temporary - Proof of concept only
         tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "devictBlue")
         tabBarController?.tabBar.items?[0].badgeValue = nil
 
         allMeetings = meetingData()
         meetings = allMeetings
-        print("vdl: meetings -> \(meetings)")
         
         setupView()
         setupLayout()
@@ -57,8 +55,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MeetingCell
         let row = indexPath.row
         let backColor: UIColor = row % 2 == 0 ? .white : .systemGray6
-        
-        print("meeting: \(meetings[row].title)")
         
         cell.badgeDelegate = self
         cell.selectionStyle = .none
@@ -114,8 +110,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: - Actions
     @objc func segmentedValueChanged(sender: UISegmentedControl) {
         guard let location = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
-        print("location --> \(location)")
-        
+          
         meetings = []
         
         if location == "All" {
