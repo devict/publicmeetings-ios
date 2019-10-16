@@ -53,23 +53,25 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     //MARK: - Setup and Layout
-     private func setScreenTitle() {
-         DispatchQueue.main.async {
-             self.tabBarController?.navigationItem.title = "Minutes"
-         }
-     }
+    private func setScreenTitle() {
+        DispatchQueue.main.async {
+            self.tabBarController?.navigationItem.title = "Minutes"
+        }
+    }
      
-     private func setupView() {
-         view.addSubview(tableView)
-         view.backgroundColor = .systemGray6
+    private func setupView() {
+        view.addSubview(tableView)
+        view.backgroundColor = .systemGray6
 
-         tableView.translatesAutoresizingMaskIntoConstraints = false
-         tableView.delegate = self
-         tableView.dataSource = self
-         tableView.register(MinutesCell.self, forCellReuseIdentifier: "minutesCell")
-         tableView.tableFooterView = UIView()
-         tableView.clipsToBounds = false
-     }
+        tableView.backgroundColor = .clear
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.register(MinutesCell.self, forCellReuseIdentifier: "minutesCell")
+        tableView.tableFooterView = UIView()
+        tableView.clipsToBounds = false
+    }
      
      private func setupLayout() {
          NSLayoutConstraint.activate([
