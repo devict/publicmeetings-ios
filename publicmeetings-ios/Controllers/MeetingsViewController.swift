@@ -54,12 +54,10 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MeetingCell
         let row = indexPath.row
-        let backColor: UIColor = row % 2 == 0 ? .white : .systemGray6
         
         cell.badgeDelegate = self
         cell.selectionStyle = .none
-        cell.accessoryType = .disclosureIndicator
-        cell.backgroundColor = backColor
+        cell.backgroundColor = .white
         cell.name.text = meetings[row].title
 
         return cell
@@ -92,6 +90,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.register(MeetingCell.self, forCellReuseIdentifier: "cell")
         tableView.tableFooterView = UIView()
     }
