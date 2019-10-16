@@ -25,6 +25,17 @@ class MinutesCell: UITableViewCell {
             
         setupView()
         setupLayout()
+        
+        backgroundColor = .clear
+        layer.masksToBounds = false
+        layer.shadowOpacity = 0.23
+        layer.shadowRadius = 4
+        layer.cornerRadius = 12.0
+        layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
+        layer.shadowColor = UIColor.black.cgColor
+
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 12.0
     }
     
     required init?(coder aDecoder: NSCoder) {
