@@ -54,6 +54,16 @@ class MeetingCell: UITableViewCell {
         setupView()
         setupLayout()
         setupActions()
+        
+        backgroundColor = .clear
+        //layer.masksToBounds = false
+        layer.shadowOpacity = 0.23
+        layer.shadowRadius = 4
+        layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
+        layer.shadowColor = UIColor.black.cgColor
+
+        contentView.backgroundColor = .white
+        //contentView.layer.cornerRadius = 12
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -77,13 +87,13 @@ class MeetingCell: UITableViewCell {
             name.widthAnchor.constraint(equalToConstant: 200.0),
             name.heightAnchor.constraint(equalToConstant: 35.0),
             
-            reminder.centerYAnchor.constraint(equalTo: centerYAnchor),
+            reminder.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
             reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40.0),
             reminder.widthAnchor.constraint(equalToConstant: 40.0),
             reminder.heightAnchor.constraint(equalToConstant: 40.0),
             
-            share.centerYAnchor.constraint(equalTo: centerYAnchor),
-            share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -30.0),
+            share.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
+            share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -10.0),
             share.widthAnchor.constraint(equalToConstant: 40.0),
             share.heightAnchor.constraint(equalToConstant: 40.0)
         ])
