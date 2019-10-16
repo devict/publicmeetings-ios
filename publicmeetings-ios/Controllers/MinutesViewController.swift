@@ -19,8 +19,6 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        
         setupView()
         setupLayout()
     }
@@ -39,7 +37,7 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let row = indexPath.row
         
         cell.selectionStyle = .none
-        cell.backgroundColor = .white
+        cell.backgroundColor = .clear
         cell.minutes.text = minutes[row]
     
         return cell
@@ -63,19 +61,21 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
      
      private func setupView() {
          view.addSubview(tableView)
+         view.backgroundColor = .systemGray6
 
          tableView.translatesAutoresizingMaskIntoConstraints = false
          tableView.delegate = self
          tableView.dataSource = self
          tableView.register(MinutesCell.self, forCellReuseIdentifier: "minutesCell")
          tableView.tableFooterView = UIView()
+         tableView.clipsToBounds = false
      }
      
      private func setupLayout() {
          NSLayoutConstraint.activate([
              tableView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 5.0),
-             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10.0),
-             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10.0),
+             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15.0),
              tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
          ])
      }
