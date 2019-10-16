@@ -48,7 +48,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - TableView Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.meetings.count
+        return meetings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,6 +89,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         view.backgroundColor = .systemGray6
         
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self

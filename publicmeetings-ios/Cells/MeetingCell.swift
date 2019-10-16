@@ -54,17 +54,7 @@ class MeetingCell: UITableViewCell {
         setupView()
         setupLayout()
         setupActions()
-        
-        backgroundColor = .clear
-        layer.masksToBounds = false
-        layer.shadowOpacity = 0.23
-        layer.shadowRadius = 4
-        layer.cornerRadius = 12.0
-        layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
-        layer.shadowColor = UIColor.black.cgColor
-
-        contentView.backgroundColor = .white
-        contentView.layer.cornerRadius = 12.0
+        setupShadow()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -103,6 +93,20 @@ class MeetingCell: UITableViewCell {
     private func setupActions() {
         reminder.addTarget(self, action: #selector(reminderTapped(sender:)), for: .touchUpInside)
         share.addTarget(self, action: #selector(shareTapped(sender:)), for: .touchUpInside)
+    }
+    
+    private func setupShadow() {
+        backgroundColor = .clear
+        
+        layer.masksToBounds = false
+        layer.shadowOpacity = 0.23
+        layer.shadowRadius = 4
+        layer.cornerRadius = 12.0
+        layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        layer.shadowColor = UIColor.black.cgColor
+
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 12.0
     }
         
     //MARK: - Actions
