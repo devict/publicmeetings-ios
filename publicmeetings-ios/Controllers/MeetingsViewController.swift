@@ -87,6 +87,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupView() {
         [meetingLocality, tableView].forEach { view.addSubview($0) }
         
+        view.backgroundColor = .systemGray6
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -102,7 +104,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
             meetingLocality.heightAnchor.constraint(equalToConstant: 30.0),
             
             tableView.topAnchor.constraint(equalToSystemSpacingBelow: meetingLocality.bottomAnchor, multiplier: 0.0),
-            tableView.widthAnchor.constraint(equalToConstant: Screen.width),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15.0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
