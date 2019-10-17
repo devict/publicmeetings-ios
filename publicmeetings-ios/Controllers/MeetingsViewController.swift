@@ -59,6 +59,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.selectionStyle = .none
         cell.backgroundColor = .white
         cell.name.text = meetings[row].title
+        cell.desc.text = meetings[row].description
+        cell.meetingDate.text = meetings[row].date?.description
 
         return cell
     }
@@ -74,7 +76,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 130.0
     }
     
     //MARK: - Setup and Layout
@@ -101,7 +103,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupLayout() {
         NSLayoutConstraint.activate([
             meetingLocality.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
-            meetingLocality.widthAnchor.constraint(equalToConstant: Screen.width),
+            meetingLocality.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            meetingLocality.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             meetingLocality.heightAnchor.constraint(equalToConstant: 30.0),
             
             tableView.topAnchor.constraint(equalToSystemSpacingBelow: meetingLocality.bottomAnchor, multiplier: 0.0),

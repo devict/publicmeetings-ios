@@ -24,6 +24,24 @@ class MeetingCell: UITableViewCell {
         return label
     }()
     
+    var desc: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .left
+        return label
+    }()
+    
+    var meetingDate: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .left
+        label.font = UIFont(name: "AvenirNext-Regular", size: 10.0)
+        label.textAlignment = .right
+        return label
+    }()
+    
     var reminder: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -68,15 +86,24 @@ class MeetingCell: UITableViewCell {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        [name, reminder, share].forEach { contentView.addSubview($0) }
+        [name, desc, meetingDate, reminder, share].forEach { contentView.addSubview($0) }
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            name.centerYAnchor.constraint(equalTo: centerYAnchor),
+            name.topAnchor.constraint(equalTo: topAnchor, constant: 3.0),
             name.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
             name.widthAnchor.constraint(equalToConstant: 200.0),
             name.heightAnchor.constraint(equalToConstant: 35.0),
+            
+            meetingDate.centerYAnchor.constraint(equalTo: name.centerYAnchor),
+            meetingDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25.0),
+            meetingDate.widthAnchor.constraint(equalToConstant: 70.0),
+            
+            desc.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 2.0),
+            desc.leadingAnchor.constraint(equalTo: name.leadingAnchor),
+            desc.widthAnchor.constraint(equalToConstant: 300.0),
+            desc.heightAnchor.constraint(equalToConstant: 35.0),
             
             reminder.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
             reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40.0),
@@ -100,7 +127,6 @@ class MeetingCell: UITableViewCell {
         
         layer.masksToBounds = false
         layer.shadowOpacity = 0.23
-        layer.shadowRadius = 4
         layer.cornerRadius = 12.0
         layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
         layer.shadowColor = UIColor.black.cgColor

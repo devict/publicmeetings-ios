@@ -25,6 +25,7 @@ class MinutesCell: UITableViewCell {
             
         setupView()
         setupLayout()
+        setupShadow()
     }
     
     required init?(coder aDecoder: NSCoder) {
