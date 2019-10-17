@@ -10,36 +10,54 @@ import Foundation
 
 func meetingData() -> [Meeting] {
     var meetings = [Meeting]()
+    var meeting: Meeting
     
-    var meeting = Meeting(title: "Mayor's meeting (0)", location: "Wichita")
+    meeting = Meeting(title: "City Council", description: "City council's meeting", location: "Wichita")
     meetings.append(meeting)
-    meeting = Meeting(title: "Sedgwick County (0)", location: "County")
+
+    meeting = Meeting(title: "Town Hall", description: "Wichita Town Hall", location: "Wichita")
     meetings.append(meeting)
-    meeting = Meeting(title: "State meeting (0)", location: "State")
+
+    meeting = Meeting(title: "City Planning", description: "Discuss planning and zoning laws", location: "Wichita")
     meetings.append(meeting)
-    meeting = Meeting(title: "Mayor's meeting (1)", location: "Wichita")
+
+    meeting = Meeting(title: "State Wellness Planning", description: "Discuss health and human services", location: "State")
     meetings.append(meeting)
-    meeting = Meeting(title: "Sedgwick County (1)", location: "County")
+   
+    meeting = Meeting(title: "County ", description: "City council's meeting", location: "County")
     meetings.append(meeting)
-    meeting = Meeting(title: "State meeting (1)", location: "State")
+
+    meeting = Meeting(title: "Special elections", description: "Election runoff discussion", location: "County")
     meetings.append(meeting)
-    meeting = Meeting(title: "Mayor's meeting (2)", location: "Wichita")
+    
+    meeting = Meeting(title: "State planning board", description: "Meeting of the state planners", location: "State")
     meetings.append(meeting)
-    meeting = Meeting(title: "Sedgwick County (2)", location: "County")
+
+    meeting = Meeting(title: "County planning board", description: "Meeting of the state planners", location: "County")
     meetings.append(meeting)
-    meeting = Meeting(title: "State meeting (2)", location: "State")
+
+    meeting = Meeting(title: "Wichita planning board", description: "Meeting of the state planners", location: "Wichita")
     meetings.append(meeting)
-    meeting = Meeting(title: "Mayor's meeting (3)", location: "Wichita")
+
+    meeting = Meeting(title: "Town Hall", description: "Wichita Town Hall", location: "Wichita")
     meetings.append(meeting)
-    meeting = Meeting(title: "Sedgwick County (3)", location: "County")
+
+    meeting = Meeting(title: "State planning board", description: "Meeting of the state planners", location: "State")
     meetings.append(meeting)
-    meeting = Meeting(title: "State meeting (3)", location: "State")
+
+    meeting = Meeting(title: "Wichita Board", description: "Meeting of the Board", location: "Wichita")
     meetings.append(meeting)
-    meeting = Meeting(title: "Mayor's meeting (4)", location: "Wichita")
+   
+    meeting = Meeting(title: "General elections", description: "General election meeting", location: "State")
     meetings.append(meeting)
-    meeting = Meeting(title: "Sedgwick County (4)", location: "County")
+
+    meeting = Meeting(title: "Primary elections", description: "Primary election meeting", location: "State")
     meetings.append(meeting)
-    meeting = Meeting(title: "State meeting (4)", location: "State")
+    
+    meeting = Meeting(title: "School Board", description: "Discuss local education policy", location: "Wichita")
     meetings.append(meeting)
+
     return meetings
 }
+
+
