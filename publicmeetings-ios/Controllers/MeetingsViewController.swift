@@ -89,7 +89,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupView() {
         [meetingLocality, tableView].forEach { view.addSubview($0) }
         
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .white
         
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
