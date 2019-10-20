@@ -10,6 +10,15 @@ import UIKit
 
 class MinutesCell: UITableViewCell {
 
+    var view: UIView = {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .white
+        v.layer.borderColor = UIColor.black.cgColor
+        v.layer.borderWidth = 0.3
+        return v
+    }()
+    
     var minutes: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +34,6 @@ class MinutesCell: UITableViewCell {
             
         setupView()
         setupLayout()
-        setupShadow()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,30 +46,20 @@ class MinutesCell: UITableViewCell {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        contentView.addSubview(minutes)
+        [view, minutes].forEach { contentView.addSubview($0) }
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            minutes.centerYAnchor.constraint(equalTo: centerYAnchor),
-            minutes.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
+            view.topAnchor.constraint(equalTo: topAnchor, constant: 3.0),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 3.0),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3.0),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3.0),
+            
+            minutes.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            minutes.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             minutes.widthAnchor.constraint(equalToConstant: 200.0),
             minutes.heightAnchor.constraint(equalToConstant: 35.0)
         ])
-    }
-    
-    private func setupShadow() {
-        backgroundColor = .clear
-        
-        layer.masksToBounds = false
-        layer.shadowOpacity = 0.23
-        layer.shadowRadius = 4
-        layer.cornerRadius = 12.0
-        layer.shadowOffset = CGSize(width: 6.0, height: 6.0)
-        layer.shadowColor = UIColor.black.cgColor
-
-        contentView.backgroundColor = .white
-        contentView.layer.cornerRadius = 12.0
-        contentView.clipsToBounds = false
     }
 }
