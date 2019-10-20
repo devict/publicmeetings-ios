@@ -23,6 +23,8 @@ class MeetingCell: UITableViewCell {
         v.backgroundColor = .white
         v.layer.borderColor = UIColor.black.cgColor
         v.layer.borderWidth = 0.3
+        v.layer.cornerRadius = 8.0
+        v.clipsToBounds = true
         return v
     }()
     
