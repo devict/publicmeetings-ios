@@ -16,6 +16,16 @@ protocol BadgeDelegate: class {
 class MeetingCell: UITableViewCell {
 
     //MARK: - Properties
+    
+    var view: UIView = {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .white
+        v.layer.borderColor = UIColor.black.cgColor
+        v.layer.borderWidth = 0.3
+        return v
+    }()
+    
     var name: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -72,7 +82,6 @@ class MeetingCell: UITableViewCell {
         setupView()
         setupLayout()
         setupActions()
-        setupShadow()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -86,13 +95,18 @@ class MeetingCell: UITableViewCell {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        [name, desc, meetingDate, reminder, share].forEach { contentView.addSubview($0) }
+        [view, name, desc, meetingDate, reminder, share].forEach { contentView.addSubview($0) }
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            name.topAnchor.constraint(equalTo: topAnchor, constant: 3.0),
-            name.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
+            view.topAnchor.constraint(equalTo: topAnchor, constant: 3.0),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 3.0),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3.0),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3.0),
+            
+            name.topAnchor.constraint(equalTo: view.topAnchor, constant: 3.0),
+            name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             name.widthAnchor.constraint(equalToConstant: 200.0),
             name.heightAnchor.constraint(equalToConstant: 35.0),
             
@@ -122,19 +136,6 @@ class MeetingCell: UITableViewCell {
         share.addTarget(self, action: #selector(shareTapped(sender:)), for: .touchUpInside)
     }
     
-    private func setupShadow() {
-        backgroundColor = .clear
-        
-        layer.masksToBounds = false
-        layer.shadowOpacity = 0.23
-        layer.cornerRadius = 12.0
-        layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-        layer.shadowColor = UIColor.black.cgColor
-
-        contentView.backgroundColor = .white
-        contentView.layer.cornerRadius = 12.0
-    }
-        
     //MARK: - Actions
     @objc func reminderTapped(sender: UIButton) {
         meetingAdded = !meetingAdded
