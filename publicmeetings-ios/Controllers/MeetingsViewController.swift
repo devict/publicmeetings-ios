@@ -14,7 +14,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     var meetingLocality: UISegmentedControl = {
         let segmented = UISegmentedControl(items: ["All", "Wichita", "County", "State"])
         segmented.translatesAutoresizingMaskIntoConstraints = false
-        segmented.backgroundColor = UIColor(named: "papayaWhip")
+        segmented.backgroundColor = UIColor(named: "softBlue")
         segmented.selectedSegmentIndex = 0
         return segmented
     }()
@@ -107,7 +107,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
             meetingLocality.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             meetingLocality.heightAnchor.constraint(equalToConstant: 30.0),
             
-            tableView.topAnchor.constraint(equalToSystemSpacingBelow: meetingLocality.bottomAnchor, multiplier: 0.0),
+            tableView.topAnchor.constraint(equalToSystemSpacingBelow: meetingLocality.bottomAnchor, multiplier: 1.0),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15.0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
