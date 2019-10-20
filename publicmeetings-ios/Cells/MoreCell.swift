@@ -16,6 +16,7 @@ class MoreCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .left
+        label.font = Standard.font
         return label
     }()
     
@@ -25,6 +26,7 @@ class MoreCell: UITableViewCell {
         label.textAlignment = .right
         label.textColor = .black
         label.isHidden = true
+        label.font = Standard.font
         return label
     }()
     

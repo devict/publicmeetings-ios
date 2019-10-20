@@ -34,6 +34,7 @@
 		E54DA384234431E70070241F /* publicmeetings_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA383234431E70070241F /* publicmeetings_iosTests.swift */; };
 		E54DA38F234431E70070241F /* publicmeetings_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */; };
 		E55F53B723462E2700200F10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55F53B623462E2700200F10 /* Colors.xcassets */; };
+		E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56077AA235C9AEB003D8F26 /* StandardValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicmeetings_iosUITests.swift; sourceTree = "<group>"; };
 		E54DA390234431E70070241F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E55F53B623462E2700200F10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E56077AA235C9AEB003D8F26 /* StandardValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				E511CFEC234A8EE700807CAF /* Accuracy.swift */,
 				E511CFED234A8EE700807CAF /* Screen.swift */,
+				E56077AA235C9AEB003D8F26 /* StandardValues.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			files = (
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
+				E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */,
 				E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */,
 				E511CFEA234A8D4800807CAF /* MeetingsDetailView.swift in Sources */,
 				E54DA36D234431E60070241F /* AppDelegate.swift in Sources */,
