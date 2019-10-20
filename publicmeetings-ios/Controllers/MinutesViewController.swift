@@ -61,7 +61,7 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
      
     private func setupView() {
         view.addSubview(tableView)
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .white
 
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
