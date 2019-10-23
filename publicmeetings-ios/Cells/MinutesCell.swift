@@ -16,7 +16,6 @@ class MinutesCell: UITableViewCell {
         v.backgroundColor = .white
         v.layer.borderColor = UIColor.black.cgColor
         v.layer.borderWidth = 0.3
-        v.layer.cornerRadius = Standard.cornerRadius
         v.clipsToBounds = true
         return v
     }()
