@@ -44,7 +44,8 @@ class MoreCell: UITableViewCell {
             
             version.centerYAnchor.constraint(equalTo: centerYAnchor),
             version.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40.0),
-            version.widthAnchor.constraint(equalToConstant: 40.0)
+            version.widthAnchor.constraint(equalToConstant: 40.0),
+            version.heightAnchor.constraint(equalToConstant: 35.0)
         ])
     }
     

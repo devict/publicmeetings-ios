@@ -23,7 +23,6 @@ class MeetingCell: UITableViewCell {
         v.backgroundColor = .white
         v.layer.borderColor = UIColor.black.cgColor
         v.layer.borderWidth = 0.3
-        v.layer.cornerRadius = Standard.cornerRadius
         v.clipsToBounds = true
         return v
     }()
@@ -51,7 +50,7 @@ class MeetingCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont(name: "AvenirNext-Regular", size: 10.0)
+        label.font = UIFont(name: "Damascus", size: 10.0)
         label.textAlignment = .right
         return label
     }()
@@ -100,6 +99,7 @@ class MeetingCell: UITableViewCell {
     //MARK: - Setup and Layout
     private func setupView() {
         [view, name, desc, meetingDate, reminder, share].forEach { contentView.addSubview($0) }
+        backgroundColor = .clear
     }
     
     private func setupLayout() {
@@ -117,6 +117,7 @@ class MeetingCell: UITableViewCell {
             meetingDate.centerYAnchor.constraint(equalTo: name.centerYAnchor),
             meetingDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25.0),
             meetingDate.widthAnchor.constraint(equalToConstant: 70.0),
+            meetingDate.heightAnchor.constraint(equalToConstant: 20.0),
             
             desc.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 2.0),
             desc.leadingAnchor.constraint(equalTo: name.leadingAnchor),

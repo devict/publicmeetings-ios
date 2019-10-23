@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rootViewController = TabBarController()
         navigationController = UINavigationController()
         navigationController?.viewControllers = [rootViewController]
-        navigationController?.navigationBar.barTintColor = UIColor(named: "papayaWhip")
+        navigationController?.navigationBar.barTintColor = UIColor(named: "devictOrange")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)

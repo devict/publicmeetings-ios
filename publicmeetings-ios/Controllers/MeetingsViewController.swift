@@ -14,7 +14,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     var meetingLocality: UISegmentedControl = {
         let segmented = UISegmentedControl(items: ["All", "Wichita", "County", "State"])
         segmented.translatesAutoresizingMaskIntoConstraints = false
-        segmented.backgroundColor = UIColor(named: "softBlue")
+        segmented.backgroundColor = UIColor(named: "devictBlue")
         segmented.selectedSegmentIndex = 0
         return segmented
     }()
@@ -57,7 +57,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.badgeDelegate = self
         cell.selectionStyle = .none
-        cell.backgroundColor = .white
+        cell.backgroundColor = .clear
         cell.name.text = meetings[row].title
         cell.desc.text = meetings[row].description
         cell.meetingDate.text = meetings[row].date?.description
@@ -89,14 +89,15 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupView() {
         [meetingLocality, tableView].forEach { view.addSubview($0) }
         
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "devictTan")
         
-        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(MeetingCell.self, forCellReuseIdentifier: "cell")
+        tableView.backgroundColor = .clear
+        
         tableView.tableFooterView = UIView()
     }
     
@@ -146,7 +147,7 @@ extension MeetingsViewController: BadgeDelegate {
     
     func incrementBadgeValue(item: Int) {
         var currentValue: Int = 0
-        
+    
         if tabBarController?.tabBar.items![item].badgeValue == "" {
             currentValue = 0
         } else {
