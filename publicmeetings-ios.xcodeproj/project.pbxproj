@@ -26,6 +26,7 @@
 		E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */; };
 		E53056CB23516D870030D715 /* government3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53056C923516D870030D715 /* government3x.png */; };
 		E53056CC23516D870030D715 /* government2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53056CA23516D870030D715 /* government2x.png */; };
+		E53623B5236131F100020413 /* WebViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53623B4236131F100020413 /* WebViewer.swift */; };
 		E5445E1923527DDE009A9FF4 /* devict00.png in Resources */ = {isa = PBXBuildFile; fileRef = E5445E1823527DDE009A9FF4 /* devict00.png */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
 		E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36E234431E60070241F /* SceneDelegate.swift */; };
@@ -74,6 +75,7 @@
 		E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
 		E53056C923516D870030D715 /* government3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = government3x.png; sourceTree = "<group>"; };
 		E53056CA23516D870030D715 /* government2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = government2x.png; sourceTree = "<group>"; };
+		E53623B4236131F100020413 /* WebViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewer.swift; sourceTree = "<group>"; };
 		E5445E1823527DDE009A9FF4 /* devict00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devict00.png; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		E53623B3236131E100020413 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				E53623B4236131F100020413 /* WebViewer.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		E54DA360234431E60070241F = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 		E54DA36B234431E60070241F /* publicmeetings-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E53623B3236131E100020413 /* WebView */,
 				E522685A23540D7C0036163B /* Utils */,
 				E511CFEB234A8EB100807CAF /* Constants */,
 				E51FA4A52344DF88005C5091 /* TabBar */,
@@ -397,6 +408,7 @@
 				E52268532353945F0036163B /* SearchView.swift in Sources */,
 				E511CFF1234A8FC300807CAF /* MeetingsDetailViewController.swift in Sources */,
 				E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */,
+				E53623B5236131F100020413 /* WebViewer.swift in Sources */,
 				E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
 				E52958822353145A00E1F2D7 /* SearchViewController.swift in Sources */,
