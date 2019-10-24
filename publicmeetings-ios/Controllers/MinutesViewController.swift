@@ -52,7 +52,7 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let url = "https://docs.google.com/viewerng/viewer?url=https://granicus_production_attachments.s3.amazonaws.com/wichitaks/dff8c7302aef7a827c09b81310ff11ce0.pdf"
+        let url = "https://granicus_production_attachments.s3.amazonaws.com/wichitaks/dff8c7302aef7a827c09b81310ff11ce0.pdf"
         
         let viewController = WebViewer()
         viewController.pdfUrl = url
