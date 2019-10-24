@@ -36,7 +36,8 @@
 		E54DA38F234431E70070241F /* publicmeetings_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */; };
 		E55F53B723462E2700200F10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55F53B623462E2700200F10 /* Colors.xcassets */; };
 		E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56077AA235C9AEB003D8F26 /* StandardValues.swift */; };
-		E56A792D2361DE5A001376EC /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A792C2361DE5A001376EC /* AgendaViewController.swift */; };
+		E56A792F2361E126001376EC /* AgendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A792E2361E126001376EC /* AgendasViewController.swift */; };
+		E56A79312361E137001376EC /* AgendasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A79302361E137001376EC /* AgendasCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,8 @@
 		E54DA390234431E70070241F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E55F53B623462E2700200F10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E56077AA235C9AEB003D8F26 /* StandardValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardValues.swift; sourceTree = "<group>"; };
-		E56A792C2361DE5A001376EC /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		E56A792E2361E126001376EC /* AgendasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendasViewController.swift; sourceTree = "<group>"; };
+		E56A79302361E137001376EC /* AgendasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendasCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				E514FAAB2347330D00075816 /* MeetingCell.swift */,
 				E511CFF4234ACE5800807CAF /* MinutesCell.swift */,
+				E56A79302361E137001376EC /* AgendasCell.swift */,
 				E525261A234911070003B575 /* MoreCell.swift */,
 			);
 			path = Cells;
@@ -172,7 +175,7 @@
 				E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */,
 				E511CFF0234A8FC300807CAF /* MeetingsDetailViewController.swift */,
 				E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */,
-				E56A792C2361DE5A001376EC /* AgendaViewController.swift */,
+				E56A792E2361E126001376EC /* AgendasViewController.swift */,
 				E52E43D5234854CA00DF9D5B /* MoreViewController.swift */,
 				E52958812353145A00E1F2D7 /* SearchViewController.swift */,
 			);
@@ -401,12 +404,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56A792F2361E126001376EC /* AgendasViewController.swift in Sources */,
+				E56A79312361E137001376EC /* AgendasCell.swift in Sources */,
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
 				E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */,
 				E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */,
 				E511CFEA234A8D4800807CAF /* MeetingsDetailView.swift in Sources */,
-				E56A792D2361DE5A001376EC /* AgendaViewController.swift in Sources */,
 				E54DA36D234431E60070241F /* AppDelegate.swift in Sources */,
 				E511CFEE234A8EE700807CAF /* Accuracy.swift in Sources */,
 				E52268532353945F0036163B /* SearchView.swift in Sources */,

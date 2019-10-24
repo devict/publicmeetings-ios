@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
         //MARK: - Properties
         let meetingsViewController = MeetingsViewController()
         let minutesViewController = MinutesViewController()
-        let agendaViewController = AgendaViewController()
+        let agendaViewController = AgendasViewController()
         let searchViewController = SearchViewController()
         let moreViewController = MoreViewController()
          
