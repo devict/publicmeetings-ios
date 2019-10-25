@@ -14,17 +14,23 @@ enum MeetingType {
 }
 
 struct Meeting {
-
     var title: String
     var description: String
-    var date: Date?
+    var date: String
+    var address: String
     var location: String
+    var city: String
     
-    init(title: String = "", description: String = "", location: String) {
+    
+    //FIXME: - Making date a string for until we have a data feed.
+    //FIXME: - Also, address information will neeed to come from feed.
+    init(title: String = "", description: String = "", date: String) {
         self.title = title
         self.description = description
-        self.location = location
-        self.date = generateFutureDate()
+        self.date = date
+        self.address = "455​ N Main"
+        self.location = "1st Floor"
+        self.city = "Wichita"
     }
 
     func generateFutureDate() -> Date {

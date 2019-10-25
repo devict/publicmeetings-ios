@@ -12,49 +12,62 @@ func meetingData() -> [Meeting] {
     var meetings = [Meeting]()
     var meeting: Meeting
     
-    meeting = Meeting(title: "City Council", description: "City council's meeting", location: "Wichita")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "Town Hall", description: "Wichita Town Hall", location: "Wichita")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "City Planning", description: "Discuss planning and zoning laws", location: "Wichita")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "State Wellness Planning", description: "Discuss health and human services", location: "State")
-    meetings.append(meeting)
-   
-    meeting = Meeting(title: "County ", description: "City council's meeting", location: "County")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "Special elections", description: "Election runoff discussion", location: "County")
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "08/06/2019")
     meetings.append(meeting)
     
-    meeting = Meeting(title: "State planning board", description: "Meeting of the state planners", location: "State")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "County planning board", description: "Meeting of the state planners", location: "County")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "Wichita planning board", description: "Meeting of the state planners", location: "Wichita")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "Town Hall", description: "Wichita Town Hall", location: "Wichita")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "State planning board", description: "Meeting of the state planners", location: "State")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "Wichita Board", description: "Meeting of the Board", location: "Wichita")
-    meetings.append(meeting)
-   
-    meeting = Meeting(title: "General elections", description: "General election meeting", location: "State")
-    meetings.append(meeting)
-
-    meeting = Meeting(title: "Primary elections", description: "Primary election meeting", location: "State")
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "08/13/2019")
     meetings.append(meeting)
     
-    meeting = Meeting(title: "School Board", description: "Discuss local education policy", location: "Wichita")
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "08/20/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Consent workshop", date: "08/27/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "09/03/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "09/10/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "09/17/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Consent workshop", date: "09/22/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "10/01/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "10/08/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "10/15/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Consent workshop", date: "10/22/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "11/05/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "11/12/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "11/19/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Consent workshop", date: "11/26/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "12/03/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "12/10/2019")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "12/17/2019")
     meetings.append(meeting)
 
     return meetings
