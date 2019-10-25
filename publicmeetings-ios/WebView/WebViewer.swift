@@ -11,22 +11,21 @@ import SafariServices
 
 class WebViewer: UIViewController, SFSafariViewControllerDelegate {
 
-    var pdfUrl: String = ""
+    var documentUrl: String = ""
     var viewController = UIViewController()
-    var meetingsWebsite: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Minutes"
         
-        if !pdfUrl.isEmpty {
-            openPDFPage()
+        if !documentUrl.isEmpty {
+            openUrl(url: documentUrl)
         }
     }
     
-    func openPDFPage() {
-        if let url = URL(string: pdfUrl) {
+    func openUrl(url: String) {
+        if let url = URL(string: url) {
             let config = SFSafariViewController.Configuration()
             config.entersReaderIfAvailable = true
             
@@ -37,7 +36,7 @@ class WebViewer: UIViewController, SFSafariViewControllerDelegate {
                 self.present(viewController, animated: false)
             }
         } else {
-            print("Cannot connect to \(String(describing: pdfUrl))")
+            print("Cannot connect to \(String(describing: url))")
         }
     }
     
