@@ -69,6 +69,18 @@ func meetingData() -> [Meeting] {
     
     meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "12/17/2019")
     meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "01/07/2020")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "01/14/2020")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Regular meeting", date: "01/21/2020")
+    meetings.append(meeting)
+    
+    meeting = Meeting(title: "City Council Meeting", description: "Consent workshop", date: "01/28/2020")
+    meetings.append(meeting)
 
     return meetings
 }

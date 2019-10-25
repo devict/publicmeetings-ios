@@ -11,13 +11,20 @@ import UIKit
 class MeetingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
-    var meetingLocality: UISegmentedControl = {
+    var venue: UISegmentedControl = {
         let segmented = UISegmentedControl(items: ["All", "Wichita", "County", "State"])
         segmented.translatesAutoresizingMaskIntoConstraints = false
         segmented.backgroundColor = UIColor(named: "devictBlue")
         segmented.selectedSegmentIndex = 0
         return segmented
     }()
+    
+    var noMeetingView: UIView = {
+        let view = NoMeetingsView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     
     var tableView = UITableView()
     
@@ -89,7 +96,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func setupView() {
-        [meetingLocality, tableView].forEach { view.addSubview($0) }
+        [venue, noMeetingView, tableView].forEach { view.addSubview($0) }
         
         view.backgroundColor = UIColor(named: "devictTan")
         
@@ -99,18 +106,17 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.separatorStyle = .none
         tableView.register(MeetingCell.self, forCellReuseIdentifier: "cell")
         tableView.backgroundColor = .clear
-        
         tableView.tableFooterView = UIView()
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            meetingLocality.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
-            meetingLocality.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            meetingLocality.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            meetingLocality.heightAnchor.constraint(equalToConstant: 30.0),
+            venue.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
+            venue.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            venue.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            venue.heightAnchor.constraint(equalToConstant: 30.0),
             
-            tableView.topAnchor.constraint(equalToSystemSpacingBelow: meetingLocality.bottomAnchor, multiplier: 1.0),
+            tableView.topAnchor.constraint(equalToSystemSpacingBelow: venue.bottomAnchor, multiplier: 1.0),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15.0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
@@ -118,23 +124,37 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func setupActions() {
-        meetingLocality.addTarget(self, action: #selector(segmentedValueChanged(sender:)), for: .valueChanged)
+        venue.addTarget(self, action: #selector(segmentedValueChanged(sender:)), for: .valueChanged)
     }
     
     //MARK: - Actions
     @objc func segmentedValueChanged(sender: UISegmentedControl) {
-        guard let location = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
+        guard let venue = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
           
         meetings = []
         
-        if location == "All" {
+        if venue == "All" {
             meetings = allMeetings
         } else {
             for meeting in allMeetings {
-                if meeting.location == location {
+                if meeting.venue == venue {
                     meetings.append(meeting)
                 }
             }
+
+            if meetings.count == 0 {
+                NSLayoutConstraint.activate([
+                    noMeetingView.topAnchor.constraint(equalTo: self.venue.bottomAnchor, constant: 1.0),
+                    noMeetingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    noMeetingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                    noMeetingView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                ])
+                
+                noMeetingView.isHidden = false
+            } else {
+                noMeetingView.isHidden = true
+            }
+            
         }
 
         tableView.reloadData()
@@ -143,7 +163,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
 
 extension MeetingsViewController: BadgeDelegate {
     /** Increment the badgeValue for the tabBar items
-     
     - Parameter item: The index of the tabBar of the item with the badge.
     */
     
@@ -163,7 +182,6 @@ extension MeetingsViewController: BadgeDelegate {
     }
     
     /** Decrement the badgeValue for the tabBar items.   If the badgeValue  gets to zero, the badge will be set to nil and not displayed
-     
     - Parameter item: The index of the tabBar of the item with the badge.
     */
     
