@@ -55,7 +55,7 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let url = "https://granicus_production_attachments.s3.amazonaws.com/wichitaks/dff8c7302aef7a827c09b81310ff11ce0.pdf"
         
         let viewController = WebViewer()
-        viewController.pdfUrl = url
+        viewController.documentUrl = url
         present(viewController, animated: true, completion: nil)
     }
     

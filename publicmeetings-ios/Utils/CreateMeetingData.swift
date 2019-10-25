@@ -84,5 +84,3 @@ func meetingData() -> [Meeting] {
 
     return meetings
 }
-
-

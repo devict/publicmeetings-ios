@@ -80,7 +80,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        _ = names[indexPath.row]
+        _ = meetings[indexPath.row]
         let viewController = MeetingsDetailViewController()
         present(viewController, animated: true, completion: nil)
     }
