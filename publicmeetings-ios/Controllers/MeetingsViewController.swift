@@ -68,6 +68,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.name.text = meetings[row].title
         cell.desc.text = meetings[row].description
         cell.address.text = meetings[row].address
+        cell.location.text = meetings[row].location
         cell.city.text = meetings[row].city
         cell.meetingDate.text = meetings[row].date
 

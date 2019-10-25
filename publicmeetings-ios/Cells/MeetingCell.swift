@@ -33,6 +33,7 @@ class MeetingCell: UITableViewCell {
         label.textColor = .black
         label.textAlignment = .left
         label.font = Standard.font
+        label.baselineAdjustment = .alignCenters
         return label
     }()
     
@@ -155,7 +156,12 @@ class MeetingCell: UITableViewCell {
             address.widthAnchor.constraint(equalToConstant: 200.0),
             address.heightAnchor.constraint(equalToConstant: 20.0),
             
-            city.topAnchor.constraint(equalTo: address.bottomAnchor, constant: 2.0),
+            location.topAnchor.constraint(equalTo: address.bottomAnchor, constant: 2.0),
+            location.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            location.widthAnchor.constraint(equalToConstant: 200.0),
+            location.heightAnchor.constraint(equalToConstant: 20.0),
+            
+            city.topAnchor.constraint(equalTo: location.bottomAnchor, constant: 2.0),
             city.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             city.widthAnchor.constraint(equalToConstant: 200.0),
             city.heightAnchor.constraint(equalToConstant: 20.0),
