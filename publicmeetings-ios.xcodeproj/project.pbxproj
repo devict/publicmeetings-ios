@@ -38,6 +38,7 @@
 		E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56077AA235C9AEB003D8F26 /* StandardValues.swift */; };
 		E56A792F2361E126001376EC /* AgendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A792E2361E126001376EC /* AgendasViewController.swift */; };
 		E56A79312361E137001376EC /* AgendasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A79302361E137001376EC /* AgendasCell.swift */; };
+		E5F0305C23631EC400F65234 /* NoMeetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0305B23631EC400F65234 /* NoMeetingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		E56077AA235C9AEB003D8F26 /* StandardValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardValues.swift; sourceTree = "<group>"; };
 		E56A792E2361E126001376EC /* AgendasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendasViewController.swift; sourceTree = "<group>"; };
 		E56A79302361E137001376EC /* AgendasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendasCell.swift; sourceTree = "<group>"; };
+		E5F0305B23631EC400F65234 /* NoMeetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMeetingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */,
 				E52268522353945F0036163B /* SearchView.swift */,
+				E5F0305B23631EC400F65234 /* NoMeetingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
 				E52958822353145A00E1F2D7 /* SearchViewController.swift in Sources */,
+				E5F0305C23631EC400F65234 /* NoMeetingsView.swift in Sources */,
 				E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */,
 				E511CFF5234ACE5800807CAF /* MinutesCell.swift in Sources */,
 				E525261B234911070003B575 /* MoreCell.swift in Sources */,

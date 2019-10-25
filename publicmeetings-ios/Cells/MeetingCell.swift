@@ -49,7 +49,7 @@ class MeetingCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.textAlignment = .left
+        label.textAlignment = .right
         label.font = UIFont(name: "Damascus", size: 13.0)
         return label
     }()
@@ -135,13 +135,13 @@ class MeetingCell: UITableViewCell {
             view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3.0),
             view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3.0),
             
-            name.topAnchor.constraint(equalTo: view.topAnchor, constant: 6.0),
+            name.topAnchor.constraint(equalTo: view.topAnchor, constant: 8.0),
             name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             name.widthAnchor.constraint(equalToConstant: 200.0),
             name.heightAnchor.constraint(equalToConstant: 20.0),
             
             meetingDate.centerYAnchor.constraint(equalTo: name.centerYAnchor),
-            meetingDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25.0),
+            meetingDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -13.0),
             meetingDate.widthAnchor.constraint(equalToConstant: 70.0),
             meetingDate.heightAnchor.constraint(equalToConstant: 20.0),
             
