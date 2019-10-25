@@ -131,6 +131,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - Actions
     @objc func segmentedValueChanged(sender: UISegmentedControl) {
+        noMeetingView.isHidden = true
+        
         guard let venue = sender.titleForSegment(at: sender.selectedSegmentIndex) else { return }
           
         meetings = []
