@@ -50,8 +50,34 @@ class MeetingCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .left
-        label.font = UIFont(name: "Damascus", size: 10.0)
-        label.textAlignment = .right
+        label.font = UIFont(name: "Damascus", size: 13.0)
+        return label
+    }()
+    
+    var address: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .left
+        label.font = Standard.font
+        return label
+    }()
+    
+    var location: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .left
+        label.font = Standard.font
+        return label
+    }()
+    
+    var city: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .left
+        label.font = Standard.font
         return label
     }()
     
@@ -98,7 +124,7 @@ class MeetingCell: UITableViewCell {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        [view, name, desc, meetingDate, reminder, share].forEach { contentView.addSubview($0) }
+        [view, name, desc, meetingDate, address, location, city, reminder, share].forEach { contentView.addSubview($0) }
         backgroundColor = .clear
     }
     
@@ -109,10 +135,10 @@ class MeetingCell: UITableViewCell {
             view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3.0),
             view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3.0),
             
-            name.topAnchor.constraint(equalTo: view.topAnchor, constant: 3.0),
+            name.topAnchor.constraint(equalTo: view.topAnchor, constant: 6.0),
             name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             name.widthAnchor.constraint(equalToConstant: 200.0),
-            name.heightAnchor.constraint(equalToConstant: 35.0),
+            name.heightAnchor.constraint(equalToConstant: 20.0),
             
             meetingDate.centerYAnchor.constraint(equalTo: name.centerYAnchor),
             meetingDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25.0),
@@ -121,16 +147,26 @@ class MeetingCell: UITableViewCell {
             
             desc.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 2.0),
             desc.leadingAnchor.constraint(equalTo: name.leadingAnchor),
-            desc.widthAnchor.constraint(equalToConstant: 300.0),
-            desc.heightAnchor.constraint(equalToConstant: 35.0),
+            desc.widthAnchor.constraint(equalToConstant: 200.0),
+            desc.heightAnchor.constraint(equalToConstant: 20.0),
+            
+            address.topAnchor.constraint(equalTo: desc.bottomAnchor, constant: 2.0),
+            address.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            address.widthAnchor.constraint(equalToConstant: 200.0),
+            address.heightAnchor.constraint(equalToConstant: 20.0),
+            
+            city.topAnchor.constraint(equalTo: address.bottomAnchor, constant: 2.0),
+            city.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            city.widthAnchor.constraint(equalToConstant: 200.0),
+            city.heightAnchor.constraint(equalToConstant: 20.0),
             
             reminder.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
-            reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40.0),
+            reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5.0),
             reminder.widthAnchor.constraint(equalToConstant: 40.0),
             reminder.heightAnchor.constraint(equalToConstant: 40.0),
             
             share.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
-            share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -10.0),
+            share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -5.0),
             share.widthAnchor.constraint(equalToConstant: 40.0),
             share.heightAnchor.constraint(equalToConstant: 40.0)
         ])

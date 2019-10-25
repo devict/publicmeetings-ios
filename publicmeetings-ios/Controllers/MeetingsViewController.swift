@@ -60,7 +60,9 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.backgroundColor = .clear
         cell.name.text = meetings[row].title
         cell.desc.text = meetings[row].description
-        cell.meetingDate.text = meetings[row].date?.description
+        cell.address.text = meetings[row].address
+        cell.city.text = meetings[row].city
+        cell.meetingDate.text = meetings[row].date
 
         return cell
     }
