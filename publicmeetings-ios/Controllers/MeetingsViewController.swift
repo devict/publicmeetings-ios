@@ -22,6 +22,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     var noMeetingView: UIView = {
         let view = NoMeetingsView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
         return view
     }()
     
@@ -86,7 +87,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140.0
+        return 150.0
     }
     
     //MARK: - Setup and Layout

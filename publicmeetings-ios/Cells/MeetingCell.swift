@@ -146,7 +146,7 @@ class MeetingCell: UITableViewCell {
             meetingDate.widthAnchor.constraint(equalToConstant: 70.0),
             meetingDate.heightAnchor.constraint(equalToConstant: 20.0),
             
-            desc.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 2.0),
+            desc.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 6.0),
             desc.leadingAnchor.constraint(equalTo: name.leadingAnchor),
             desc.widthAnchor.constraint(equalToConstant: 200.0),
             desc.heightAnchor.constraint(equalToConstant: 20.0),
