@@ -16,7 +16,6 @@ protocol BadgeDelegate: class {
 class MeetingCell: UITableViewCell {
 
     //MARK: - Properties
-    
     var view: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -61,6 +60,7 @@ class MeetingCell: UITableViewCell {
         label.textColor = .black
         label.textAlignment = .left
         label.font = Standard.font
+        label.text = ""
         return label
     }()
     
@@ -79,6 +79,17 @@ class MeetingCell: UITableViewCell {
         label.textColor = .black
         label.textAlignment = .left
         label.font = Standard.font
+        label.text = ""
+        return label
+    }()
+    
+    var state: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .left
+        label.font = Standard.font
+        label.text = ""
         return label
     }()
     
@@ -116,6 +127,7 @@ class MeetingCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupView()
     }
     
     //MARK: - Cell delegates

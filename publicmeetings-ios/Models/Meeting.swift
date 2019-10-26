@@ -20,7 +20,12 @@ struct Meeting {
     var address: String
     var location: String
     var city: String
+    var state: String
+    var zip: String
     var venue: String
+    
+    var cityState: String = ""
+    var mappableAddress: String = ""
     
     
     //FIXME: - Making date a string for until we have a data feed.
@@ -32,7 +37,12 @@ struct Meeting {
         self.address = "455​ N Main"
         self.location = "1st Floor"
         self.city = "Wichita"
+        self.state = "KS"
+        self.zip = "67202​"
         self.venue = "Wichita"
+        
+        cityState = city + " " + state
+        mappableAddress = address + "," + city + "," + state + "," + zip
     }
 
     func generateFutureDate() -> Date {
