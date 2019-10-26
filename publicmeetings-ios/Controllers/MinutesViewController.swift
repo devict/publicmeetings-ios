@@ -11,8 +11,7 @@ import UIKit
 class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - Properties
-    var minutes: [String] = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"]
-    
+    var allMeetings = [Meeting]()
     var tableView = UITableView()
     
     //MARK: - ViewController delegates
@@ -21,6 +20,8 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         setupView()
         setupLayout()
+        
+        allMeetings = meetingData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +30,7 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //MARK: - TableView delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        minutes.count
+        allMeetings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,7 +39,10 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
-        cell.minutes.text = minutes[row]
+        
+        cell.name.text = allMeetings[row].title
+        cell.desc.text = allMeetings[row].description
+        cell.meetingDate.text = allMeetings[row].date
     
         return cell
     }
@@ -48,7 +52,7 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+        return 60.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

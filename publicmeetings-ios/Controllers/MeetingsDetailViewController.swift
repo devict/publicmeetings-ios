@@ -36,8 +36,6 @@ class MeetingsDetailViewController: UIViewController {
             
             self.openMapForPlace(lat: location.latitude, long: location.longitude)
         }
-        
-        
     }
     
     //Experimental mapping by address
@@ -70,9 +68,6 @@ class MeetingsDetailViewController: UIViewController {
         mapItem.name = "City Hall"
         mapItem.openInMaps(launchOptions: options)
     }
-    
-    
-    
     
     //MARK: - Setup and Layout
     private func setupView() {
