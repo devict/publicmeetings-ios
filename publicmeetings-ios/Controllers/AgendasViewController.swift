@@ -11,6 +11,7 @@ import UIKit
 class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - Properties
+    var allMeetings = [Meeting]()
     var agendas: [String] = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"]
     
     var tableView = UITableView()
@@ -21,6 +22,8 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         setupView()
         setupLayout()
+        
+        allMeetings = meetingData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +41,10 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
-        cell.agendas.text = agendas[row]
+        
+        cell.name.text = allMeetings[row].title
+        cell.desc.text = allMeetings[row].description
+        cell.meetingDate.text = allMeetings[row].date
     
         return cell
     }
@@ -48,7 +54,7 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+        return 70.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
