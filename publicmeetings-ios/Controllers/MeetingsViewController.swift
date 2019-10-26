@@ -70,7 +70,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.desc.text = meetings[row].description
         cell.address.text = meetings[row].address
         cell.location.text = meetings[row].location
-        cell.city.text = meetings[row].city
+        cell.city.text = meetings[row].cityState
         cell.meetingDate.text = meetings[row].date
 
         return cell
@@ -83,6 +83,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _ = meetings[indexPath.row]
         let viewController = MeetingsDetailViewController()
+        viewController.meetingAddress = meetings[indexPath.row].mappableAddress
         present(viewController, animated: true, completion: nil)
     }
     
@@ -158,7 +159,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
             } else {
                 noMeetingView.isHidden = true
             }
-            
         }
 
         tableView.reloadData()
