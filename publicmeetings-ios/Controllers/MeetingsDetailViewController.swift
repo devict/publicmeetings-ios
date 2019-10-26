@@ -67,7 +67,7 @@ class MeetingsDetailViewController: UIViewController {
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = placeName
+        mapItem.name = "City Hall"
         mapItem.openInMaps(launchOptions: options)
     }
     
