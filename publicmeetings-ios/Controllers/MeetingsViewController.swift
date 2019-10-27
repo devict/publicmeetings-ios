@@ -52,6 +52,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
+        navigationController?.navigationBar.barTintColor = .systemOrange
     }
     
     //MARK: - TableView Delegates
@@ -99,6 +100,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func setupView() {
+        navigationController?.navigationBar.barTintColor = .systemBlue
+        
         [venue, noMeetingView, tableView].forEach { view.addSubview($0) }
         
         view.backgroundColor = UIColor(named: "devictTan")
