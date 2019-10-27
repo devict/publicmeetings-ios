@@ -26,7 +26,7 @@ class SearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
-        navigationController?.navigationBar.barTintColor = .systemRed
+        navigationController?.navigationBar.barTintColor = UIColor(named: "softRed")
     }
     
     //MARK: - Setup and Layout
