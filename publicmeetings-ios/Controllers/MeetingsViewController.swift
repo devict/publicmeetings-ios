@@ -217,11 +217,9 @@ extension MeetingsViewController: BadgeDelegate {
 }
 
 extension MeetingsViewController {
-    //Experimental mapping by address
     func coordinates(forAddress address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
         let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address) {
-            (placemarks, error) in
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
             guard error == nil else {
                 //FIXME: Handle error properly
                 print("Geocoding error: \(error!)")
@@ -233,11 +231,11 @@ extension MeetingsViewController {
         }
     }
     
-    public func openMapForPlace(lat:Double = 0, long:Double = 0, placeName:String = "") {
+    public func openMapForPlace(lat: Double = 0, long: Double = 0, placeName: String = "") {
         let latitude: CLLocationDegrees = lat
         let longitude: CLLocationDegrees = long
 
-        let regionDistance:CLLocationDistance = 100
+        let regionDistance: CLLocationDistance = 100
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         let options = [

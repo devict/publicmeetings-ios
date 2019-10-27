@@ -175,10 +175,10 @@
 		E51FA4A92344E2A7005C5091 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */,
-				E511CFF0234A8FC300807CAF /* MeetingsDetailViewController.swift */,
-				E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */,
 				E56A792E2361E126001376EC /* AgendasViewController.swift */,
+				E511CFF0234A8FC300807CAF /* MeetingsDetailViewController.swift */,
+				E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */,
+				E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */,
 				E52E43D5234854CA00DF9D5B /* MoreViewController.swift */,
 				E52958812353145A00E1F2D7 /* SearchViewController.swift */,
 			);
