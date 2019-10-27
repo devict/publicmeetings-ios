@@ -11,7 +11,7 @@ import UIKit
 class MoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
-    let moreItems: [String] = ["About","Libraries","Version"]
+    let options: [String] = ["Voter Registration", "About", "Version"]
     
     var tableView = UITableView()
     
@@ -38,14 +38,14 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: - TableView Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return moreItems.count
+        return options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moreCell") as! MoreCell
         let row = indexPath.row
         
-        cell.item.text = moreItems[row]
+        cell.item.text = options[row]
         cell.version.text = version
         
         guard let itemText = cell.item.text else { return cell }
@@ -56,6 +56,14 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = "http://www.voteks.org/before-you-vote/how-do-i-register.html"
+                
+        let viewController = WebViewer()
+        viewController.documentUrl = url
+        present(viewController, animated: true, completion: nil)
     }
     
     //MARK: - Setup and Layout
