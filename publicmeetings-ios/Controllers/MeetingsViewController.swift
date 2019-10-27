@@ -33,8 +33,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     var allMeetings = [Meeting]()
     var meetings = [Meeting]()
     
-    var names: [String] = ["Zeroth","First","Second","Third","Fourth","Fifth","Sixth","Seventh","Eighth","Ninth","Tenth","Eleventh","Twelvth","Thirteenth","Fourteenth","Fifteenth","Sixteenth","Seventeenth","Eighteenth","Nineteenth"]
-    
     //MARK: - ViewController Delegates
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,11 +81,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        _ = meetings[indexPath.row]
-//        let viewController = MeetingsDetailViewController()
-//        viewController.meetingAddress = meetings[indexPath.row].mappableAddress
-//        present(viewController, animated: true, completion: nil)
-        
         let meetingAddress = meetings[indexPath.row].mappableAddress
         
         coordinates(forAddress: meetingAddress) {
@@ -98,7 +91,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
             }
             
             self.openMapForPlace(lat: location.latitude, long: location.longitude)
-            self.dismiss(animated: false, completion: nil)
         }
     }
     
@@ -231,10 +223,12 @@ extension MeetingsViewController {
         geocoder.geocodeAddressString(address) {
             (placemarks, error) in
             guard error == nil else {
+                //FIXME: Handle error properly
                 print("Geocoding error: \(error!)")
                 completion(nil)
                 return
             }
+            
             completion(placemarks?.first?.location?.coordinate)
         }
     }
