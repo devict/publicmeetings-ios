@@ -41,7 +41,7 @@ struct Meeting {
         self.zip = "67202​"
         self.venue = "Wichita"
         
-        cityState = city + " " + state
+        cityState = city + ", " + state
         mappableAddress = address + "," + city + "," + state + "," + zip
     }
 

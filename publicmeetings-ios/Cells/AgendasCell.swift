@@ -47,8 +47,7 @@ class AgendasCell: UITableViewCell {
         label.font = UIFont(name: "Damascus", size: 13.0)
         return label
     }()
-    
-    
+        
     //MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

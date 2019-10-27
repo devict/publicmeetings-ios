@@ -176,7 +176,7 @@ class MeetingCell: UITableViewCell {
             city.topAnchor.constraint(equalTo: location.bottomAnchor, constant: 2.0),
             city.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             city.widthAnchor.constraint(equalToConstant: 200.0),
-            city.heightAnchor.constraint(equalToConstant: 20.0),
+            city.heightAnchor.constraint(equalToConstant: 22.0),
             
             reminder.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
             reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5.0),
