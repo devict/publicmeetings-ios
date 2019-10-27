@@ -12,8 +12,6 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //MARK: - Properties
     var allMeetings = [Meeting]()
-    var agendas: [String] = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"]
-    
     var tableView = UITableView()
     
     //MARK: - ViewController delegates
@@ -33,7 +31,7 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //MARK: - TableView delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        agendas.count
+        allMeetings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,8 +63,7 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
         viewController.documentUrl = url
         present(viewController, animated: true, completion: nil)
     }
-    
-    
+        
     //MARK: - Setup and Layout
     private func setScreenTitle() {
         DispatchQueue.main.async {
