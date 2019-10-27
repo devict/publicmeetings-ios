@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class MeetingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -82,10 +83,23 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        _ = meetings[indexPath.row]
-        let viewController = MeetingsDetailViewController()
-        viewController.meetingAddress = meetings[indexPath.row].mappableAddress
-        present(viewController, animated: true, completion: nil)
+//        _ = meetings[indexPath.row]
+//        let viewController = MeetingsDetailViewController()
+//        viewController.meetingAddress = meetings[indexPath.row].mappableAddress
+//        present(viewController, animated: true, completion: nil)
+        
+        let meetingAddress = meetings[indexPath.row].mappableAddress
+        
+        coordinates(forAddress: meetingAddress) {
+            (location) in
+            guard let location = location else {
+                //FIXME: Handle error here.
+                return
+            }
+            
+            self.openMapForPlace(lat: location.latitude, long: location.longitude)
+            self.dismiss(animated: false, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -207,5 +221,39 @@ extension MeetingsViewController: BadgeDelegate {
         if tabBarController?.tabBar.items![item].badgeValue == "0" {
             tabBarController?.tabBar.items![item].badgeValue = nil
         }
+    }
+}
+
+extension MeetingsViewController {
+    //Experimental mapping by address
+    func coordinates(forAddress address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) {
+            (placemarks, error) in
+            guard error == nil else {
+                print("Geocoding error: \(error!)")
+                completion(nil)
+                return
+            }
+            completion(placemarks?.first?.location?.coordinate)
+        }
+    }
+    
+    public func openMapForPlace(lat:Double = 0, long:Double = 0, placeName:String = "") {
+        let latitude: CLLocationDegrees = lat
+        let longitude: CLLocationDegrees = long
+
+        let regionDistance:CLLocationDistance = 100
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "City Hall"
+        mapItem.openInMaps(launchOptions: options)
     }
 }

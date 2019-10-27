@@ -22,7 +22,6 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         setupLayout()
         
         allMeetings = meetingData()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
