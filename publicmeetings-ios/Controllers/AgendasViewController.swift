@@ -28,6 +28,7 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
+        navigationController?.navigationBar.barTintColor = .systemIndigo
     }
     
     //MARK: - TableView delegates
@@ -74,6 +75,8 @@ class AgendasViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
      
     private func setupView() {
+        navigationController?.navigationBar.barTintColor = .systemIndigo
+        
         view.addSubview(tableView)
         view.backgroundColor = UIColor(named: "devictTan")
 

@@ -22,10 +22,12 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         setupLayout()
         
         allMeetings = meetingData()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
+        navigationController?.navigationBar.barTintColor = .systemTeal
     }
     
     //MARK: - TableView delegates
@@ -56,7 +58,7 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let url = "https://granicus_production_attachments.s3.amazonaws.com/wichitaks/dff8c7302aef7a827c09b81310ff11ce0.pdf"
+        let url = "http://wichitaks.granicus.com/MinutesViewer.php?view_id=2&clip_id=3883"
         
         let viewController = WebViewer()
         viewController.documentUrl = url
@@ -72,6 +74,8 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
      
     private func setupView() {
+        navigationController?.navigationBar.barTintColor = .systemTeal
+        
         view.addSubview(tableView)
         view.backgroundColor = UIColor(named: "devictTan")
 

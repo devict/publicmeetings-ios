@@ -33,6 +33,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
+        navigationController?.navigationBar.barTintColor = .systemYellow
     }
     
     //MARK: - TableView Delegates
@@ -65,6 +66,8 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func setupView() {
+        navigationController?.navigationBar.barTintColor = .systemYellow
+        
         view.addSubview(tableView)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
