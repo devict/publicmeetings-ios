@@ -59,11 +59,18 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let url = "http://www.voteks.org/before-you-vote/how-do-i-register.html"
-                
-        let viewController = WebViewer()
-        viewController.documentUrl = url
-        present(viewController, animated: true, completion: nil)
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRow(at: indexPath!) as! MoreCell
+        
+        if let currentItem = currentCell.item.text {
+            if currentItem == "Voter Registration" {
+                let url = "http://www.voteks.org/before-you-vote/how-do-i-register.html"
+                        
+                let viewController = WebViewer()
+                viewController.documentUrl = url
+                present(viewController, animated: true, completion: nil)
+            }
+        }
     }
     
     //MARK: - Setup and Layout
