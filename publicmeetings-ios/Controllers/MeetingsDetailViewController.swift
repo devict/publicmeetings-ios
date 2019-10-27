@@ -35,6 +35,7 @@ class MeetingsDetailViewController: UIViewController {
             }
             
             self.openMapForPlace(lat: location.latitude, long: location.longitude)
+            self.dismiss(animated: false, completion: nil)
         }
     }
     
