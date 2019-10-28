@@ -64,8 +64,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let row = indexPath.row
         
         cell.badgeDelegate = self
-        cell.selectionStyle = .none
-        cell.backgroundColor = .clear
         cell.name.text = meetings[row].title
         cell.desc.text = meetings[row].description
         cell.address.text = meetings[row].address

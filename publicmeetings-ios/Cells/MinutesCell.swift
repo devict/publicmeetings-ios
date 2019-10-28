@@ -67,6 +67,9 @@ class MinutesCell: UITableViewCell {
     //MARK: - Setup and Layout
     private func setupView() {
         [view, name, desc, meetingDate].forEach { contentView.addSubview($0) }
+        
+        selectionStyle = .none
+        backgroundColor = .clear
     }
     
     private func setupLayout() {
