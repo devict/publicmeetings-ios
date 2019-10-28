@@ -138,6 +138,8 @@ class MeetingCell: UITableViewCell {
     //MARK: - Setup and Layout
     private func setupView() {
         [view, name, desc, meetingDate, address, location, city, reminder, share].forEach { contentView.addSubview($0) }
+        
+        selectionStyle = .none
         backgroundColor = .clear
     }
     

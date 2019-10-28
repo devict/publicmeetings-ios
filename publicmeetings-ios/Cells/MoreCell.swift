@@ -36,6 +36,8 @@ class MoreCell: UITableViewCell {
         
         [item, version].forEach { contentView.addSubview($0)}
         
+        selectionStyle = .none
+        
         NSLayoutConstraint.activate([
             item.centerYAnchor.constraint(equalTo: centerYAnchor),
             item.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
