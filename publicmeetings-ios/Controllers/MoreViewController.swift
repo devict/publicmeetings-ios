@@ -68,12 +68,18 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
                         
                 let viewController = WebViewer()
                 viewController.documentUrl = url
-                present(viewController, animated: true, completion: nil)
+                
+                DispatchQueue.main.async {
+                    self.present(viewController, animated: true, completion: nil)
+                }
             }
             
             if currentItem == "About" {
                 let viewController = AboutViewController()
-                present(viewController, animated: true, completion: nil)
+                
+                DispatchQueue.main.async {
+                    self.present(viewController, animated: true, completion: nil)
+                }
             }
         }
     }
