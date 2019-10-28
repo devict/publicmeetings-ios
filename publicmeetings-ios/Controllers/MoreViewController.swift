@@ -70,6 +70,11 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
                 viewController.documentUrl = url
                 present(viewController, animated: true, completion: nil)
             }
+            
+            if currentItem == "About" {
+                let viewController = AboutViewController()
+                present(viewController, animated: true, completion: nil)
+            }
         }
     }
     
