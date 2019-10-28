@@ -58,7 +58,10 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let viewController = WebViewer()
         viewController.documentUrl = url
-        present(viewController, animated: true, completion: nil)
+        
+        DispatchQueue.main.async {
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     
