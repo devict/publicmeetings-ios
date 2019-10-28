@@ -38,9 +38,6 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "minutesCell") as! MinutesCell
         let row = indexPath.row
         
-        cell.selectionStyle = .none
-        cell.backgroundColor = .clear
-        
         cell.name.text = allMeetings[row].title
         cell.desc.text = allMeetings[row].description
         cell.meetingDate.text = allMeetings[row].date
