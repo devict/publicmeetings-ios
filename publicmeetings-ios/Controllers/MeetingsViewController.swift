@@ -15,8 +15,10 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     var venue: UISegmentedControl = {
         let segmented = UISegmentedControl(items: ["All", "Wichita", "County", "State"])
         segmented.translatesAutoresizingMaskIntoConstraints = false
-        segmented.backgroundColor = UIColor(named: "devictBlue")
+        segmented.backgroundColor = UIColor.black
         segmented.selectedSegmentIndex = 0
+        segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
+        segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
         return segmented
     }()
     
@@ -37,7 +39,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "devictBlue")
+        tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "softRed")
         tabBarController?.tabBar.items?[0].badgeValue = nil
 
         allMeetings = meetingData()
