@@ -19,6 +19,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         segmented.selectedSegmentIndex = 0
         segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
         segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
+        segmented.layer.borderColor = UIColor.white.cgColor
+        segmented.layer.borderWidth = 0.9
         return segmented
     }()
     

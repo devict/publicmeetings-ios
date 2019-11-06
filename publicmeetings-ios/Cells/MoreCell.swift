@@ -11,6 +11,16 @@ import UIKit
 class MoreCell: UITableViewCell {
 
     //MARK: - Properties
+    var view: UIView = {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .white
+        v.layer.borderColor = UIColor.black.cgColor
+        v.layer.borderWidth = 0.3
+        v.clipsToBounds = true
+        return v
+    }()
+        
     var item: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,11 +44,17 @@ class MoreCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        [item, version].forEach { contentView.addSubview($0)}
+        [view, item, version].forEach { contentView.addSubview($0)}
         
         selectionStyle = .none
+        backgroundColor = .clear
         
         NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: topAnchor, constant: 3.0),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 3.0),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3.0),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3.0),
+            
             item.centerYAnchor.constraint(equalTo: centerYAnchor),
             item.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
             item.widthAnchor.constraint(equalToConstant: 200.0),

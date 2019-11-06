@@ -24,8 +24,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemTeal
-        
         setupView()
         setupLayout()
         setScreenTitle()
@@ -55,7 +53,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45.0
+        return 65.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,10 +93,13 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.navigationBar.barTintColor = .systemYellow
         
         view.addSubview(tableView)
+        view.backgroundColor =  UIColor(named: "devictTan")
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         tableView.register(MoreCell.self, forCellReuseIdentifier: "moreCell")
         tableView.tableFooterView = UIView()
     }
