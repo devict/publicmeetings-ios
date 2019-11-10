@@ -89,8 +89,10 @@ class MinutesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
      
      private func setupLayout() {
+         let guide = view.safeAreaLayoutGuide
+        
          NSLayoutConstraint.activate([
-             tableView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 5.0),
+             tableView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 0.0),
              tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
              tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15.0),
              tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)

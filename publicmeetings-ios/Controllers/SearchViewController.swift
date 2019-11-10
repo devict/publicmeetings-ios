@@ -42,8 +42,10 @@ class SearchViewController: UIViewController {
     }
     
     private func setupLayout() {
+        let guide = view.safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
-            searchView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
+            searchView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 0.0),
             searchView.widthAnchor.constraint(equalToConstant: Screen.width),
             searchView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])

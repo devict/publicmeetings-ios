@@ -29,8 +29,10 @@ class AboutViewController: UIViewController {
     }
     
     private func setupLayout() {
+        let guide = view.safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
-            aboutView.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
+            aboutView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 0.0),
             aboutView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             aboutView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             aboutView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
