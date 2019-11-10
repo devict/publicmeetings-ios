@@ -11,7 +11,7 @@ import UIKit
 class MoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
-    let options: [String] = ["Voter Registration", "About", "Version"]
+    let options: [String] = ["Voter Registration", "Election Schedule", "About", "Version"]
     
     var tableView = UITableView()
     
@@ -71,6 +71,17 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.present(viewController, animated: true, completion: nil)
                 }
             }
+            
+            if currentItem == "Election Schedule" {
+                  let url = "https://ballotpedia.org/City_elections_in_Wichita,_Kansas_(2019)"
+                          
+                  let viewController = WebViewer()
+                  viewController.documentUrl = url
+                  
+                  DispatchQueue.main.async {
+                      self.present(viewController, animated: true, completion: nil)
+                  }
+              }
             
             if currentItem == "About" {
                 let viewController = AboutViewController()
