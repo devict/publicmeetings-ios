@@ -73,15 +73,15 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             
             if currentItem == "Election Schedule" {
-                  let url = "https://ballotpedia.org/City_elections_in_Wichita,_Kansas_(2019)"
+                let url = "https://ballotpedia.org/City_elections_in_Wichita,_Kansas_(2019)"
                           
-                  let viewController = WebViewer()
-                  viewController.documentUrl = url
-                  
-                  DispatchQueue.main.async {
-                      self.present(viewController, animated: true, completion: nil)
-                  }
-              }
+                let viewController = WebViewer()
+                viewController.documentUrl = url
+                 
+                DispatchQueue.main.async {
+                    self.present(viewController, animated: true, completion: nil)
+                }
+            }
             
             if currentItem == "About" {
                 let viewController = AboutViewController()
