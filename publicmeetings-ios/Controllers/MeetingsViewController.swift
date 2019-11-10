@@ -124,8 +124,10 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func setupLayout() {
+        let guide = view.safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
-            venue.topAnchor.constraint(equalToSystemSpacingBelow: view.topAnchor, multiplier: 11.0),
+            venue.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 0.0),
             venue.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             venue.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             venue.heightAnchor.constraint(equalToConstant: 30.0),
