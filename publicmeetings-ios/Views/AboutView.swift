@@ -10,11 +10,28 @@ import UIKit
 
 class AboutView: UIView {
     
-    var about: UILabel = {
+    var logo: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "devict-icon")
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    var developedBy: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "About information"
-        label.font = Standard.largeFont
+        label.text = "Developed By"
+        label.font = Standard.font
+        label.textAlignment = .center
+        return label
+    }()
+    
+    var developers: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Michael Campbell"
+        label.font = Standard.font
         label.textAlignment = .center
         return label
     }()
@@ -35,21 +52,27 @@ class AboutView: UIView {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        addSubview(about)
+        [logo, developedBy, developers].forEach { addSubview($0) }
         backgroundColor = UIColor(named: "devictTan")
     }
     
     private func setupLayout() {
+        let guide = safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: topAnchor),
-            leadingAnchor.constraint(equalTo: leadingAnchor),
-            trailingAnchor.constraint(equalTo: trailingAnchor),
-            bottomAnchor.constraint(equalTo: bottomAnchor),
+            logo.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 30.0),
+            logo.centerXAnchor.constraint(equalTo: centerXAnchor),
+            logo.widthAnchor.constraint(equalToConstant: Screen.width * 0.75),
             
-            about.centerYAnchor.constraint(equalTo: centerYAnchor),
-            about.centerYAnchor.constraint(equalTo: centerYAnchor),
-            about.widthAnchor.constraint(equalToConstant: Screen.width),
-            about.heightAnchor.constraint(equalToConstant: 60.0),
+            developedBy.topAnchor.constraint(equalTo: bottomAnchor, constant: -70.0),
+            developedBy.centerXAnchor.constraint(equalTo: centerXAnchor),
+            developedBy.widthAnchor.constraint(equalToConstant: Screen.width),
+            developedBy.heightAnchor.constraint(equalToConstant: 20.0),
+            
+            developers.topAnchor.constraint(equalTo: bottomAnchor, constant: -50.0),
+            developers.centerXAnchor.constraint(equalTo: centerXAnchor),
+            developers.widthAnchor.constraint(equalToConstant: Screen.width),
+            developers.heightAnchor.constraint(equalToConstant: 20.0),
         ])
     }
 }
