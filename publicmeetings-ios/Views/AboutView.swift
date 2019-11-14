@@ -22,7 +22,7 @@ class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Developed By"
-        label.font = Standard.font
+        label.font = Standard.systemFont
         label.textAlignment = .center
         return label
     }()
@@ -31,7 +31,7 @@ class AboutView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Michael Campbell"
-        label.font = Standard.font
+        label.font = Standard.systemFont
         label.textAlignment = .center
         return label
     }()
@@ -62,7 +62,7 @@ class AboutView: UIView {
         NSLayoutConstraint.activate([
             logo.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 30.0),
             logo.centerXAnchor.constraint(equalTo: centerXAnchor),
-            logo.widthAnchor.constraint(equalToConstant: Screen.width * 0.75),
+            logo.widthAnchor.constraint(equalToConstant: Screen.width * 0.65),
             
             developedBy.topAnchor.constraint(equalTo: bottomAnchor, constant: -70.0),
             developedBy.centerXAnchor.constraint(equalTo: centerXAnchor),
