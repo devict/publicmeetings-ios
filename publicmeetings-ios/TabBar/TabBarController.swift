@@ -24,7 +24,6 @@ class TabBarController: UITabBarController {
         let meetingImage = UIImage(systemName: "calendar", withConfiguration: config)
         let documentsImage = UIImage(systemName: "folder", withConfiguration: config)
         let searchImage = UIImage(systemName: "magnifyingglass", withConfiguration: config)
-        let docImage = UIImage(systemName: "doc.plaintext", withConfiguration: config)
         let moreImage = UIImage(systemName: "ellipsis.circle", withConfiguration: config)
         
         //MARK: - TabBar item setup

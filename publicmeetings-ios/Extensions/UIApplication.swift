@@ -13,9 +13,11 @@ extension UIApplication {
         guard var top = shared.keyWindow?.rootViewController else {
             return nil
         }
+        
         while let next = top.presentedViewController {
             top = next
         }
+        
         return top
     }
 }

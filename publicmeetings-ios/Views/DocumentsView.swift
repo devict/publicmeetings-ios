@@ -77,8 +77,6 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     private func setupLayout() {
-        let guide = safeAreaLayoutGuide
-        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
