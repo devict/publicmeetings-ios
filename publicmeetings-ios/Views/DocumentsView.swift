@@ -11,18 +11,6 @@ import UIKit
 class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
-    var docType: UISegmentedControl = {
-        let segmented = UISegmentedControl(items: ["Agendas", "Minutes"])
-        segmented.translatesAutoresizingMaskIntoConstraints = false
-        segmented.backgroundColor = UIColor.black
-        segmented.selectedSegmentIndex = 0
-        segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
-        segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
-        segmented.layer.borderColor = UIColor.white.cgColor
-        segmented.layer.borderWidth = 0.9
-        return segmented
-    }()
-    
     var allMeetings = [Meeting]()
     var tableView = UITableView()
     
@@ -34,7 +22,6 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
         setupLayout()
         
         allMeetings = meetingData()
-        print("allMeetings: \(allMeetings)")
     }
      
     required init?(coder aDecoder: NSCoder) {
@@ -47,7 +34,7 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "minutesCell") as! MinutesCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "documentsCell") as! DocumentsCell
         let row = indexPath.row
         
         cell.name.text = allMeetings[row].title
@@ -62,7 +49,7 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+        return 140.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -79,24 +66,19 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        [docType, tableView].forEach { addSubview($0) }
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(tableView)
         
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(MinutesCell.self, forCellReuseIdentifier: "minutesCell")
+        tableView.register(DocumentsCell.self, forCellReuseIdentifier: "documentsCell")
     }
     
     private func setupLayout() {
         let guide = safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            docType.topAnchor.constraint(equalTo: topAnchor),
-            docType.leadingAnchor.constraint(equalTo: leadingAnchor),
-            docType.trailingAnchor.constraint(equalTo: trailingAnchor),
-            docType.heightAnchor.constraint(equalToConstant: 31.0),
-            
-            tableView.topAnchor.constraint(equalTo: docType.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15.0),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15.0),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)

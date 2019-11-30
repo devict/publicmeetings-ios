@@ -45,6 +45,7 @@
 		E56A79312361E137001376EC /* AgendasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A79302361E137001376EC /* AgendasCell.swift */; };
 		E580F2C42377BFCD00F0C0FD /* devict-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E580F2C32377BFCD00F0C0FD /* devict-icon.png */; };
 		E5A88D42239219C200610157 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A88D41239219C200610157 /* UIApplication.swift */; };
+		E5A88D44239237D800610157 /* DocumentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A88D43239237D800610157 /* DocumentsCell.swift */; };
 		E5F0305C23631EC400F65234 /* NoMeetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0305B23631EC400F65234 /* NoMeetingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		E56A79302361E137001376EC /* AgendasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendasCell.swift; sourceTree = "<group>"; };
 		E580F2C32377BFCD00F0C0FD /* devict-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-icon.png"; sourceTree = "<group>"; };
 		E5A88D41239219C200610157 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		E5A88D43239237D800610157 /* DocumentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsCell.swift; sourceTree = "<group>"; };
 		E5F0305B23631EC400F65234 /* NoMeetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMeetingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,9 +176,10 @@
 		E514FAAA234732E500075816 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E56A79302361E137001376EC /* AgendasCell.swift */,
+				E5A88D43239237D800610157 /* DocumentsCell.swift */,
 				E514FAAB2347330D00075816 /* MeetingCell.swift */,
 				E511CFF4234ACE5800807CAF /* MinutesCell.swift */,
-				E56A79302361E137001376EC /* AgendasCell.swift */,
 				E525261A234911070003B575 /* MoreCell.swift */,
 			);
 			path = Cells;
@@ -461,6 +464,7 @@
 				E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */,
 				E5A88D42239219C200610157 /* UIApplication.swift in Sources */,
 				E508086C23670CF2007DC949 /* AboutView.swift in Sources */,
+				E5A88D44239237D800610157 /* DocumentsCell.swift in Sources */,
 				E511CFF5234ACE5800807CAF /* MinutesCell.swift in Sources */,
 				E525261B234911070003B575 /* MoreCell.swift in Sources */,
 				E511CFF3234ACD8D00807CAF /* MinutesViewController.swift in Sources */,
