@@ -23,6 +23,8 @@ struct Meeting {
     var state: String
     var zip: String
     var venue: String
+    var minutesUrl: String
+    var agendaUrl: String
     
     var cityState: String = ""
     var mappableAddress: String = ""
@@ -40,6 +42,8 @@ struct Meeting {
         self.state = "KS"
         self.zip = "67202​"
         self.venue = "Wichita"
+        self.minutesUrl = ""
+        self.agendaUrl = ""
         
         cityState = city + ", " + state
         mappableAddress = address + "," + city + "," + state + "," + zip
