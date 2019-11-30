@@ -127,7 +127,7 @@ class DocumentsCell: UITableViewCell {
             minutesButton.heightAnchor.constraint(equalToConstant: 40.0),
             
             agendaButton.topAnchor.constraint(equalTo: desc.bottomAnchor, constant: 10.0),
-            agendaButton.leadingAnchor.constraint(equalTo: minutesButton.trailingAnchor, constant: 15.0),
+            agendaButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15.0),
             agendaButton.widthAnchor.constraint(equalToConstant: 120.0),
             agendaButton.heightAnchor.constraint(equalToConstant: 40.0)            
         ])

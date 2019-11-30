@@ -71,6 +71,8 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         tableView.register(DocumentsCell.self, forCellReuseIdentifier: "documentsCell")
     }
     
