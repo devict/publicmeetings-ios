@@ -52,10 +52,11 @@ class DocumentsCell: UITableViewCell {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Minutes", for: .normal)
+        button.titleLabel?.font = Standard.systemFont
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
         button.setTitleColor(.black, for: .normal)
-        button.layer.cornerRadius = 8.0
+        button.layer.cornerRadius = 12.0
         return button
     }()
     
@@ -63,10 +64,11 @@ class DocumentsCell: UITableViewCell {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Agenda", for: .normal)
+        button.titleLabel?.font = Standard.systemFont
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
         button.setTitleColor(.black, for: .normal)
-        button.layer.cornerRadius = 8.0
+        button.layer.cornerRadius = 12.0
         return button
     }()
     

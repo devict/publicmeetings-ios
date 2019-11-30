@@ -34,7 +34,7 @@ class DocumentsViewController: UIViewController {
     //MARK: - Setup and Layout
     private func setScreenTitle() {
         DispatchQueue.main.async {
-            self.tabBarController?.navigationItem.title = "Agendas"
+            self.tabBarController?.navigationItem.title = "Documents"
         }
     }
     
