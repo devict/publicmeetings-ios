@@ -63,7 +63,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let currentItem = currentCell.item.text {
             if currentItem == "Voter Registration" {
                 let url = "http://www.voteks.org/before-you-vote/how-do-i-register.html"
-                        
                 let viewController = WebViewer()
                 viewController.documentUrl = url
                 
@@ -74,7 +73,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if currentItem == "Election Schedule" {
                 let url = "https://ballotpedia.org/City_elections_in_Wichita,_Kansas_(2019)"
-                          
                 let viewController = WebViewer()
                 viewController.documentUrl = url
                  
@@ -85,7 +83,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if currentItem == "Donate" {
                 let url = "http://devict.org/support"
-                          
                 let viewController = WebViewer()
                 viewController.documentUrl = url
                  
