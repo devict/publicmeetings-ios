@@ -64,7 +64,7 @@ class WebViewer: UIViewController, SFSafariViewControllerDelegate {
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        viewController = MinutesViewController()
+        viewController = DocumentsViewController()
         
         DispatchQueue.main.async {
             self.navigationController?.present(self.viewController, animated: true, completion: nil)
