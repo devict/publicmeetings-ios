@@ -12,16 +12,12 @@
 		E511CFEA234A8D4800807CAF /* MeetingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */; };
 		E511CFEE234A8EE700807CAF /* Accuracy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFEC234A8EE700807CAF /* Accuracy.swift */; };
 		E511CFEF234A8EE700807CAF /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFED234A8EE700807CAF /* Screen.swift */; };
-		E511CFF3234ACD8D00807CAF /* MinutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */; };
-		E511CFF5234ACE5800807CAF /* MinutesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFF4234ACE5800807CAF /* MinutesCell.swift */; };
 		E512C19A23445A29005BF52E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19923445A29005BF52E /* User.swift */; };
 		E512C19D23445BD6005BF52E /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512C19C23445BD6005BF52E /* Meeting.swift */; };
 		E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514FAAB2347330D00075816 /* MeetingCell.swift */; };
 		E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FA4A62344DFF6005C5091 /* TabBarController.swift */; };
 		E51FD2D32386A7D70054AD8A /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FD2D22386A7D70054AD8A /* DocumentsViewController.swift */; };
 		E51FD2D52386A7F20054AD8A /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FD2D42386A7F20054AD8A /* DocumentsView.swift */; };
-		E51FD2D72386AC7B0054AD8A /* MinutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FD2D62386AC7B0054AD8A /* MinutesView.swift */; };
-		E51FD2D92386AC910054AD8A /* AgendasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51FD2D82386AC910054AD8A /* AgendasView.swift */; };
 		E52268532353945F0036163B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52268522353945F0036163B /* SearchView.swift */; };
 		E522685C23540F5D0036163B /* CreateMeetingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522685B23540F5D0036163B /* CreateMeetingData.swift */; };
 		E525261923490A150003B575 /* devict-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E525261823490A150003B575 /* devict-logo.png */; };
@@ -41,8 +37,6 @@
 		E54DA38F234431E70070241F /* publicmeetings_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */; };
 		E55F53B723462E2700200F10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55F53B623462E2700200F10 /* Colors.xcassets */; };
 		E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56077AA235C9AEB003D8F26 /* StandardValues.swift */; };
-		E56A792F2361E126001376EC /* AgendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A792E2361E126001376EC /* AgendasViewController.swift */; };
-		E56A79312361E137001376EC /* AgendasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56A79302361E137001376EC /* AgendasCell.swift */; };
 		E580F2C42377BFCD00F0C0FD /* devict-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E580F2C32377BFCD00F0C0FD /* devict-icon.png */; };
 		E5A88D42239219C200610157 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A88D41239219C200610157 /* UIApplication.swift */; };
 		E5A88D44239237D800610157 /* DocumentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A88D43239237D800610157 /* DocumentsCell.swift */; };
@@ -72,16 +66,12 @@
 		E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsDetailView.swift; sourceTree = "<group>"; };
 		E511CFEC234A8EE700807CAF /* Accuracy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accuracy.swift; sourceTree = "<group>"; };
 		E511CFED234A8EE700807CAF /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
-		E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesViewController.swift; sourceTree = "<group>"; };
-		E511CFF4234ACE5800807CAF /* MinutesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesCell.swift; sourceTree = "<group>"; };
 		E512C19923445A29005BF52E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E512C19C23445BD6005BF52E /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		E514FAAB2347330D00075816 /* MeetingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
 		E51FA4A62344DFF6005C5091 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E51FD2D22386A7D70054AD8A /* DocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
 		E51FD2D42386A7F20054AD8A /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
-		E51FD2D62386AC7B0054AD8A /* MinutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesView.swift; sourceTree = "<group>"; };
-		E51FD2D82386AC910054AD8A /* AgendasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendasView.swift; sourceTree = "<group>"; };
 		E52268522353945F0036163B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E522685B23540F5D0036163B /* CreateMeetingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetingData.swift; sourceTree = "<group>"; };
 		E525261823490A150003B575 /* devict-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-logo.png"; sourceTree = "<group>"; };
@@ -107,8 +97,6 @@
 		E54DA390234431E70070241F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E55F53B623462E2700200F10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E56077AA235C9AEB003D8F26 /* StandardValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardValues.swift; sourceTree = "<group>"; };
-		E56A792E2361E126001376EC /* AgendasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendasViewController.swift; sourceTree = "<group>"; };
-		E56A79302361E137001376EC /* AgendasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendasCell.swift; sourceTree = "<group>"; };
 		E580F2C32377BFCD00F0C0FD /* devict-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-icon.png"; sourceTree = "<group>"; };
 		E5A88D41239219C200610157 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E5A88D43239237D800610157 /* DocumentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsCell.swift; sourceTree = "<group>"; };
@@ -144,10 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				E508086B23670CF2007DC949 /* AboutView.swift */,
-				E51FD2D82386AC910054AD8A /* AgendasView.swift */,
 				E51FD2D42386A7F20054AD8A /* DocumentsView.swift */,
 				E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */,
-				E51FD2D62386AC7B0054AD8A /* MinutesView.swift */,
 				E5F0305B23631EC400F65234 /* NoMeetingsView.swift */,
 				E52268522353945F0036163B /* SearchView.swift */,
 			);
@@ -176,10 +162,8 @@
 		E514FAAA234732E500075816 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E56A79302361E137001376EC /* AgendasCell.swift */,
 				E5A88D43239237D800610157 /* DocumentsCell.swift */,
 				E514FAAB2347330D00075816 /* MeetingCell.swift */,
-				E511CFF4234ACE5800807CAF /* MinutesCell.swift */,
 				E525261A234911070003B575 /* MoreCell.swift */,
 			);
 			path = Cells;
@@ -197,10 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				E508086923670CD8007DC949 /* AboutViewController.swift */,
-				E56A792E2361E126001376EC /* AgendasViewController.swift */,
 				E51FD2D22386A7D70054AD8A /* DocumentsViewController.swift */,
 				E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */,
-				E511CFF2234ACD8D00807CAF /* MinutesViewController.swift */,
 				E52E43D5234854CA00DF9D5B /* MoreViewController.swift */,
 				E52958812353145A00E1F2D7 /* SearchViewController.swift */,
 			);
@@ -440,8 +422,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56A792F2361E126001376EC /* AgendasViewController.swift in Sources */,
-				E56A79312361E137001376EC /* AgendasCell.swift in Sources */,
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
 				E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */,
@@ -453,21 +433,17 @@
 				E511CFEE234A8EE700807CAF /* Accuracy.swift in Sources */,
 				E51FD2D32386A7D70054AD8A /* DocumentsViewController.swift in Sources */,
 				E52268532353945F0036163B /* SearchView.swift in Sources */,
-				E51FD2D72386AC7B0054AD8A /* MinutesView.swift in Sources */,
 				E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */,
 				E53623B5236131F100020413 /* WebViewer.swift in Sources */,
 				E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
-				E51FD2D92386AC910054AD8A /* AgendasView.swift in Sources */,
 				E52958822353145A00E1F2D7 /* SearchViewController.swift in Sources */,
 				E5F0305C23631EC400F65234 /* NoMeetingsView.swift in Sources */,
 				E514FAAC2347330D00075816 /* MeetingCell.swift in Sources */,
 				E5A88D42239219C200610157 /* UIApplication.swift in Sources */,
 				E508086C23670CF2007DC949 /* AboutView.swift in Sources */,
 				E5A88D44239237D800610157 /* DocumentsCell.swift in Sources */,
-				E511CFF5234ACE5800807CAF /* MinutesCell.swift in Sources */,
 				E525261B234911070003B575 /* MoreCell.swift in Sources */,
-				E511CFF3234ACD8D00807CAF /* MinutesViewController.swift in Sources */,
 				E511CFEF234A8EE700807CAF /* Screen.swift in Sources */,
 				E522685C23540F5D0036163B /* CreateMeetingData.swift in Sources */,
 			);

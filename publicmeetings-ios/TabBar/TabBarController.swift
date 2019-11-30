@@ -16,8 +16,6 @@ class TabBarController: UITabBarController {
         //MARK: - Properties
         let meetingsViewController = MeetingsViewController()
         let documentsViewController = DocumentsViewController()
-        let minutesViewController = MinutesViewController()
-        let agendaViewController = AgendasViewController()
         let searchViewController = SearchViewController()
         let moreViewController = MoreViewController()
          
@@ -25,8 +23,6 @@ class TabBarController: UITabBarController {
         let config = UIImage.SymbolConfiguration(weight: .heavy)
         let meetingImage = UIImage(systemName: "calendar", withConfiguration: config)
         let documentsImage = UIImage(systemName: "folder", withConfiguration: config)
-        let minutesImage = UIImage(systemName: "clock", withConfiguration: config)
-        let agendaImage = UIImage(systemName: "list.number", withConfiguration: config)
         let searchImage = UIImage(systemName: "magnifyingglass", withConfiguration: config)
         let docImage = UIImage(systemName: "doc.plaintext", withConfiguration: config)
         let moreImage = UIImage(systemName: "ellipsis.circle", withConfiguration: config)
@@ -34,19 +30,13 @@ class TabBarController: UITabBarController {
         //MARK: - TabBar item setup
         meetingsViewController.tabBarItem = UITabBarItem(title: "Meetings", image: meetingImage, selectedImage: meetingImage)
         documentsViewController.tabBarItem = UITabBarItem(title: "Documents", image: documentsImage, selectedImage: documentsImage)
-        minutesViewController.tabBarItem = UITabBarItem(title: "Minutes", image: minutesImage, selectedImage: minutesImage)
-        agendaViewController.tabBarItem = UITabBarItem(title: "Agendas", image: agendaImage, selectedImage: agendaImage)
         searchViewController.tabBarItem = UITabBarItem(title: "Search", image: searchImage, selectedImage: searchImage)
-        documentsViewController.tabBarItem = UITabBarItem(title: "Documents", image: docImage, selectedImage: docImage)
         moreViewController.tabBarItem = UITabBarItem(title: "More", image: moreImage, selectedImage: moreImage)
         
         //MARK: - Navigation
         meetingsViewController.navigationController?.navigationBar.topItem?.title = "Meetings"
         documentsViewController.navigationController?.navigationBar.topItem?.title = "Documents"
-        minutesViewController.navigationController?.navigationBar.topItem?.title = "Minutes"
-        minutesViewController.navigationController?.navigationBar.topItem?.title = "Agendas"
         searchViewController.navigationController?.navigationBar.topItem?.title = "Search"
-        documentsViewController.navigationController?.navigationBar.topItem?.title = "Documents"
         moreViewController.navigationController?.navigationBar.topItem?.title = "More"
          
         //MARK: - ViewController configuration
