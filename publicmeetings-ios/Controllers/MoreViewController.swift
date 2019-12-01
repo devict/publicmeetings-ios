@@ -31,7 +31,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
-        navigationController?.navigationBar.barTintColor = .systemYellow
+        navigationController?.navigationBar.barTintColor = .systemOrange
     }
     
     //MARK: - TableView Delegates
