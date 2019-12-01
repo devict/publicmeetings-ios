@@ -42,8 +42,8 @@ struct Meeting {
         self.state = "KS"
         self.zip = "67202​"
         self.venue = "Wichita"
-        self.minutesUrl = ""
-        self.agendaUrl = ""
+        self.minutesUrl = "http://wichitaks.granicus.com/MinutesViewer.php?view_id=2&clip_id=3883"
+        self.agendaUrl = "https://granicus_production_attachments.s3.amazonaws.com/wichitaks/dff8c7302aef7a827c09b81310ff11ce0.pdf"
         
         cityState = city + ", " + state
         mappableAddress = address + "," + city + "," + state + "," + zip
