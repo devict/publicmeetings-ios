@@ -72,6 +72,8 @@ class DocumentsCell: UITableViewCell {
         return button
     }()
     
+    var minutesUrl: String = ""
+    var agendaUrl: String = ""
     
     
     //MARK: - Initialization
@@ -133,7 +135,7 @@ class DocumentsCell: UITableViewCell {
         ])
     }
     
-    func setupActions() {
+    private func setupActions() {
         minutesButton.addTarget(self, action: #selector(minutesButtonTapped(sender:)), for: .touchUpInside)
         agendaButton.addTarget(self, action: #selector(agendaButtonTapped(sender:)), for: .touchUpInside)
     }
@@ -141,10 +143,24 @@ class DocumentsCell: UITableViewCell {
     
     //MARK: - Actions
     @objc func minutesButtonTapped(sender: UIButton) {
-        print("minutesButtonTapped")
+        let url = minutesUrl
+        
+        let viewController = WebViewer()
+        viewController.documentUrl = url
+        
+        DispatchQueue.main.async {
+            UIApplication.topViewController()?.present(viewController, animated: true, completion: nil)
+        }
     }
     
     @objc func agendaButtonTapped(sender: UIButton) {
-        print("agendaButtonTapped")
-    }    
+        let url = agendaUrl
+        
+        let viewController = WebViewer()
+        viewController.documentUrl = url
+        
+        DispatchQueue.main.async {
+            UIApplication.topViewController()?.present(viewController, animated: true, completion: nil)
+        }
+    }
 }

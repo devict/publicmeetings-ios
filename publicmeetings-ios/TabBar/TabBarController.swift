@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
         //MARK: - TabBar image setup
         let config = UIImage.SymbolConfiguration(weight: .heavy)
         let meetingImage = UIImage(systemName: "calendar", withConfiguration: config)
-        let documentsImage = UIImage(systemName: "folder", withConfiguration: config)
+        let documentsImage = UIImage(systemName: "doc.plaintext", withConfiguration: config)
         let searchImage = UIImage(systemName: "magnifyingglass", withConfiguration: config)
         let moreImage = UIImage(systemName: "ellipsis.circle", withConfiguration: config)
         

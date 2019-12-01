@@ -40,6 +40,8 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
         cell.name.text = allMeetings[row].title
         cell.desc.text = allMeetings[row].description
         cell.meetingDate.text = allMeetings[row].date
+        cell.minutesUrl = allMeetings[row].minutesUrl
+        cell.agendaUrl = allMeetings[row].agendaUrl
     
         return cell
     }
@@ -51,18 +53,6 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let url = "http://wichitaks.granicus.com/MinutesViewer.php?view_id=2&clip_id=3883"
-        
-        let viewController = WebViewer()
-        viewController.documentUrl = url
-        
-        DispatchQueue.main.async {
-            UIApplication.topViewController()?.present(viewController, animated: true, completion: nil)
-        }
-    }
-    
     
     //MARK: - Setup and Layout
     private func setupView() {
@@ -83,9 +73,5 @@ class DocumentsView: UIView, UITableViewDelegate, UITableViewDataSource {
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15.0),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    private func setupActions() {
-        
     }
 }
