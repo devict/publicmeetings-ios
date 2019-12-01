@@ -10,6 +10,7 @@ import UIKit
 
 class DocumentsCell: UITableViewCell {
 
+    //MARK: - Properties
     var view: UIView = {
         let v = UIView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +57,7 @@ class DocumentsCell: UITableViewCell {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
         button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = UIColor(named: "devictTan")
         button.layer.cornerRadius = 12.0
         return button
     }()
@@ -68,14 +70,14 @@ class DocumentsCell: UITableViewCell {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
         button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = UIColor(named: "devictTan")
         button.layer.cornerRadius = 12.0
         return button
     }()
     
     var minutesUrl: String = ""
     var agendaUrl: String = ""
-    
-    
+        
     //MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -139,7 +141,6 @@ class DocumentsCell: UITableViewCell {
         minutesButton.addTarget(self, action: #selector(minutesButtonTapped(sender:)), for: .touchUpInside)
         agendaButton.addTarget(self, action: #selector(agendaButtonTapped(sender:)), for: .touchUpInside)
     }
-    
     
     //MARK: - Actions
     @objc func minutesButtonTapped(sender: UIButton) {

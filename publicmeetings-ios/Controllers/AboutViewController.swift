@@ -23,6 +23,7 @@ class AboutViewController: UIViewController {
         setupLayout()
     }
     
+   
     //MARK: - Setup and Layout
     private func setupView() {
         view.addSubview(aboutView)
