@@ -38,6 +38,8 @@
 		E55F53B723462E2700200F10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55F53B623462E2700200F10 /* Colors.xcassets */; };
 		E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56077AA235C9AEB003D8F26 /* StandardValues.swift */; };
 		E580F2C42377BFCD00F0C0FD /* devict-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E580F2C32377BFCD00F0C0FD /* devict-icon.png */; };
+		E58D97F923B84D370078E037 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58D97F823B84D360078E037 /* DateExtension.swift */; };
+		E58D97FB23B84DDF0078E037 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58D97FA23B84DDF0078E037 /* DateView.swift */; };
 		E5A88D42239219C200610157 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A88D41239219C200610157 /* UIApplication.swift */; };
 		E5A88D44239237D800610157 /* DocumentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A88D43239237D800610157 /* DocumentsCell.swift */; };
 		E5F0305C23631EC400F65234 /* NoMeetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0305B23631EC400F65234 /* NoMeetingsView.swift */; };
@@ -98,6 +100,8 @@
 		E55F53B623462E2700200F10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E56077AA235C9AEB003D8F26 /* StandardValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardValues.swift; sourceTree = "<group>"; };
 		E580F2C32377BFCD00F0C0FD /* devict-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-icon.png"; sourceTree = "<group>"; };
+		E58D97F823B84D360078E037 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E58D97FA23B84DDF0078E037 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		E5A88D41239219C200610157 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E5A88D43239237D800610157 /* DocumentsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsCell.swift; sourceTree = "<group>"; };
 		E5F0305B23631EC400F65234 /* NoMeetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMeetingsView.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E508086B23670CF2007DC949 /* AboutView.swift */,
+				E58D97FA23B84DDF0078E037 /* DateView.swift */,
 				E51FD2D42386A7F20054AD8A /* DocumentsView.swift */,
 				E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */,
 				E5F0305B23631EC400F65234 /* NoMeetingsView.swift */,
@@ -281,6 +286,7 @@
 		E5A88D402392199D00610157 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E58D97F823B84D360078E037 /* DateExtension.swift */,
 				E5A88D41239219C200610157 /* UIApplication.swift */,
 			);
 			path = Extensions;
@@ -433,8 +439,10 @@
 				E511CFEE234A8EE700807CAF /* Accuracy.swift in Sources */,
 				E51FD2D32386A7D70054AD8A /* DocumentsViewController.swift in Sources */,
 				E52268532353945F0036163B /* SearchView.swift in Sources */,
+				E58D97F923B84D370078E037 /* DateExtension.swift in Sources */,
 				E51FA4A72344DFF6005C5091 /* TabBarController.swift in Sources */,
 				E53623B5236131F100020413 /* WebViewer.swift in Sources */,
+				E58D97FB23B84DDF0078E037 /* DateView.swift in Sources */,
 				E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */,
 				E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */,
 				E52958822353145A00E1F2D7 /* SearchViewController.swift in Sources */,

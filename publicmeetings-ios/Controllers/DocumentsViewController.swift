@@ -28,7 +28,7 @@ class DocumentsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         setScreenTitle()
-        navigationController?.navigationBar.barTintColor = .systemOrange
+        navigationController?.navigationBar.barTintColor = UIColor(named: "devictBlue")
     }
     
     //MARK: - Setup and Layout

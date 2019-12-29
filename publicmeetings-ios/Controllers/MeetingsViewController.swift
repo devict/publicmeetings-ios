@@ -28,6 +28,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let view = NoMeetingsView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true
+        view.backgroundColor = UIColor(named: "devictTan")
         return view
     }()
     
@@ -55,7 +56,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
-        navigationController?.navigationBar.barTintColor = .systemOrange
+        navigationController?.navigationBar.barTintColor = UIColor(named: "devictBlue")
     }
     
     //MARK: - TableView Delegates
@@ -97,7 +98,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+        return 120.0
     }
     
     //MARK: - Setup and Layout
