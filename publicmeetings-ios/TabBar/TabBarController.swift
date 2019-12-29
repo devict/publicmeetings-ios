@@ -43,8 +43,12 @@ class TabBarController: UITabBarController {
         viewControllers = viewControllerList
         
         //MARK: - TabBar configuration
-        UITabBar.appearance().tintColor = UIColor(named: "devictOrange")
-        UITabBar.appearance().unselectedItemTintColor = .black
+        UITabBar.appearance().tintColor = .red
+        UITabBar.appearance().unselectedItemTintColor = .white
+        UITabBar.appearance().alpha = 1.0
+        UITabBar.appearance().backgroundColor = UIColor(named: "devictBlue")
+        
+        
     }
 }
 

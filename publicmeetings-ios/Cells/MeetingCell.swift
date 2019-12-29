@@ -143,9 +143,8 @@ class MeetingCell: UITableViewCell {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        //[view, name, desc, meetingDate, address, location, city, reminder, share].forEach { contentView.addSubview($0) }
-        addSubview(view)
-        view.addSubview(dateView)
+        contentView.addSubview(view)
+        [dateView, name, desc, address, location, city, reminder, share].forEach { contentView.addSubview($0) }
         
         selectionStyle = .none
         backgroundColor = .clear
@@ -176,38 +175,30 @@ class MeetingCell: UITableViewCell {
             dateView.monthLabel.topAnchor.constraint(equalTo: dateView.dateLabel.bottomAnchor),
             dateView.monthLabel.leadingAnchor.constraint(equalTo: dateView.leadingAnchor),
             dateView.monthLabel.trailingAnchor.constraint(equalTo: dateView.trailingAnchor),
-            dateView.monthLabel.heightAnchor.constraint(equalToConstant: 40.0)
+            dateView.monthLabel.heightAnchor.constraint(equalToConstant: 40.0),
             
-            
-            
-            /*
             name.topAnchor.constraint(equalTo: view.topAnchor, constant: 10.0),
-            name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            name.leadingAnchor.constraint(equalTo: dateView.trailingAnchor, constant: 4.0),
             name.widthAnchor.constraint(equalToConstant: 200.0),
             name.heightAnchor.constraint(equalToConstant: 22.0),
             
-            meetingDate.centerYAnchor.constraint(equalTo: name.centerYAnchor),
-            meetingDate.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -13.0),
-            meetingDate.widthAnchor.constraint(equalToConstant: 70.0),
-            meetingDate.heightAnchor.constraint(equalToConstant: 20.0),
-            
             desc.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 6.0),
-            desc.leadingAnchor.constraint(equalTo: name.leadingAnchor),
+            desc.leadingAnchor.constraint(equalTo: dateView.trailingAnchor, constant: 4.0),
             desc.widthAnchor.constraint(equalToConstant: 200.0),
             desc.heightAnchor.constraint(equalToConstant: 20.0),
             
             address.topAnchor.constraint(equalTo: desc.bottomAnchor, constant: 2.0),
-            address.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            address.leadingAnchor.constraint(equalTo: dateView.trailingAnchor, constant: 4.0),
             address.widthAnchor.constraint(equalToConstant: 200.0),
             address.heightAnchor.constraint(equalToConstant: 20.0),
             
             location.topAnchor.constraint(equalTo: address.bottomAnchor, constant: 2.0),
-            location.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            location.leadingAnchor.constraint(equalTo: dateView.trailingAnchor, constant: 4.0),
             location.widthAnchor.constraint(equalToConstant: 200.0),
             location.heightAnchor.constraint(equalToConstant: 20.0),
             
             city.topAnchor.constraint(equalTo: location.bottomAnchor, constant: 2.0),
-            city.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
+            city.leadingAnchor.constraint(equalTo: dateView.trailingAnchor, constant: 4.0),
             city.widthAnchor.constraint(equalToConstant: 200.0),
             city.heightAnchor.constraint(equalToConstant: 22.0),
             
@@ -220,7 +211,6 @@ class MeetingCell: UITableViewCell {
             share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -5.0),
             share.widthAnchor.constraint(equalToConstant: 40.0),
             share.heightAnchor.constraint(equalToConstant: 40.0)
-            */
         ])
     }
     

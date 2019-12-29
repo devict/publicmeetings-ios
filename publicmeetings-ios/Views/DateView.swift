@@ -45,8 +45,7 @@ class DateView: UIView {
         super.init(frame: frame)
         
         setupView()
-        //setupLayout()
-        //setupActions()
+
     }
      
     required init?(coder aDecoder: NSCoder) {
@@ -56,32 +55,9 @@ class DateView: UIView {
     //MARK: - Setup and Layout
     private func setupView() {
         [dayOfWeekLabel, dateLabel, monthLabel].forEach { addSubview($0) }
+        
         backgroundColor = UIColor(named: "softRed")
-    }
-    
-    private func setupLayout() {
-        print("---> self.layer.frame.height: \(self.layer.frame.height)")
-        print("---> self.frame.height: \(self.frame.height)")
-        
-        NSLayoutConstraint.activate([
-            dayOfWeekLabel.topAnchor.constraint(equalTo: topAnchor),
-            dayOfWeekLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            dayOfWeekLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            dayOfWeekLabel.heightAnchor.constraint(equalToConstant: self.layer.frame.height * 0.5),
-            
-            dateLabel.topAnchor.constraint(equalTo: dayOfWeekLabel.bottomAnchor),
-            dateLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            dateLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            dateLabel.heightAnchor.constraint(equalToConstant: 60.0),
-                   
-            monthLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor),
-            monthLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            monthLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            monthLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-    }
-    
-    private func setupActions() {
-        
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1.0
     }
 }

@@ -41,7 +41,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "softRed")
+        tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "darkGreen")
         tabBarController?.tabBar.items?[0].badgeValue = nil
 
         allMeetings = meetingData()
