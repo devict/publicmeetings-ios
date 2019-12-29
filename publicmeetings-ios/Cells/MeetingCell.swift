@@ -153,7 +153,7 @@ class MeetingCell: UITableViewCell {
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            view.topAnchor.constraint(equalTo: topAnchor, constant: 0.0),
+            view.topAnchor.constraint(equalTo: topAnchor),
             view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0),
             view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0.0),
             view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0.0),
@@ -161,7 +161,24 @@ class MeetingCell: UITableViewCell {
             dateView.topAnchor.constraint(equalTo: view.topAnchor),
             dateView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             dateView.widthAnchor.constraint(equalToConstant: 80.0),
-            dateView.heightAnchor.constraint(equalToConstant: 140.0)
+            dateView.heightAnchor.constraint(equalToConstant: 140.0),
+            
+            dateView.dayOfWeekLabel.topAnchor.constraint(equalTo: dateView.topAnchor),
+            dateView.dayOfWeekLabel.leadingAnchor.constraint(equalTo: dateView.leadingAnchor),
+            dateView.dayOfWeekLabel.trailingAnchor.constraint(equalTo: dateView.trailingAnchor),
+            dateView.dayOfWeekLabel.heightAnchor.constraint(equalToConstant: 40.0),
+            
+            dateView.dateLabel.topAnchor.constraint(equalTo: dateView.dayOfWeekLabel.bottomAnchor),
+            dateView.dateLabel.leadingAnchor.constraint(equalTo: dateView.leadingAnchor),
+            dateView.dateLabel.trailingAnchor.constraint(equalTo: dateView.trailingAnchor),
+            dateView.dateLabel.heightAnchor.constraint(equalToConstant: 40.0),
+            
+            dateView.monthLabel.topAnchor.constraint(equalTo: dateView.dateLabel.bottomAnchor),
+            dateView.monthLabel.leadingAnchor.constraint(equalTo: dateView.leadingAnchor),
+            dateView.monthLabel.trailingAnchor.constraint(equalTo: dateView.trailingAnchor),
+            dateView.monthLabel.heightAnchor.constraint(equalToConstant: 40.0)
+            
+            
             
             /*
             name.topAnchor.constraint(equalTo: view.topAnchor, constant: 10.0),

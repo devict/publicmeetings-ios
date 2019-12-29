@@ -45,8 +45,8 @@ class DateView: UIView {
         super.init(frame: frame)
         
         setupView()
-        setupLayout()
-        setupActions()
+        //setupLayout()
+        //setupActions()
     }
      
     required init?(coder aDecoder: NSCoder) {
@@ -60,11 +60,14 @@ class DateView: UIView {
     }
     
     private func setupLayout() {
+        print("---> self.layer.frame.height: \(self.layer.frame.height)")
+        print("---> self.frame.height: \(self.frame.height)")
+        
         NSLayoutConstraint.activate([
             dayOfWeekLabel.topAnchor.constraint(equalTo: topAnchor),
             dayOfWeekLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             dayOfWeekLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            dayOfWeekLabel.heightAnchor.constraint(equalToConstant: 40.0),
+            dayOfWeekLabel.heightAnchor.constraint(equalToConstant: self.layer.frame.height * 0.5),
             
             dateLabel.topAnchor.constraint(equalTo: dayOfWeekLabel.bottomAnchor),
             dateLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -74,7 +77,7 @@ class DateView: UIView {
             monthLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor),
             monthLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             monthLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            monthLabel.heightAnchor.constraint(equalToConstant: 40.0)
+            monthLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
