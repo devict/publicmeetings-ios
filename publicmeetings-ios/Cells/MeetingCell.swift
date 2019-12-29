@@ -26,6 +26,12 @@ class MeetingCell: UITableViewCell {
         return v
     }()
     
+    var dateView: DateView = {
+        let view = DateView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     var name: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -137,7 +143,9 @@ class MeetingCell: UITableViewCell {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        [view, name, desc, meetingDate, address, location, city, reminder, share].forEach { contentView.addSubview($0) }
+        //[view, name, desc, meetingDate, address, location, city, reminder, share].forEach { contentView.addSubview($0) }
+        addSubview(view)
+        view.addSubview(dateView)
         
         selectionStyle = .none
         backgroundColor = .clear
@@ -145,11 +153,17 @@ class MeetingCell: UITableViewCell {
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            view.topAnchor.constraint(equalTo: topAnchor, constant: 3.0),
-            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 3.0),
-            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -3.0),
-            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -3.0),
+            view.topAnchor.constraint(equalTo: topAnchor, constant: 0.0),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0.0),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0.0),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0.0),
             
+            dateView.topAnchor.constraint(equalTo: view.topAnchor),
+            dateView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            dateView.widthAnchor.constraint(equalToConstant: 80.0),
+            dateView.heightAnchor.constraint(equalToConstant: 140.0)
+            
+            /*
             name.topAnchor.constraint(equalTo: view.topAnchor, constant: 10.0),
             name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15.0),
             name.widthAnchor.constraint(equalToConstant: 200.0),
@@ -189,6 +203,7 @@ class MeetingCell: UITableViewCell {
             share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -5.0),
             share.widthAnchor.constraint(equalToConstant: 40.0),
             share.heightAnchor.constraint(equalToConstant: 40.0)
+            */
         ])
     }
     
