@@ -42,9 +42,11 @@ class TabBarController: UITabBarController {
         let viewControllerList = [meetingsViewController, documentsViewController, searchViewController, moreViewController]
         viewControllers = viewControllerList
         
+        
         //MARK: - TabBar configuration
-        UITabBar.appearance().tintColor = .red
-        UITabBar.appearance().unselectedItemTintColor = .white
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().tintColor = .white
+        UITabBar.appearance().unselectedItemTintColor = UIColor(named: "unselectedBlue")
         UITabBar.appearance().alpha = 1.0
         UITabBar.appearance().backgroundColor = UIColor(named: "devictBlue")
         

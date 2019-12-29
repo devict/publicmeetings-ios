@@ -24,7 +24,7 @@ class MeetingsDetailView: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .clear
+        //backgroundColor = .clear
         mainSetup()
    }
     

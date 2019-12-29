@@ -45,7 +45,6 @@ class DateView: UIView {
         super.init(frame: frame)
         
         setupView()
-
     }
      
     required init?(coder aDecoder: NSCoder) {

@@ -28,6 +28,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let view = NoMeetingsView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true
+        view.backgroundColor = UIColor(named: "devictTan")
         return view
     }()
     
@@ -41,7 +42,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "darkGreen")
+        tabBarController?.tabBar.items?[0].badgeColor = UIColor(named: "softRed")
         tabBarController?.tabBar.items?[0].badgeValue = nil
 
         allMeetings = meetingData()
@@ -55,7 +56,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         setScreenTitle()
-        navigationController?.navigationBar.barTintColor = .systemOrange
+        navigationController?.navigationBar.barTintColor = UIColor(named: "devictBlue")
     }
     
     //MARK: - TableView Delegates
