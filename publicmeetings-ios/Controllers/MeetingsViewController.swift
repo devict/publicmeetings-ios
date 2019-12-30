@@ -68,13 +68,19 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MeetingCell
         let row = indexPath.row
         
+        let actualDate = convertToDate(stringDate: meetings[row].date)
+        print("actualDate: \(actualDate)")
+        
         cell.badgeDelegate = self
         cell.name.text = meetings[row].title
         cell.desc.text = meetings[row].description
         cell.address.text = meetings[row].address
         cell.location.text = meetings[row].location
         cell.city.text = meetings[row].cityState
-        cell.meetingDate.text = meetings[row].date
+        
+        cell.dateView.dayOfWeekLabel.text = actualDate.longDay
+        cell.dateView.dateLabel.text = actualDate.dateOfMonth
+        cell.dateView.monthLabel.text = actualDate.longMonth
 
         return cell
     }
@@ -252,5 +258,16 @@ extension MeetingsViewController {
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = "City Hall"
         mapItem.openInMaps(launchOptions: options)
+    }
+    
+    
+    //NOTE: THIS IS A FAKE METHOD FOR TESTING ONLY!!!  DO NOT USE IN PRODUCTION CODE!!!
+    func convertToDate(stringDate: String) -> Date {
+        print("convertToDate: \(stringDate)")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        let date = dateFormatter.date(from: stringDate)!
+        return date
     }
 }

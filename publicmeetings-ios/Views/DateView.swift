@@ -15,7 +15,6 @@ class DateView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = Standard.systemFont
         label.textAlignment = .center
-        label.text = "Monday"
         label.textColor = .white
         return label
     }()
@@ -25,7 +24,6 @@ class DateView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = Standard.systemFontLarge
         label.textAlignment = .center
-        label.text = "30"
         label.textColor = .white
         return label
     }()
@@ -35,7 +33,6 @@ class DateView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = Standard.systemFont
         label.textAlignment = .center
-        label.text = "January"
         label.textColor = .white
         return label
     }()

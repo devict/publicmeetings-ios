@@ -49,8 +49,6 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().unselectedItemTintColor = UIColor(named: "unselectedBlue")
         UITabBar.appearance().alpha = 1.0
         UITabBar.appearance().backgroundColor = UIColor(named: "devictBlue")
-        
-        
     }
 }
 
