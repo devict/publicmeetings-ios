@@ -53,7 +53,7 @@ class DateView: UIView {
         [dayOfWeekLabel, dateLabel, monthLabel].forEach { addSubview($0) }
         
         backgroundColor = UIColor(named: "softRed")
-        layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 0.5
     }
 }
