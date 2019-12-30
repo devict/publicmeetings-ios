@@ -10,12 +10,19 @@ import UIKit
 
 class NoMeetingsView: UIView {
 
+    var backgroundImage: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "meetingroom"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     var noMeetings: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.backgroundColor = .clear
         label.textAlignment = .center
+        label.textColor = .white
         label.font = Standard.largeFont
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
@@ -38,11 +45,16 @@ class NoMeetingsView: UIView {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        addSubview(noMeetings)
+        [backgroundImage, noMeetings].forEach { addSubview($0) }
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
+            backgroundImage.topAnchor.constraint(equalTo: topAnchor),
+            backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
             noMeetings.centerXAnchor.constraint(equalTo: centerXAnchor),
             noMeetings.centerYAnchor.constraint(equalTo: centerYAnchor),
             noMeetings.widthAnchor.constraint(equalToConstant: Screen.width),

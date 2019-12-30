@@ -13,7 +13,7 @@ class AboutView: UIView {
     var logo: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "devict-icon")
+        imageView.image = UIImage(named: "pillars")
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -23,6 +23,7 @@ class AboutView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Developed By"
         label.font = Standard.systemFont
+        label.textColor = .white
         label.textAlignment = .center
         return label
     }()
@@ -32,6 +33,7 @@ class AboutView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Michael Campbell"
         label.font = Standard.systemFont
+        label.textColor = .white
         label.textAlignment = .center
         return label
     }()
@@ -60,9 +62,10 @@ class AboutView: UIView {
         let guide = safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            logo.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 30.0),
-            logo.centerXAnchor.constraint(equalTo: centerXAnchor),
-            logo.widthAnchor.constraint(equalToConstant: Screen.width * 0.65),
+            logo.topAnchor.constraint(equalTo: topAnchor),
+            logo.leadingAnchor.constraint(equalTo: leadingAnchor),
+            logo.trailingAnchor.constraint(equalTo: trailingAnchor),
+            logo.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             developedBy.topAnchor.constraint(equalTo: bottomAnchor, constant: -70.0),
             developedBy.centerXAnchor.constraint(equalTo: centerXAnchor),
