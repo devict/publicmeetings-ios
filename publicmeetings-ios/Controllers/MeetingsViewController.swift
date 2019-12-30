@@ -69,7 +69,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         let row = indexPath.row
         
         let actualDate = convertToDate(stringDate: meetings[row].date)
-        print("actualDate: \(actualDate)")
         
         cell.badgeDelegate = self
         cell.name.text = meetings[row].title
@@ -263,7 +262,6 @@ extension MeetingsViewController {
     
     //NOTE: THIS IS A FAKE METHOD FOR TESTING ONLY!!!  DO NOT USE IN PRODUCTION CODE!!!
     func convertToDate(stringDate: String) -> Date {
-        print("convertToDate: \(stringDate)")
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
