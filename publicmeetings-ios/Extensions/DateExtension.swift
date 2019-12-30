@@ -9,6 +9,13 @@
 import Foundation
 
 extension Date {
+    var dateOfMonth: String {
+        let fmt  = DateFormatter()
+        fmt.dateFormat = "dd"
+        let date: String = fmt.string(from: self)
+        return date
+    }
+    
     var shortDate: String {
         let fmt  = DateFormatter()
         fmt.dateFormat = "MM-dd"

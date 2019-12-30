@@ -159,7 +159,7 @@ class MeetingCell: UITableViewCell {
             
             dateView.topAnchor.constraint(equalTo: view.topAnchor),
             dateView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            dateView.widthAnchor.constraint(equalToConstant: 80.0),
+            dateView.widthAnchor.constraint(equalToConstant: 90.0),
             dateView.heightAnchor.constraint(equalToConstant: 140.0),
             
             dateView.dayOfWeekLabel.topAnchor.constraint(equalTo: dateView.topAnchor),
