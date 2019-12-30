@@ -56,8 +56,8 @@ class DocumentsCell: UITableViewCell {
         button.titleLabel?.font = Standard.systemFont
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = UIColor(named: "devictTan")
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(named: "devictBlue")
         button.layer.cornerRadius = 12.0
         return button
     }()
@@ -69,8 +69,8 @@ class DocumentsCell: UITableViewCell {
         button.titleLabel?.font = Standard.systemFont
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = UIColor(named: "devictTan")
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(named: "devictBlue")
         button.layer.cornerRadius = 12.0
         return button
     }()
