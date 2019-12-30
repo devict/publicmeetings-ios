@@ -15,7 +15,7 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
     var venue: UISegmentedControl = {
         let segmented = UISegmentedControl(items: ["All", "Wichita", "County", "State"])
         segmented.translatesAutoresizingMaskIntoConstraints = false
-        segmented.backgroundColor = UIColor.black
+        segmented.backgroundColor = UIColor(named: "softBlue")
         segmented.selectedSegmentIndex = 0
         segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
         segmented.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
