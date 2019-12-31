@@ -38,6 +38,24 @@ class AboutView: UIView {
         return textView
     }()
     
+    var byLineView: UIView = {
+        let view = UIView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(named: "darkRed")
+        return view
+    }()
+    
+    var byLine: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .clear
+        label.textColor = .white
+        label.text = "2019 Public Meetings.  Developed by DevICT.  All Rights Reserved."
+        label.textAlignment = .center
+        label.font = Standard.systemFontSmall
+        return label
+    }()
+    
 
     //MARK: - Initialization
     override init(frame: CGRect) {
@@ -54,11 +72,14 @@ class AboutView: UIView {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        [logo, aboutLabel, about].forEach { addSubview($0) }
+        [logo, aboutLabel, about, byLineView].forEach { addSubview($0) }
+        byLineView.addSubview(byLine)
         about.text = loremIpsum()
     }
     
     private func setupLayout() {
+        let guide = safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
             logo.topAnchor.constraint(equalTo: topAnchor),
             logo.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -72,7 +93,16 @@ class AboutView: UIView {
             about.topAnchor.constraint(equalTo: aboutLabel.bottomAnchor, constant: 2.0),
             about.leadingAnchor.constraint(equalTo: leadingAnchor),
             about.trailingAnchor.constraint(equalTo: trailingAnchor),
-            about.bottomAnchor.constraint(equalToSystemSpacingBelow: bottomAnchor, multiplier: -25.0)
+            about.bottomAnchor.constraint(equalToSystemSpacingBelow: bottomAnchor, multiplier: -25.0),
+            
+            byLineView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+            byLineView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            byLineView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            byLineView.heightAnchor.constraint(equalToConstant: 25.0),
+            
+            byLine.centerXAnchor.constraint(equalTo: byLineView.centerXAnchor),
+            byLine.centerYAnchor.constraint(equalTo: byLineView.centerYAnchor),
+            byLine.widthAnchor.constraint(equalToConstant: Screen.width)
         ])
     }
     

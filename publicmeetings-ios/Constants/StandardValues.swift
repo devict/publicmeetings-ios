@@ -12,6 +12,7 @@ import UIKit
 struct Standard {
     static let cornerRadius: CGFloat = 8.0
     static let font: UIFont = UIFont(name: "Damascus", size: 16.0)!
+    static let systemFontSmall: UIFont = UIFont.systemFont(ofSize: 10.0)
     static let systemFont: UIFont = UIFont.systemFont(ofSize: 16.0)
     static let systemFontLarge: UIFont = UIFont.systemFont(ofSize: 50.0)
     static let fontBold: UIFont = UIFont(name: "DamascusBold", size: 16.0)!
