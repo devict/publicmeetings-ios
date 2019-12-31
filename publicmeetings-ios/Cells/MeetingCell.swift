@@ -202,12 +202,12 @@ class MeetingCell: UITableViewCell {
             city.widthAnchor.constraint(equalToConstant: 200.0),
             city.heightAnchor.constraint(equalToConstant: 22.0),
             
-            reminder.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
+            reminder.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             reminder.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5.0),
             reminder.widthAnchor.constraint(equalToConstant: 40.0),
             reminder.heightAnchor.constraint(equalToConstant: 40.0),
             
-            share.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5.0),
+            share.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1.0),
             share.trailingAnchor.constraint(equalTo: reminder.leadingAnchor, constant: -5.0),
             share.widthAnchor.constraint(equalToConstant: 40.0),
             share.heightAnchor.constraint(equalToConstant: 40.0)

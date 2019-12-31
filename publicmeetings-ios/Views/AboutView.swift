@@ -13,29 +13,29 @@ class AboutView: UIView {
     var logo: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "pillars")
+        imageView.image = UIImage(named: "meetingroom")
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
-    var developedBy: UILabel = {
+    var aboutLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Developed By"
-        label.font = Standard.systemFont
+        label.backgroundColor = .clear
+        label.text = "About The Meeting Project"
         label.textColor = .white
+        label.font = Standard.fontBold
         label.textAlignment = .center
         return label
     }()
     
-    var developers: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Michael Campbell"
-        label.font = Standard.systemFont
-        label.textColor = .white
-        label.textAlignment = .center
-        return label
+    var about: UITextView = {
+        let textView = UITextView(frame: .zero)
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.backgroundColor = .clear
+        textView.textColor = .white
+        textView.font = Standard.systemFont
+        return textView
     }()
     
 
@@ -54,28 +54,33 @@ class AboutView: UIView {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        [logo, developedBy, developers].forEach { addSubview($0) }
-        backgroundColor = UIColor(named: "devictTan")
+        [logo, aboutLabel, about].forEach { addSubview($0) }
+        about.text = loremIpsum()
     }
     
     private func setupLayout() {
-        let guide = safeAreaLayoutGuide
-        
         NSLayoutConstraint.activate([
             logo.topAnchor.constraint(equalTo: topAnchor),
             logo.leadingAnchor.constraint(equalTo: leadingAnchor),
             logo.trailingAnchor.constraint(equalTo: trailingAnchor),
             logo.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            developedBy.topAnchor.constraint(equalTo: bottomAnchor, constant: -70.0),
-            developedBy.centerXAnchor.constraint(equalTo: centerXAnchor),
-            developedBy.widthAnchor.constraint(equalToConstant: Screen.width),
-            developedBy.heightAnchor.constraint(equalToConstant: 20.0),
+            aboutLabel.topAnchor.constraint(equalTo: topAnchor, constant: 25.0),
+            aboutLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            aboutLabel.heightAnchor.constraint(equalToConstant: 25.0),
             
-            developers.topAnchor.constraint(equalTo: bottomAnchor, constant: -50.0),
-            developers.centerXAnchor.constraint(equalTo: centerXAnchor),
-            developers.widthAnchor.constraint(equalToConstant: Screen.width),
-            developers.heightAnchor.constraint(equalToConstant: 20.0),
+            about.topAnchor.constraint(equalTo: aboutLabel.bottomAnchor, constant: 2.0),
+            about.leadingAnchor.constraint(equalTo: leadingAnchor),
+            about.trailingAnchor.constraint(equalTo: trailingAnchor),
+            about.bottomAnchor.constraint(equalToSystemSpacingBelow: bottomAnchor, multiplier: -25.0)
         ])
+    }
+    
+    func loremIpsum() -> String {
+        var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum non. Pellentesque nec nam aliquam sem et tortor consequat id. Nulla facilisi cras fermentum odio eu feugiat pretium. Gravida quis blandit turpis cursus in. Aenean sed adipiscing diam donec adipiscing tristique risus. Purus in mollis nunc sed. Euismod in pellentesque.\n\n"
+
+        lorem += "Amet mattis vulputate enim nulla. Nibh tellus molestie nunc non blandit massa enim. Pulvinar sapien et ligula ullamcorper malesuada. Mi quis hendrerit dolor magna eget est lorem ipsum. Sagittis vitae et leo duis ut diam. Bibendum ut tristique et egestas quis ipsum suspendisse. Ultrices mi tempus imperdiet nulla. Sodales ut etiam sit amet nisl purus in mollis. Velit euismod in pellentesque massa placerat duis ultricies lacus. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Sed risus pretium quam vulputate dignissim suspendisse in est ante. Duis at consectetur lorem donec massa sapien faucibus. Vivamus at augue eget arcu dictum varius duis at. Magna etiam tempor orci eu lobortis elementum nibh.\n\n"
+        
+        return lorem
     }
 }

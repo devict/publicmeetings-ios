@@ -16,6 +16,8 @@ class AboutViewController: UIViewController {
         return view
     }()
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
