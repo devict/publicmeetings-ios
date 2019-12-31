@@ -35,6 +35,8 @@ class AboutView: UIView {
         textView.backgroundColor = .clear
         textView.textColor = .white
         textView.font = Standard.systemFont
+        textView.isEditable = false
+        textView.isSelectable = false
         return textView
     }()
     
