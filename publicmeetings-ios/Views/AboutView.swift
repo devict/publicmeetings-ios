@@ -95,7 +95,7 @@ class AboutView: UIView {
             about.topAnchor.constraint(equalTo: aboutLabel.bottomAnchor, constant: 2.0),
             about.leadingAnchor.constraint(equalTo: leadingAnchor),
             about.trailingAnchor.constraint(equalTo: trailingAnchor),
-            about.bottomAnchor.constraint(equalToSystemSpacingBelow: bottomAnchor, multiplier: -25.0),
+            about.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -25.0),
             
             byLineView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
             byLineView.leadingAnchor.constraint(equalTo: leadingAnchor),

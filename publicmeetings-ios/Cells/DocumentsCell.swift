@@ -57,7 +57,7 @@ class DocumentsCell: UITableViewCell {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(named: "devictBlue")
+        button.backgroundColor = UIColor(named: "softRed")
         button.layer.cornerRadius = 12.0
         return button
     }()
@@ -70,7 +70,7 @@ class DocumentsCell: UITableViewCell {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.9
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor(named: "devictBlue")
+        button.backgroundColor = UIColor(named: "softRed")
         button.layer.cornerRadius = 12.0
         return button
     }()
