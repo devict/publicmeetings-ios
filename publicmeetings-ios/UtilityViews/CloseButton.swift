@@ -38,6 +38,15 @@ class CloseButton: UIButton {
         addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
+    //MARK: - Methods
+    func setSystemImage(systemImage: String) {
+        self.setImage(UIImage(systemName: systemImage), for: .normal)
+    }
+    
+    func setImage(image: String) {
+        self.setImage(UIImage(named: image), for: .normal)
+    }
+    
     //MARK: - Actions
     @objc func buttonTapped() {
         delegate?.closeButtonTapped()

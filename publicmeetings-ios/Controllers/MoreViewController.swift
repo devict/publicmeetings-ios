@@ -93,6 +93,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if currentItem == "About" {
                 let viewController = AboutViewController()
+                //viewController.modalPresentationStyle = .fullScreen
                 
                 DispatchQueue.main.async {
                     self.present(viewController, animated: true, completion: nil)

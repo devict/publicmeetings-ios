@@ -36,6 +36,7 @@ class AboutViewController: UIViewController, CloseButtonDelegate {
         
         closeButton.delegate = self
         closeButton.tintColor = .white
+        closeButton.setSystemImage(systemImage: "xmark")
     }
     
     private func setupLayout() {
