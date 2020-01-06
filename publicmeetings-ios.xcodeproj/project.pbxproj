@@ -22,6 +22,7 @@
 		E522685C23540F5D0036163B /* CreateMeetingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522685B23540F5D0036163B /* CreateMeetingData.swift */; };
 		E525261923490A150003B575 /* devict-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E525261823490A150003B575 /* devict-logo.png */; };
 		E525261B234911070003B575 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525261A234911070003B575 /* MoreCell.swift */; };
+		E5276F1423C2E40A00D2DE7E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5276F1323C2E40A00D2DE7E /* CloseButton.swift */; };
 		E52958822353145A00E1F2D7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52958812353145A00E1F2D7 /* SearchViewController.swift */; };
 		E52E43D6234854CA00DF9D5B /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D5234854CA00DF9D5B /* MoreViewController.swift */; };
 		E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */; };
@@ -78,6 +79,7 @@
 		E522685B23540F5D0036163B /* CreateMeetingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetingData.swift; sourceTree = "<group>"; };
 		E525261823490A150003B575 /* devict-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-logo.png"; sourceTree = "<group>"; };
 		E525261A234911070003B575 /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
+		E5276F1323C2E40A00D2DE7E /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		E52958812353145A00E1F2D7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E52E43D5234854CA00DF9D5B /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		E5276F1223C2E3D200D2DE7E /* UtilityViews */ = {
+			isa = PBXGroup;
+			children = (
+				E5276F1323C2E40A00D2DE7E /* CloseButton.swift */,
+			);
+			path = UtilityViews;
+			sourceTree = "<group>";
+		};
 		E53623B3236131E100020413 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +258,7 @@
 				E5A88D402392199D00610157 /* Extensions */,
 				E53623B3236131E100020413 /* WebView */,
 				E522685A23540D7C0036163B /* Utils */,
+				E5276F1223C2E3D200D2DE7E /* UtilityViews */,
 				E511CFEB234A8EB100807CAF /* Constants */,
 				E51FA4A52344DF88005C5091 /* TabBar */,
 				E511CFE8234A8D3000807CAF /* Views */,
@@ -431,6 +442,7 @@
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
 				E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */,
+				E5276F1423C2E40A00D2DE7E /* CloseButton.swift in Sources */,
 				E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */,
 				E508086A23670CD8007DC949 /* AboutViewController.swift in Sources */,
 				E51FD2D52386A7F20054AD8A /* DocumentsView.swift in Sources */,
