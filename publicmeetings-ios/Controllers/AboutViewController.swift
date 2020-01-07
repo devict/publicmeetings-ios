@@ -8,12 +8,18 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class AboutViewController: UIViewController, CloseButtonDelegate {
 
     var aboutView: AboutView = {
         let view = AboutView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+    }()
+    
+    var closeButton: CloseButton = {
+        let button = CloseButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     override func viewDidLoad() {
@@ -25,7 +31,11 @@ class AboutViewController: UIViewController {
     
     //MARK: - Setup and Layout
     private func setupView() {
-        view.addSubview(aboutView)
+        [aboutView, closeButton].forEach { view.addSubview($0) }
+        
+        closeButton.delegate = self
+        closeButton.tintColor = .white
+        closeButton.setSystemImage(systemImage: "xmark")
     }
     
     private func setupLayout() {
@@ -35,7 +45,18 @@ class AboutViewController: UIViewController {
             aboutView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 0.0),
             aboutView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             aboutView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            aboutView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            aboutView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            closeButton.topAnchor.constraint(equalTo: guide.topAnchor, constant: 3.0),
+            closeButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 3.0),
+            closeButton.widthAnchor.constraint(equalToConstant: 50.0),
+            closeButton.heightAnchor.constraint(equalToConstant: 50.0)
         ])
+    }
+    
+    //MARK: - Actions
+    func closeButtonTapped() {
+        print("view.closeButtonTapped")
+        self.dismiss(animated: true, completion: nil)
     }
 }
