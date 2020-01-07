@@ -16,8 +16,6 @@ class AboutViewController: UIViewController {
         return view
     }()
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +23,6 @@ class AboutViewController: UIViewController {
         setupLayout()
     }
     
-   
     //MARK: - Setup and Layout
     private func setupView() {
         view.addSubview(aboutView)

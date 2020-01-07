@@ -32,7 +32,6 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         return view
     }()
     
-    
     var tableView = UITableView()
     
     var allMeetings = [Meeting]()
