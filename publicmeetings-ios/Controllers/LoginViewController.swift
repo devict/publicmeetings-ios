@@ -58,6 +58,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         //TODO: Proper error handling
         print("Error with Apple Authorization")
+        self.dismiss(animated: false, completion: nil)
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
@@ -67,6 +68,8 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             default:
                 break
         }
+        
+        self.dismiss(animated: false, completion: nil)
     }
 }
 
