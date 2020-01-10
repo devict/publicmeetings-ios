@@ -38,6 +38,7 @@
 		E54DA38F234431E70070241F /* publicmeetings_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */; };
 		E55F53B723462E2700200F10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55F53B623462E2700200F10 /* Colors.xcassets */; };
 		E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56077AA235C9AEB003D8F26 /* StandardValues.swift */; };
+		E573C76923C6E0A300619920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573C76823C6E0A300619920 /* LoginViewController.swift */; };
 		E580F2C42377BFCD00F0C0FD /* devict-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E580F2C32377BFCD00F0C0FD /* devict-icon.png */; };
 		E58D97F923B84D370078E037 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58D97F823B84D360078E037 /* DateExtension.swift */; };
 		E58D97FB23B84DDF0078E037 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58D97FA23B84DDF0078E037 /* DateView.swift */; };
@@ -101,6 +102,8 @@
 		E54DA390234431E70070241F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E55F53B623462E2700200F10 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E56077AA235C9AEB003D8F26 /* StandardValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardValues.swift; sourceTree = "<group>"; };
+		E573C76723C6D50B00619920 /* Public Meetings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Public Meetings.entitlements"; sourceTree = "<group>"; };
+		E573C76823C6E0A300619920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E580F2C32377BFCD00F0C0FD /* devict-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "devict-icon.png"; sourceTree = "<group>"; };
 		E58D97F823B84D360078E037 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		E58D97FA23B84DDF0078E037 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 			children = (
 				E508086923670CD8007DC949 /* AboutViewController.swift */,
 				E51FD2D22386A7D70054AD8A /* DocumentsViewController.swift */,
+				E573C76823C6E0A300619920 /* LoginViewController.swift */,
 				E52E43D923485B3600DF9D5B /* MeetingsViewController.swift */,
 				E52E43D5234854CA00DF9D5B /* MoreViewController.swift */,
 				E52958812353145A00E1F2D7 /* SearchViewController.swift */,
@@ -255,6 +259,7 @@
 		E54DA36B234431E60070241F /* publicmeetings-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E573C76723C6D50B00619920 /* Public Meetings.entitlements */,
 				E5A88D402392199D00610157 /* Extensions */,
 				E53623B3236131E100020413 /* WebView */,
 				E522685A23540D7C0036163B /* Utils */,
@@ -439,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E573C76923C6E0A300619920 /* LoginViewController.swift in Sources */,
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
 				E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */,
@@ -630,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "publicmeetings-ios/Public Meetings.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5U3KF2575;
 				INFOPLIST_FILE = "publicmeetings-ios/Info.plist";
@@ -648,6 +655,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "publicmeetings-ios/Public Meetings.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5U3KF2575;
 				INFOPLIST_FILE = "publicmeetings-ios/Info.plist";
