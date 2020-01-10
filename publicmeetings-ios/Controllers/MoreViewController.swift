@@ -8,10 +8,19 @@
 
 import UIKit
 
+enum MoreOptions {
+    case login
+    case voterRegistration
+    case electionSchedule
+    case donate
+    case about
+    case version
+}
+
 class MoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
-    let options: [String] = ["Voter Registration", "Election Schedule", "Donate", "About", "Version"]
+    let options: [String] = ["Login", "Voter Registration", "Election Schedule", "Donate", "About", "Version"]
     
     var tableView = UITableView()
     
@@ -61,6 +70,11 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         let currentCell = tableView.cellForRow(at: indexPath!) as! MoreCell
         
         if let currentItem = currentCell.item.text {
+            if currentItem == "Login" {
+                let viewController = LoginViewController()
+                self.present(viewController, animated: false, completion: nil)
+            }
+                        
             if currentItem == "Voter Registration" {
                 let url = "http://www.voteks.org/before-you-vote/how-do-i-register.html"
                 let viewController = WebViewer()
