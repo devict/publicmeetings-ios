@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E508086A23670CD8007DC949 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508086923670CD8007DC949 /* AboutViewController.swift */; };
 		E508086C23670CF2007DC949 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508086B23670CF2007DC949 /* AboutView.swift */; };
+		E5080A8523CA82A4008E8A6F /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5080A8423CA82A4008E8A6F /* Line.swift */; };
 		E511CFEA234A8D4800807CAF /* MeetingsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */; };
 		E511CFEE234A8EE700807CAF /* Accuracy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFEC234A8EE700807CAF /* Accuracy.swift */; };
 		E511CFEF234A8EE700807CAF /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511CFED234A8EE700807CAF /* Screen.swift */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		E508086923670CD8007DC949 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E508086B23670CF2007DC949 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		E5080A8423CA82A4008E8A6F /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsDetailView.swift; sourceTree = "<group>"; };
 		E511CFEC234A8EE700807CAF /* Accuracy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accuracy.swift; sourceTree = "<group>"; };
 		E511CFED234A8EE700807CAF /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				E508086B23670CF2007DC949 /* AboutView.swift */,
 				E58D97FA23B84DDF0078E037 /* DateView.swift */,
 				E51FD2D42386A7F20054AD8A /* DocumentsView.swift */,
+				E5080A8423CA82A4008E8A6F /* Line.swift */,
 				E54AEA6C23C929A9004FC8B7 /* LoginView.swift */,
 				E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */,
 				E5F0305B23631EC400F65234 /* NoMeetingsView.swift */,
@@ -488,6 +491,7 @@
 				E52E43DA23485B3600DF9D5B /* MeetingsViewController.swift in Sources */,
 				E508086A23670CD8007DC949 /* AboutViewController.swift in Sources */,
 				E51FD2D52386A7F20054AD8A /* DocumentsView.swift in Sources */,
+				E5080A8523CA82A4008E8A6F /* Line.swift in Sources */,
 				E511CFEA234A8D4800807CAF /* MeetingsDetailView.swift in Sources */,
 				E54DA36D234431E60070241F /* AppDelegate.swift in Sources */,
 				E511CFEE234A8EE700807CAF /* Accuracy.swift in Sources */,
