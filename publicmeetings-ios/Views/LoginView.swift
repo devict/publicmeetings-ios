@@ -48,6 +48,7 @@ class LoginView: UIView {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.6
         button.setTitleColor(.black, for: .normal)
+        button.titleLabel!.font = UIFont(name: "AppleGaramond", size: 18.0)
         return button
     }()
 
@@ -59,6 +60,7 @@ class LoginView: UIView {
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 0.6
         button.setTitleColor(.black, for: .normal)
+        button.titleLabel!.font = UIFont(name: "AppleGaramond", size: 18.0)
         return button
     }()
 

@@ -24,7 +24,7 @@ class LoginViewController: UIViewController, CloseButtonDelegate {
     }()
 
     var signinButton: ASAuthorizationAppleIDButton = {
-        let button = ASAuthorizationAppleIDButton()
+        let button = ASAuthorizationAppleIDButton(type: .signIn, style: .white)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

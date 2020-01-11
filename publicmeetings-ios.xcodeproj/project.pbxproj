@@ -31,6 +31,12 @@
 		E53623B5236131F100020413 /* WebViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53623B4236131F100020413 /* WebViewer.swift */; };
 		E5445E1923527DDE009A9FF4 /* devict00.png in Resources */ = {isa = PBXBuildFile; fileRef = E5445E1823527DDE009A9FF4 /* devict00.png */; };
 		E54AEA6D23C929A9004FC8B7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54AEA6C23C929A9004FC8B7 /* LoginView.swift */; };
+		E54AEA7523C99590004FC8B7 /* AppleGaramond-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54AEA7023C992ED004FC8B7 /* AppleGaramond-Bold.ttf */; };
+		E54AEA7623C99594004FC8B7 /* AppleGaramond-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54AEA7123C992ED004FC8B7 /* AppleGaramond-BoldItalic.ttf */; };
+		E54AEA7723C99598004FC8B7 /* AppleGaramond-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54AEA6F23C992ED004FC8B7 /* AppleGaramond-Italic.ttf */; };
+		E54AEA7823C9959B004FC8B7 /* AppleGaramond-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54AEA7423C992ED004FC8B7 /* AppleGaramond-Light.ttf */; };
+		E54AEA7923C995A0004FC8B7 /* AppleGaramond-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54AEA7223C992ED004FC8B7 /* AppleGaramond-LightItalic.ttf */; };
+		E54AEA7A23C995A5004FC8B7 /* AppleGaramond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54AEA7323C992ED004FC8B7 /* AppleGaramond.ttf */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
 		E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36E234431E60070241F /* SceneDelegate.swift */; };
 		E54DA376234431E70070241F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54DA375234431E70070241F /* Assets.xcassets */; };
@@ -90,6 +96,12 @@
 		E53623B4236131F100020413 /* WebViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewer.swift; sourceTree = "<group>"; };
 		E5445E1823527DDE009A9FF4 /* devict00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devict00.png; sourceTree = "<group>"; };
 		E54AEA6C23C929A9004FC8B7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E54AEA6F23C992ED004FC8B7 /* AppleGaramond-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleGaramond-Italic.ttf"; sourceTree = "<group>"; };
+		E54AEA7023C992ED004FC8B7 /* AppleGaramond-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleGaramond-Bold.ttf"; sourceTree = "<group>"; };
+		E54AEA7123C992ED004FC8B7 /* AppleGaramond-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleGaramond-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E54AEA7223C992ED004FC8B7 /* AppleGaramond-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleGaramond-LightItalic.ttf"; sourceTree = "<group>"; };
+		E54AEA7323C992ED004FC8B7 /* AppleGaramond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleGaramond.ttf; sourceTree = "<group>"; };
+		E54AEA7423C992ED004FC8B7 /* AppleGaramond-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleGaramond-Light.ttf"; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DA36E234431E60070241F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +251,19 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		E54AEA6E23C992D0004FC8B7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E54AEA7023C992ED004FC8B7 /* AppleGaramond-Bold.ttf */,
+				E54AEA7123C992ED004FC8B7 /* AppleGaramond-BoldItalic.ttf */,
+				E54AEA6F23C992ED004FC8B7 /* AppleGaramond-Italic.ttf */,
+				E54AEA7423C992ED004FC8B7 /* AppleGaramond-Light.ttf */,
+				E54AEA7223C992ED004FC8B7 /* AppleGaramond-LightItalic.ttf */,
+				E54AEA7323C992ED004FC8B7 /* AppleGaramond.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E54DA360234431E60070241F = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +299,7 @@
 				E51FA4A92344E2A7005C5091 /* Controllers */,
 				E514FAAA234732E500075816 /* Cells */,
 				E525261723490A150003B575 /* Assets */,
+				E54AEA6E23C992D0004FC8B7 /* Fonts */,
 				E54DA36C234431E60070241F /* AppDelegate.swift */,
 				E54DA36E234431E60070241F /* SceneDelegate.swift */,
 				E54DA375234431E70070241F /* Assets.xcassets */,
@@ -415,14 +441,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54AEA7723C99598004FC8B7 /* AppleGaramond-Italic.ttf in Resources */,
 				E55F53B723462E2700200F10 /* Colors.xcassets in Resources */,
 				E53056CB23516D870030D715 /* government3x.png in Resources */,
 				E54DA379234431E70070241F /* LaunchScreen.storyboard in Resources */,
 				E54DA376234431E70070241F /* Assets.xcassets in Resources */,
+				E54AEA7923C995A0004FC8B7 /* AppleGaramond-LightItalic.ttf in Resources */,
+				E54AEA7A23C995A5004FC8B7 /* AppleGaramond.ttf in Resources */,
 				E53056CC23516D870030D715 /* government2x.png in Resources */,
 				E5445E1923527DDE009A9FF4 /* devict00.png in Resources */,
+				E54AEA7823C9959B004FC8B7 /* AppleGaramond-Light.ttf in Resources */,
 				E525261923490A150003B575 /* devict-logo.png in Resources */,
+				E54AEA7623C99594004FC8B7 /* AppleGaramond-BoldItalic.ttf in Resources */,
 				E580F2C42377BFCD00F0C0FD /* devict-icon.png in Resources */,
+				E54AEA7523C99590004FC8B7 /* AppleGaramond-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
