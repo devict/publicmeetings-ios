@@ -30,6 +30,7 @@
 		E53056CC23516D870030D715 /* government2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E53056CA23516D870030D715 /* government2x.png */; };
 		E53623B5236131F100020413 /* WebViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53623B4236131F100020413 /* WebViewer.swift */; };
 		E5445E1923527DDE009A9FF4 /* devict00.png in Resources */ = {isa = PBXBuildFile; fileRef = E5445E1823527DDE009A9FF4 /* devict00.png */; };
+		E54AEA6D23C929A9004FC8B7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54AEA6C23C929A9004FC8B7 /* LoginView.swift */; };
 		E54DA36D234431E60070241F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36C234431E60070241F /* AppDelegate.swift */; };
 		E54DA36F234431E60070241F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA36E234431E60070241F /* SceneDelegate.swift */; };
 		E54DA376234431E70070241F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54DA375234431E70070241F /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		E53056CA23516D870030D715 /* government2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = government2x.png; sourceTree = "<group>"; };
 		E53623B4236131F100020413 /* WebViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewer.swift; sourceTree = "<group>"; };
 		E5445E1823527DDE009A9FF4 /* devict00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devict00.png; sourceTree = "<group>"; };
+		E54AEA6C23C929A9004FC8B7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E54DA369234431E60070241F /* Public Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Public Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54DA36C234431E60070241F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54DA36E234431E60070241F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				E508086B23670CF2007DC949 /* AboutView.swift */,
 				E58D97FA23B84DDF0078E037 /* DateView.swift */,
 				E51FD2D42386A7F20054AD8A /* DocumentsView.swift */,
+				E54AEA6C23C929A9004FC8B7 /* LoginView.swift */,
 				E511CFE9234A8D4800807CAF /* MeetingsDetailView.swift */,
 				E5F0305B23631EC400F65234 /* NoMeetingsView.swift */,
 				E52268522353945F0036163B /* SearchView.swift */,
@@ -445,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E573C76923C6E0A300619920 /* LoginViewController.swift in Sources */,
+				E54AEA6D23C929A9004FC8B7 /* LoginView.swift in Sources */,
 				E512C19D23445BD6005BF52E /* Meeting.swift in Sources */,
 				E512C19A23445A29005BF52E /* User.swift in Sources */,
 				E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */,

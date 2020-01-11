@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct Standard {
+    static let appleRadius: CGFloat = 6.0
     static let cornerRadius: CGFloat = 8.0
     static let font: UIFont = UIFont(name: "Damascus", size: 16.0)!
     static let systemFontSmall: UIFont = UIFont.systemFont(ofSize: 10.0)
