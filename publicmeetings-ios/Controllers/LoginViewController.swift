@@ -64,8 +64,6 @@ class LoginViewController: UIViewController, CloseButtonDelegate {
             signinButton.widthAnchor.constraint(equalToConstant: 160.0),
             signinButton.heightAnchor.constraint(equalToConstant: 35.0)
         ])
-        
-        //signinButton.layer.cornerRadius = 18.0
     }
     
     func setupActions() {
@@ -100,7 +98,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
             case let credentials as ASAuthorizationAppleIDCredential:
-                let user = User(credentials: credentials)
+                let _ = User(credentials: credentials)
             default:
                 break
         }
