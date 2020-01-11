@@ -9,7 +9,19 @@
 import UIKit
 import AuthenticationServices
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, CloseButtonDelegate {
+
+    var loginView: LoginView = {
+        let view = LoginView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    var closeButton: CloseButton = {
+        let button = CloseButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     var signinButton: ASAuthorizationAppleIDButton = {
         let button = ASAuthorizationAppleIDButton()
@@ -26,15 +38,31 @@ class LoginViewController: UIViewController {
     }
     
     func setupView() {
-        view.addSubview(signinButton)
+        [loginView, closeButton, signinButton].forEach { view.addSubview($0) }
+
+        closeButton.delegate = self
+        closeButton.tintColor = .white
+        closeButton.setSystemImage(systemImage: "xmark")
     }
 
     func setupLayout() {
+        let guide = view.safeAreaLayoutGuide
+        
         NSLayoutConstraint.activate([
-            signinButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            signinButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            //signinButton.widthAnchor.constraint(equalToConstant: 100.0),
-            //signinButton.heightAnchor.constraint(equalToConstant: 35.0)
+            loginView.topAnchor.constraint(equalTo: view.topAnchor),
+            loginView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loginView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loginView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+
+            closeButton.topAnchor.constraint(equalTo: guide.topAnchor, constant: 3.0),
+            closeButton.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 3.0),
+            closeButton.widthAnchor.constraint(equalToConstant: 50.0),
+            closeButton.heightAnchor.constraint(equalToConstant: 50.0),
+
+            signinButton.topAnchor.constraint(equalTo: loginView.forgotPassword.bottomAnchor, constant: 10.0),
+            signinButton.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
+            signinButton.widthAnchor.constraint(equalToConstant: 160.0),
+            signinButton.heightAnchor.constraint(equalToConstant: 35.0)
         ])
     }
     
@@ -46,11 +74,17 @@ class LoginViewController: UIViewController {
         let provider = ASAuthorizationAppleIDProvider()
         let request = provider.createRequest()
         request.requestedScopes = [.email, .fullName]
-        
+
         let controller = ASAuthorizationController(authorizationRequests: [request])
         controller.delegate = self
         controller.presentationContextProvider = self
         controller.performRequests()
+    }
+
+    //MARK: - Actions
+    func closeButtonTapped() {
+        print("view.closeButtonTapped")
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -60,15 +94,15 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
         print("Error with Apple Authorization")
         self.dismiss(animated: false, completion: nil)
     }
-    
+
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
             case let credentials as ASAuthorizationAppleIDCredential:
-                let user = User(credentials: credentials)
+                let _ = User(credentials: credentials)
             default:
                 break
         }
-        
+
         self.dismiss(animated: false, completion: nil)
     }
 }

@@ -22,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rootViewController = TabBarController()
         navigationController = UINavigationController()
         navigationController?.viewControllers = [rootViewController]
-        //navigationController?.navigationBar.barTintColor = UIColor(named: "devictBlue")
         navigationController?.navigationBar.backgroundColor = UIColor(named: "devictBlue")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         
