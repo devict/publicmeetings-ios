@@ -72,6 +72,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let currentItem = currentCell.item.text {
             if currentItem == "Login" {
                 let viewController = LoginViewController()
+                viewController.modalPresentationStyle = .fullScreen
                 self.present(viewController, animated: false, completion: nil)
             }
                         
