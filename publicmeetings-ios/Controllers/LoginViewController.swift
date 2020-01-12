@@ -59,7 +59,7 @@ class LoginViewController: UIViewController, CloseButtonDelegate {
             closeButton.widthAnchor.constraint(equalToConstant: 50.0),
             closeButton.heightAnchor.constraint(equalToConstant: 50.0),
 
-            signinButton.topAnchor.constraint(equalTo: loginView.forgotPassword.bottomAnchor, constant: 10.0),
+            signinButton.topAnchor.constraint(equalTo: loginView.login.bottomAnchor, constant: 10.0),
             signinButton.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
             signinButton.widthAnchor.constraint(equalToConstant: 160.0),
             signinButton.heightAnchor.constraint(equalToConstant: 35.0)
@@ -83,7 +83,6 @@ class LoginViewController: UIViewController, CloseButtonDelegate {
 
     //MARK: - Actions
     func closeButtonTapped() {
-        print("view.closeButtonTapped")
         self.dismiss(animated: true, completion: nil)
     }
 }
