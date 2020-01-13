@@ -24,30 +24,28 @@ class Line: UIView  {
         super.init(coder: aDecoder)
     }
 
-    //TODO: Pass in the line parameters.  Values are hard-coded for testing purposes
-
     public override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
         context.setLineWidth(width)
-        context.setStrokeColor(color)
+        context.setStrokeColor(color.cgColor)
         context.move(to: origin)
         context.addLine(to: destination)
         context.strokePath()
     }
 
-    private setLineWidth(width: CGFloat) {
+    func setLineWidth(width: CGFloat) {
         self.width = width
     }
 
-    private func setOrigin(origin: CGPoint) {
+    func setOrigin(origin: CGPoint) {
         self.origin = origin
     }
 
-    private func setDestination(destination: CGPoint) {
+    func setDestination(destination: CGPoint) {
         self.destination = destination
     }
 
-    private func setLine(from: CGPoint, to: CGPoint) {
+    func setLine(from: CGPoint, to: CGPoint) {
         setOrigin(origin: from)
         setDestination(destination: to)
     }

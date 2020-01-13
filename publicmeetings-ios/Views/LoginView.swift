@@ -41,7 +41,8 @@ class LoginView: UIView {
         text.translatesAutoresizingMaskIntoConstraints = false
         text.backgroundColor = .clear
         text.autocapitalizationType = .none
-        text.textColor = .white
+        text.textColor = .black
+        text.backgroundColor = .systemGray4
         return text
     }()
 
@@ -50,7 +51,8 @@ class LoginView: UIView {
         text.translatesAutoresizingMaskIntoConstraints = false
         text.backgroundColor = .clear
         text.autocapitalizationType = .none
-        text.textColor = .white
+        text.textColor = .black
+        text.backgroundColor = .systemGray4
         return text
     }()
 
@@ -110,6 +112,12 @@ class LoginView: UIView {
         forgotPassword.layer.cornerRadius = Standard.appleRadius
     }
 
+    func getPointForView(_ view : UIView) -> (x: CGFloat, y: CGFloat) {
+        let x = view.frame.origin.x
+        let y = view.frame.origin.y
+        return (x, y)
+    }
+
     //MARK: - Setup and Layout
     private func setupView() {
         [imageView, usernameLabel, username, passwordLabel, password, login, forgotPassword, register].forEach { addSubview($0) }
@@ -128,7 +136,7 @@ class LoginView: UIView {
             usernameLabel.widthAnchor.constraint(equalToConstant: 120.0),
             usernameLabel.heightAnchor.constraint(equalToConstant: 20.0),
 
-            username.topAnchor.constraint(equalTo: topAnchor, constant: 155.0),
+            username.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: 2.0),
             username.centerXAnchor.constraint(equalTo: centerXAnchor),
             username.widthAnchor.constraint(equalToConstant: 160.0),
             username.heightAnchor.constraint(equalToConstant: 35.0),
