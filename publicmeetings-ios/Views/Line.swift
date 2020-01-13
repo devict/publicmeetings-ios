@@ -9,9 +9,14 @@
 import UIKit
 
 class Line: UIView  {
+    var origin: CGPoint = CGPoint(x: 0, y: 0)
+    var destination: CGPoint = CGPoint(x: 0, y: 0)
+    var width: CGFloat = 0.0
+    var color: UIColor = .clear
 
-    public init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 480))
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+
         backgroundColor = .white
     }
 
@@ -23,10 +28,27 @@ class Line: UIView  {
 
     public override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
-        context.setLineWidth(2.0)
-        context.setStrokeColor(UIColor.systemGray3.cgColor)
-        context.move(to: CGPoint(x: 30, y: 100))
-        context.addLine(to: CGPoint(x: 230, y: 100))
+        context.setLineWidth(width)
+        context.setStrokeColor(color)
+        context.move(to: origin)
+        context.addLine(to: destination)
         context.strokePath()
+    }
+
+    private setLineWidth(width: CGFloat) {
+        self.width = width
+    }
+
+    private func setOrigin(origin: CGPoint) {
+        self.origin = origin
+    }
+
+    private func setDestination(destination: CGPoint) {
+        self.destination = destination
+    }
+
+    private func setLine(from: CGPoint, to: CGPoint) {
+        setOrigin(origin: from)
+        setDestination(destination: to)
     }
 }
