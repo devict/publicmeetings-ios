@@ -159,10 +159,8 @@ class MeetingsViewController: UIViewController, UITableViewDelegate, UITableView
         if venue == "All" {
             meetings = allMeetings
         } else {
-            for meeting in allMeetings {
-                if meeting.venue == venue {
-                    meetings.append(meeting)
-                }
+            for meeting in allMeetings where meeting.venue == venue {
+                meetings.append(meeting)
             }
 
             if meetings.count == 0 {
