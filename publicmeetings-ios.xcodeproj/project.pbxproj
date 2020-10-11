@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,7 @@
 		E54DA38F234431E70070241F /* publicmeetings_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DA38E234431E70070241F /* publicmeetings_iosUITests.swift */; };
 		E55F53B723462E2700200F10 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E55F53B623462E2700200F10 /* Colors.xcassets */; };
 		E56077AB235C9AEB003D8F26 /* StandardValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56077AA235C9AEB003D8F26 /* StandardValues.swift */; };
+		E56EA7E12532FE89002F10C9 /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = E56EA7E02532FE89002F10C9 /* Valet */; };
 		E573C76923C6E0A300619920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E573C76823C6E0A300619920 /* LoginViewController.swift */; };
 		E580F2C42377BFCD00F0C0FD /* devict-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E580F2C32377BFCD00F0C0FD /* devict-icon.png */; };
 		E58D97F923B84D370078E037 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58D97F823B84D360078E037 /* DateExtension.swift */; };
@@ -133,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56EA7E12532FE89002F10C9 /* Valet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +358,9 @@
 			dependencies = (
 			);
 			name = "publicmeetings-ios";
+			packageProductDependencies = (
+				E56EA7E02532FE89002F10C9 /* Valet */,
+			);
 			productName = "publicmeetings-ios";
 			productReference = E54DA369234431E60070241F /* Public Meetings.app */;
 			productType = "com.apple.product-type.application";
@@ -428,6 +433,9 @@
 				Base,
 			);
 			mainGroup = E54DA360234431E60070241F;
+			packageReferences = (
+				E56EA7DF2532FE89002F10C9 /* XCRemoteSwiftPackageReference "Valet" */,
+			);
 			productRefGroup = E54DA36A234431E60070241F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -834,6 +842,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E56EA7DF2532FE89002F10C9 /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Square/Valet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E56EA7E02532FE89002F10C9 /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E56EA7DF2532FE89002F10C9 /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E54DA361234431E60070241F /* Project object */;
 }
